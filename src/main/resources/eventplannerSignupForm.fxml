@@ -7,32 +7,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@signup.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventplannerSignupForm">
     <children>
-        <Pane layoutX="147.0" layoutY="172.0" prefHeight="536.0" prefWidth="1128.0">
+        <Pane layoutX="141.0" layoutY="143.0" prefHeight="536.0" prefWidth="1128.0">
             <children>
-                <Label layoutX="111.0" layoutY="206.0" prefHeight="66.0" prefWidth="349.0" styleClass="role-sportsman-form" text=" EVENT PLANNER">
+                <Label layoutX="115.0" layoutY="179.0" prefHeight="66.0" prefWidth="349.0" styleClass="role-sportsman-form" text=" EVENT PLANNER">
                     <font>
                         <Font name="System Bold" size="40.0" />
                     </font>
                 </Label>
-                <Label fx:id="signupLabel" layoutX="190.0" layoutY="52.0" styleClass="sgn" text="Sign Up">
+                <Label fx:id="signupLabel" layoutX="115.0" layoutY="28.0" styleClass="sgn" text="Sign Up">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <TextField layoutX="587.0" layoutY="63.0" prefHeight="42.0" prefWidth="341.0" promptText="First Name" styleClass="textfield" />
-                <TextField layoutX="587.0" layoutY="122.0" prefHeight="42.0" prefWidth="341.0" promptText="Last Name" styleClass="textfield" />
-                <TextField layoutX="586.0" layoutY="182.0" prefHeight="42.0" prefWidth="341.0" promptText="Email Address" styleClass="textfield" />
-                <PasswordField layoutX="586.0" layoutY="239.0" prefHeight="42.0" prefWidth="341.0" promptText="Password" styleClass="textfield" />
-                <Button fx:id="signupButtonForm" layoutX="586.0" layoutY="420.0" mnemonicParsing="false" onAction="#saveSportsmanData" prefHeight="42.0" prefWidth="341.0" styleClass="sgn-btn" text="Sign up">
+                <TextField layoutX="586.0" layoutY="28.0" prefHeight="42.0" prefWidth="341.0" promptText="First Name" styleClass="textfield" />
+                <TextField layoutX="586.0" layoutY="90.0" prefHeight="42.0" prefWidth="341.0" promptText="Last Name" styleClass="textfield" />
+                <TextField layoutX="585.0" layoutY="150.0" prefHeight="42.0" prefWidth="341.0" promptText="Email Address" styleClass="textfield" />
+                <PasswordField layoutX="585.0" layoutY="207.0" prefHeight="42.0" prefWidth="341.0" promptText="Password" styleClass="textfield" />
+                <Button fx:id="signupButtonForm" layoutX="585.0" layoutY="392.0" mnemonicParsing="false" onAction="#saveSportsmanData" prefHeight="42.0" prefWidth="341.0" styleClass="sgn-btn" text="Sign up">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
-                <DatePicker layoutX="586.0" layoutY="359.0" prefHeight="42.0" prefWidth="341.0" promptText="Date of Birth" styleClass="textfield" />
-                <PasswordField layoutX="586.0" layoutY="299.0" prefHeight="42.0" prefWidth="341.0" promptText="Phone Number" styleClass="textfield" />
+                <DatePicker layoutX="585.0" layoutY="327.0" prefHeight="42.0" prefWidth="341.0" promptText="Date of Birth" styleClass="textfield" />
+                <PasswordField layoutX="585.0" layoutY="267.0" prefHeight="42.0" prefWidth="341.0" promptText="Phone Number" styleClass="textfield" />
             </children>
         </Pane>
         <Button fx:id="goBackButton" layoutX="84.0" layoutY="64.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" styleClass="btn" text="Back">
