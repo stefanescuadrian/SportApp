@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@signup.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SportsmanSignupForm">
+   <children>
+      <Pane layoutX="138.0" layoutY="162.0" prefHeight="536.0" prefWidth="1128.0">
+         <children>
+            <Label layoutX="178.0" layoutY="206.0" prefHeight="66.0" prefWidth="266.0" styleClass="role-sportsman-form" text=" SPORTSMAN">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="signupLabel" layoutX="190.0" layoutY="52.0" styleClass="sgn" text="Sign Up">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField layoutX="590.0" layoutY="69.0" prefHeight="42.0" prefWidth="341.0" promptText="First Name" styleClass="textfield" />
+            <TextField layoutX="590.0" layoutY="145.0" prefHeight="42.0" prefWidth="341.0" promptText="Last Name" styleClass="textfield" />
+            <TextField layoutX="590.0" layoutY="223.0" prefHeight="42.0" prefWidth="341.0" promptText="Email Address" styleClass="textfield" />
+            <PasswordField layoutX="590.0" layoutY="303.0" prefHeight="42.0" prefWidth="341.0" promptText="Password" styleClass="textfield" />
+            <Button fx:id="signupButtonForm" layoutX="590.0" layoutY="376.0" mnemonicParsing="false" onAction="#saveSportsmanData" prefHeight="42.0" prefWidth="341.0" styleClass="sgn-btn" text="Sign up">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="goBackButton" layoutX="74.0" layoutY="54.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" styleClass="btn" text="Back">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

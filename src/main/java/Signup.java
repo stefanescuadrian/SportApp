@@ -35,6 +35,13 @@ public class Signup{
         window.setScene(signupScene);
         window.show();
     }
+    public void goToSportsmanForm(ActionEvent event) throws IOException {
+        Parent signupView= FXMLLoader.load(getClass().getResource("/sportsmanSignupForm.fxml"));
+        Scene signupScene=new Scene(signupView);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(signupScene);
+        window.show();
+    }
 
     public void initialize(URL location, ResourceBundle resources) {
 
