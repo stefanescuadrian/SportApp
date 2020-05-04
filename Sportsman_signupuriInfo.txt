@@ -1,0 +1,60 @@
+Role: Sportsman 
+First Name: Adrian 
+Last Name: Stefanescu 
+Email: stefanescuadrian04@gmail.com 
+Password: parola
+
+Role: Sportsman 
+First Name: as 
+Last Name: as 
+Email: as 
+Password: as
+
+Role: Sportsman 
+First Name: test 
+Last Name: test 
+Email: test 
+Password: test
+
+Role: Sportsman 
+First Name: sad 
+Last Name: ads 
+Email: asd 
+Password: asd
+
+Role: Sportsman 
+First Name: sda 
+Last Name: d 
+Email: ads 
+Password: ads
+
+Role: Sportsman 
+First Name: Serban 
+Last Name: Stefanescu 
+Email: Serban123 
+Password: asdfg
+
+Role: Sportsman 
+First Name: asd 
+Last Name: asd 
+Email:  
+Password: qwe
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+
+Role: Sportsman 
+First Name: q 
+Last Name: q 
+Email: q 
+Password: q
+
+Role: Sportsman 
+First Name: w 
+Last Name: w 
+Email: w 
+Password: w
+

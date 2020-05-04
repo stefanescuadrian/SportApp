@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_241" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>admin@admin.com</string>
+    </void>
+    <void property="firstName">
+     <string>Admin</string>
+    </void>
+    <void property="lastName">
+     <string>Admin</string>
+    </void>
+    <void property="password">
+     <string>admin</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eventplanner">
+    <void property="birthDate">
+     <string>2020-05-08</string>
+    </void>
+    <void property="email">
+     <string>d</string>
+    </void>
+    <void property="firstName">
+     <string>s</string>
+    </void>
+    <void property="lastName">
+     <string>s</string>
+    </void>
+    <void property="password">
+     <string>asd</string>
+    </void>
+    <void property="phoneNumber">
+     <string>231</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>e</string>
+    </void>
+    <void property="firstName">
+     <string>e</string>
+    </void>
+    <void property="lastName">
+     <string>e</string>
+    </void>
+    <void property="password">
+     <string>e</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>q</string>
+    </void>
+    <void property="firstName">
+     <string>q</string>
+    </void>
+    <void property="lastName">
+     <string>q</string>
+    </void>
+    <void property="password">
+     <string>q</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
