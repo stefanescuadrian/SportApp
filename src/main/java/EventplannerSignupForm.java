@@ -7,19 +7,27 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.*;
+import java.util.ArrayList;
 
 
 public class EventplannerSignupForm {
     private Alert alert = new Alert(Alert.AlertType.INFORMATION);
-    public TextField firstNameEP;
-    public TextField lastNameEP;
-    public TextField emailAddressEP;
-    public PasswordField passwordEP;
-    public TextField phoneNumberEP;
-    public DatePicker dateOfBirthEP;
+    private ArrayList List = new ArrayList();
+    @FXML
+    private TextField firstNameEP;
+    @FXML
+    private TextField lastNameEP;
+    @FXML
+    private TextField emailAddressEP;
+    @FXML
+    private PasswordField passwordEP;
+    @FXML
+    private TextField phoneNumberEP;
+    @FXML
+    private DatePicker dateOfBirthEP;
 
 
     @FXML
@@ -88,11 +96,60 @@ public class EventplannerSignupForm {
             return;
         }
 
+
+        //Decodificare xml file
+        try{
+            FileInputStream fis = new FileInputStream("./Signupuri.xml");
+            XMLDecoder decoder = new XMLDecoder(fis);
+            ArrayList A = new ArrayList();
+            A = (ArrayList) decoder.readObject();
+            List =A;
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        //ACCOUNT ALREADY EXISTS CHECK
+        for(int i = 0; i< List.size(); i++){
+            if(List.get(i) instanceof Sportsman){
+                if ( ((Sportsman) List.get(i)).getEmail().equals(this.emailAddressEP.getText())){
+                    alert.setTitle("ERROR");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Account already exists! Please enter another email address!");
+                    alert.showAndWait();
+                    emailAddressEP.clear();
+                    return;
+                }
+            }
+            if(List.get(i) instanceof Eventplanner){
+                if ( ((Eventplanner) List.get(i)).getEmail().equals(this.emailAddressEP.getText())){
+                    alert.setTitle("ERROR");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Account already exists! Please enter another email address!");
+                    alert.showAndWait();
+                    emailAddressEP.clear();
+                    return;
+                }
+            }
+
+        }
+
         alert.setTitle("Registration Successfull");
         alert.setHeaderText(null);
         alert.setContentText("Welcome " + firstNameEP.getText() + " " + lastNameEP.getText() + "!");
         alert.showAndWait();
 
+
+        //Codificare xml file
+        try{
+            Eventplanner S = new Eventplanner(firstNameEP.getText(), lastNameEP.getText(), emailAddressEP.getText(), passwordEP.getText(),phoneNumberEP.getText(),dateOfBirthEP.getValue().toString());
+            List.add(S);
+            FileOutputStream fos = new FileOutputStream("./Signupuri.xml");
+            XMLEncoder encoder = new XMLEncoder(fos);
+            encoder.writeObject(List);
+            encoder.close();
+            fos.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("EventPlanner_signupuriInfo.txt", true))) {
             bw.write("Role: Sportsman ");

@@ -7,18 +7,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.*;
+import java.util.ArrayList;
 
 
 public class SportsmanSignupForm {
 
+    private ArrayList List = new ArrayList();
+    @FXML
+    private TextField firstName;
+    @FXML
+    private TextField lastName;
+    @FXML
+    private TextField emailAddress;
+    @FXML
+    private PasswordField password;
 
-    public TextField firstName;
-    public TextField lastName;
-    public TextField emailAddress;
-    public PasswordField password;
 
     @FXML
     private Label signupLabel;
@@ -28,6 +34,9 @@ public class SportsmanSignupForm {
     @FXML
     private Button goBackButton;
     private Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+    public SportsmanSignupForm() throws FileNotFoundException {
+    }
 
     @FXML
 
@@ -64,6 +73,7 @@ public class SportsmanSignupForm {
             alert.showAndWait();
             return;
         }
+
         if (password.getText().isEmpty()) {
             alert.setTitle("ERROR");
             alert.setHeaderText(null);
@@ -72,10 +82,58 @@ public class SportsmanSignupForm {
             return;
         }
 
-        alert.setTitle("Registration Successfull");
+
+        //Decodificare xml file
+        try{
+            FileInputStream fis = new FileInputStream("./Signupuri.xml");
+            XMLDecoder decoder = new XMLDecoder(fis);
+            ArrayList A = new ArrayList();
+            A = (ArrayList) decoder.readObject();
+            List =A;
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        //ACCOUNT ALREADY EXISTS CHECK
+        for(int i = 0; i< List.size(); i++){
+            if(List.get(i) instanceof Sportsman){
+                if ( ((Sportsman) List.get(i)).getEmail().equals(this.emailAddress.getText())){
+                    alert.setTitle("ERROR");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Account already exists! Please enter another email address!");
+                    alert.showAndWait();
+                    emailAddress.clear();
+                    return;
+                }
+            }
+            if(List.get(i) instanceof Eventplanner){
+                if ( ((Eventplanner) List.get(i)).getEmail().equals(this.emailAddress.getText())){
+                    alert.setTitle("ERROR");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Account already exists! Please enter another email address!");
+                    alert.showAndWait();
+                    emailAddress.clear();
+                    return;
+                }
+            }
+        }
+
+        alert.setTitle("Registration Successfull!");
         alert.setHeaderText(null);
         alert.setContentText("Welcome " + firstName.getText() + " " + lastName.getText() + "!");
         alert.showAndWait();
+
+        //Codificare xml file
+        try{
+            Sportsman S = new Sportsman(firstName.getText(), lastName.getText(), emailAddress.getText(), password.getText());
+            List.add(S);
+            FileOutputStream fos = new FileOutputStream("./Signupuri.xml");
+            XMLEncoder encoder = new XMLEncoder(fos);
+            encoder.writeObject(List);
+            encoder.close();
+            fos.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("Sportsman_signupuriInfo.txt", true))) {
@@ -134,4 +192,5 @@ public class SportsmanSignupForm {
         window.show();
     }
 }
+
 
