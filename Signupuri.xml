@@ -71,5 +71,21 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>aaaaa</string>
+    </void>
+    <void property="firstName">
+     <string>aaaa</string>
+    </void>
+    <void property="lastName">
+     <string>aaaa</string>
+    </void>
+    <void property="password">
+     <string>aaaaa</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

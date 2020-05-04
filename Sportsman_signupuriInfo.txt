@@ -58,3 +58,9 @@ Last Name: w
 Email: w 
 Password: w
 
+Role: Sportsman 
+First Name: aaaa 
+Last Name: aaaa 
+Email: aaaaa 
+Password: aaaaa
+

@@ -18,7 +18,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </TextField>
-            <Button fx:id="loginButton" alignment="BASELINE_LEFT" layoutX="588.0" layoutY="485.0" mnemonicParsing="false" onAction="#loginAction" onMouseClicked="#buttonClicked" prefHeight="48.0" prefWidth="319.0" styleClass="lgn-btn" text="    Login">
+            <Button fx:id="loginButton" alignment="BASELINE_LEFT" layoutX="588.0" layoutY="485.0" mnemonicParsing="false" onAction="#loginAction"  prefHeight="48.0" prefWidth="319.0" styleClass="lgn-btn" text="    Login">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
