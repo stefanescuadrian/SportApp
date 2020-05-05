@@ -107,15 +107,25 @@ public class Login implements Initializable {
         }
 
     }
+    /*//go to Sportsman Homepage
+    public void loginAction(ActionEvent event) throws IOException {
+        System.out.println("eee");
+        Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
+        Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(sportsmanHomePageScene);
+        window.show();
+    }*/
 
-    //go to Sportsman Home Page
-    //public void loginAction(ActionEvent event) throws IOException {
+ /*//go to Event Planner Homepage
+    public void loginAction(ActionEvent event) throws IOException {
         //System.out.println("eee");
-      //  Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
-      //  Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
-      //  Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-       // window.setScene(sportsmanHomePageScene);
-      //  window.show();
-   // }
+          Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
+          Scene eventplannerHomePageScene=new Scene(eventplannerHomePageView);
+          Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+         window.setScene(eventplannerHomePageScene);
+          window.show();
+         }*/
+
 
 }

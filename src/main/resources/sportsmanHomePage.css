@@ -43,23 +43,31 @@
     -fx-background-color: white;
     -fx-border-color: white;
 
-
 }
 
 .btn{
     -fx-background-color:#A33AFF;
     -fx-text-fill:white;
 }
+.add-btn{
+    -fx-background-color:black;
+    -fx-text-fill:white;
+}
+.add-btn:hover{
+    -fx-background-color: #403f3f;
+}
 .btn:hover{
     -fx-background-color:#A55AFF;
 }
-.back-btn{
-    -fx-background-color: transparent;
-    -fx-text-fill: gray;
-}
-.back-btn:hover{
 
-    -fx-text-fill: #A33AFF;
+
+.logout-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill:#949392;
+}
+.logout-btn:hover{
+    -fx-cursor: hand;
+    -fx-text-fill:#403f3f ;
 }
 .table{
     -fx-background-color: transparent;

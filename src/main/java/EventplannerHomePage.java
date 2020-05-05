@@ -9,13 +9,21 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SportsmanHomePage {
+public class EventplannerHomePage {
 
     @FXML
-    private Button goBackButton;
+    private Button myEventsButton;
 
     @FXML
-    void changeScreenButtonPushed(ActionEvent event) {
+    private Button addEventsButton;
+
+    @FXML
+    void goToMyEventsPage(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addEvents(ActionEvent event) {
 
     }
     @FXML
@@ -26,5 +34,6 @@ public class SportsmanHomePage {
         window.setScene(loginScene);
         window.show();
     }
+
 
 }

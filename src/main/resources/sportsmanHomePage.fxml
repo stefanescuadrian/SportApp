@@ -45,15 +45,20 @@
                 <Font name="System Bold" size="25.0" />
             </font>
         </TitledPane>
-        <Button fx:id="goBackButton" layoutX="84.0" layoutY="34.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" styleClass="back-btn" text="Back">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-        </Button>
         <ImageView fitHeight="78.0" fitWidth="875.0" layoutX="237.0" layoutY="86.0">
             <image>
                 <Image url="@line.png" />
             </image>
         </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="114.0" layoutX="41.0" layoutY="28.0" preserveRatio="true">
+         <image>
+            <Image url="@logo_black.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1067.0" layoutY="39.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="logout-btn" text="Log out">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

@@ -1,0 +1,29 @@
+.btn{
+    -fx-background-color:#A33AFF;
+    -fx-text-fill:white;
+}
+.add-btn{
+    -fx-background-color:black;
+    -fx-text-fill:white;
+}
+.add-btn:hover{
+    -fx-background-color: #403f3f;
+}
+.btn:hover{
+    -fx-background-color:#A55AFF;
+}
+.logout-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #949392;
+}
+.logout-btn:hover{
+    -fx-cursor: hand;
+    -fx-text-fill:#403f3f ;
+}
+
+.split-menu-button .label{
+    -fx-background-color: transparent;
+}
+.split-menu-button{
+    -fx-background-color: transparent;
+}
