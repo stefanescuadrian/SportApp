@@ -1,0 +1,49 @@
+.txt{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-prompt-text-fill: #6e6d6b;
+   -fx-prompt-text-padding:0 10 0 0;
+}
+.choice-box{
+    -fx-background-color: transparent;
+    -fx-mark-color:#A33AFF;
+
+
+}
+.choice-box .context-menu{
+    -fx-background-color: white;
+  -fx-padding: 50px 50px 50px 50px;
+    -fx-translate-y: 30;
+    -fx-translate-x: -30;
+    -fx-font-size: 15;
+
+}
+.choice-box>.label{
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-translate-x: -25;
+}
+.choice-box>.open-button>.arrow{
+    -fx-padding: 7 8 7 8;
+    -fx-translate-x: -20;
+}
+.btn{
+    -fx-background-color:#A33AFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.btn:hover{
+    -fx-background-color:#A55AFF ;
+}
+.text-area .scroll-pane{
+    -fx-background-color:transparent ;
+}
+.text-area{
+    -fx-highlight-fill: transparent;
+}
+
+.btn_back{
+    -fx-graphic: url(arrow123.png);
+    -fx-background-color: transparent;
+}

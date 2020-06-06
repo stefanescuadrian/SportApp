@@ -26,8 +26,12 @@ public class EventplannerHomePage {
     }
 
     @FXML
-    void addEvents(ActionEvent event) {
-
+    void addEvents(ActionEvent event) throws IOException {
+        Parent loginView= FXMLLoader.load(getClass().getResource("/eventForm.fxml"));
+        Scene loginScene=new Scene(loginView);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(loginScene);
+        window.show();
     }
     @FXML
     void logoutOnAction(ActionEvent event) throws IOException {
