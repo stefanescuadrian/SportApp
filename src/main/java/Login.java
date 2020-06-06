@@ -52,7 +52,7 @@ public class Login implements Initializable {
 
     }
 
-    public void loginAction(ActionEvent e){
+   /* public void loginAction(ActionEvent e){
         if (usernameField.getText().isEmpty()) {
             alert.setTitle("ERROR");
             alert.setHeaderText(null);
@@ -106,18 +106,18 @@ public class Login implements Initializable {
             }
         }
 
-    }
-    /*//go to Sportsman Homepage
-    public void loginAction(ActionEvent event) throws IOException {
+    }*/
+    //go to Sportsman Homepage
+    /*public void loginAction(ActionEvent event) throws IOException {
         System.out.println("eee");
         Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
         Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(sportsmanHomePageScene);
         window.show();
-    }*/
-
- /*//go to Event Planner Homepage
+    }
+*/
+ //go to Event Planner Homepage
     public void loginAction(ActionEvent event) throws IOException {
         //System.out.println("eee");
           Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
@@ -125,7 +125,7 @@ public class Login implements Initializable {
           Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
          window.setScene(eventplannerHomePageScene);
           window.show();
-         }*/
+         }
 
 
 }

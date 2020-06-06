@@ -40,5 +40,11 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
+      <TableView layoutX="257.0" layoutY="137.0" prefHeight="539.0" prefWidth="831.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
