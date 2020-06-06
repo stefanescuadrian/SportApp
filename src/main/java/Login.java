@@ -52,7 +52,11 @@ public class Login implements Initializable {
 
     }
 
-    public void loginAction(ActionEvent e){
+    public String returnCurrentEmail(String email){
+        return email;
+    }
+
+    public void loginAction(ActionEvent e) throws IOException {
         if (usernameField.getText().isEmpty()) {
             alert.setTitle("ERROR");
             alert.setHeaderText(null);
@@ -83,29 +87,65 @@ public class Login implements Initializable {
                 FileNotFoundException ex) {
             ex.printStackTrace();
         }
+        boolean ok1=false, ok2=false;
         //Check Credentials
         for(int i =0; i<List.size();i++) {
             if (List.get(i) instanceof Sportsman) {
                 if (((Sportsman) List.get(i)).getEmail().equals(this.usernameField.getText())) {
-                    System.out.println("Accept");
+                    ok1=true;
                     if (((Sportsman) List.get(i)).getPassword().equals((this.passwordField.getText()))) {
-                        System.out.println("Accept");
+                        ok2=true;
+                        Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
+                        Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
+                        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
+                        window.setScene(sportsmanHomePageScene);
+                        window.show();
+                        returnCurrentEmail(((Sportsman) List.get(i)).getEmail());
                         break;
                     }
-
+                    else {
+                        alert.setTitle("ERROR");
+                        alert.setHeaderText(null);
+                        alert.setContentText("The password is incorrect!");
+                        alert.showAndWait();
+                        this.passwordField.clear();
+                        return;
+                    }
                 }
             }
             if(List.get(i) instanceof Eventplanner){
                 if(((Eventplanner) List.get(i)).getEmail().equals(this.usernameField.getText())){
-                    System.out.println("Accept");
-                    if(((Eventplanner) List.get(i)).getEmail().equals(this.passwordField.getText())){
-                        System.out.println("Accept");
+                    ok1=true;
+                    if(((Eventplanner) List.get(i)).getPassword().equals(this.passwordField.getText())){
+                        ok2=true;
+                        Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
+                        Scene eventplannerHomePageScene=new Scene(eventplannerHomePageView);
+                        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
+                        window.setScene(eventplannerHomePageScene);
+                        window.show();
+                        returnCurrentEmail(((Eventplanner) List.get(i)).getEmail());
                         break;
+                    }
+                    else {
+                        alert.setTitle("ERROR");
+                        alert.setHeaderText(null);
+                        alert.setContentText("The password is incorrect!");
+                        alert.showAndWait();
+                        this.passwordField.clear();
+                        return;
                     }
                 }
             }
         }
-
+        if (!ok1){
+            alert.setTitle("ERROR");
+            alert.setHeaderText(null);
+            alert.setContentText("This account doesn't exist!");
+            alert.showAndWait();
+            this.usernameField.clear();
+            this.passwordField.clear();
+            return;
+        }
     }
     /*//go to Sportsman Homepage
     public void loginAction(ActionEvent event) throws IOException {
