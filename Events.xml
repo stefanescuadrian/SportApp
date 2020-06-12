@@ -113,5 +113,33 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Football</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-16</string>
+    </void>
+    <void property="eventDescription">
+     <string>Descriere scurta </string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Medium</string>
+    </void>
+    <void property="eventLocation">
+     <string>Teren fotbal </string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>22</int>
+    </void>
+    <void property="eventName">
+     <string>Fotbal</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

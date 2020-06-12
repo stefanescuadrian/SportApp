@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class EventForm {
     private Alert alert = new Alert(Alert.AlertType.INFORMATION);
     private ArrayList List = new ArrayList();
-    ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Volleyball","Rugby","Yoga","Jogging","Football");
+    ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
     ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
     @FXML
     private ChoiceBox eventCategory;
@@ -146,10 +146,6 @@ public class EventForm {
             ex.printStackTrace();
         }
 
-        alert.setTitle("Information");
-        alert.setHeaderText(null);
-        alert.setContentText("Event successfully added!");
-        alert.showAndWait();
 
         Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
         Scene loginScene=new Scene(loginView);
