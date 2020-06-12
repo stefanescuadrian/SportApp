@@ -32,6 +32,15 @@ public class EventplannerHomePage implements Initializable {
     @FXML
     private TableView<Eveniment> table;
 
+    @FXML
+    private TableColumn<?, ?> firstColumn;
+
+    @FXML
+    private TableColumn<?, ?> secondColumn;
+
+    @FXML
+    private TableColumn<?, ?> thirdColumn;
+
 
     private static ArrayList List = new ArrayList();
     private static String eventPlannerName;
@@ -43,24 +52,20 @@ public class EventplannerHomePage implements Initializable {
 
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
-        //ImageView img1 = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
+        firstColumn.setMinWidth(60);
+        firstColumn.setMaxWidth(60);
+        firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
 
-        TableColumn firstColumn = new TableColumn();
-        firstColumn.setMinWidth(277);
-        firstColumn.setMaxWidth(277);
-        firstColumn.setCellValueFactory(new PropertyValueFactory<>("eC"));
 
-        TableColumn secondColumn = new TableColumn();
         secondColumn.setMinWidth(277);
         secondColumn.setMaxWidth(277);
-        secondColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
+        secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
 
-        TableColumn thirdColumn = new TableColumn();
+
         thirdColumn.setMinWidth(277);
         thirdColumn.setMaxWidth(277);
-        thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eN"));
+        thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
 
-        table.getColumns().addAll(firstColumn,secondColumn,thirdColumn);
 
         //Decodificare xml
         try{
@@ -76,8 +81,7 @@ public class EventplannerHomePage implements Initializable {
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment) {
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventName()));
-
+                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName()));
             }
         }
 

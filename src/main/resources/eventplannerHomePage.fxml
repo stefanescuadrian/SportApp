@@ -40,6 +40,11 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="table" layoutX="257.0" layoutY="137.0" prefHeight="539.0" prefWidth="831.0" />
+      <TableView fx:id="table" layoutX="257.0" layoutY="137.0" prefHeight="539.0" prefWidth="831.0">
+         <columns>
+            <TableColumn fx:id="firstColumn" prefWidth="75.0" />
+            <TableColumn fx:id="secondColumn" prefWidth="75.0" />
+            <TableColumn fx:id="thirdColumn" prefWidth="75.0" />
+         </columns></TableView>
    </children>
 </AnchorPane>
