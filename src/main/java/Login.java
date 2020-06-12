@@ -1,3 +1,4 @@
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +21,11 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
+
 public class Login implements Initializable {
-    private static ArrayList List = new ArrayList();
+
+
+    private static ArrayList<User> List = new ArrayList();
 
     @FXML
     private TextField usernameField;
@@ -56,7 +60,7 @@ public class Login implements Initializable {
         return email;
     }
 
-    public void loginAction(ActionEvent e) throws IOException {
+   public void loginAction(ActionEvent e) throws IOException {
         if (usernameField.getText().isEmpty()) {
             alert.setTitle("ERROR");
             alert.setHeaderText(null);
@@ -90,17 +94,17 @@ public class Login implements Initializable {
         boolean ok1=false, ok2=false;
         //Check Credentials
         for(int i =0; i<List.size();i++) {
-            if (List.get(i) instanceof Sportsman) {
-                if (((Sportsman) List.get(i)).getEmail().equals(this.usernameField.getText())) {
+            if (List.get(i).getRole().equals("Sportsman")) {
+                if ( List.get(i).getEmail().equals(this.usernameField.getText())) {
                     ok1=true;
-                    if (((Sportsman) List.get(i)).getPassword().equals((this.passwordField.getText()))) {
+                    if ( List.get(i).getPassword().equals((this.passwordField.getText()))) {
                         ok2=true;
                         Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
                         Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
                         Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
                         window.setScene(sportsmanHomePageScene);
                         window.show();
-                        returnCurrentEmail(((Sportsman) List.get(i)).getEmail());
+                        returnCurrentEmail( List.get(i).getEmail());
                         break;
                     }
                     else {
@@ -113,17 +117,17 @@ public class Login implements Initializable {
                     }
                 }
             }
-            if(List.get(i) instanceof Eventplanner){
-                if(((Eventplanner) List.get(i)).getEmail().equals(this.usernameField.getText())){
+            if (List.get(i).getRole().equals("Eventplanner")){
+                if( List.get(i).getEmail().equals(this.usernameField.getText())){
                     ok1=true;
-                    if(((Eventplanner) List.get(i)).getPassword().equals(this.passwordField.getText())){
+                    if( List.get(i).getPassword().equals(this.passwordField.getText())){
                         ok2=true;
                         Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
                         Scene eventplannerHomePageScene=new Scene(eventplannerHomePageView);
                         Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
                         window.setScene(eventplannerHomePageScene);
                         window.show();
-                        returnCurrentEmail(((Eventplanner) List.get(i)).getEmail());
+                        returnCurrentEmail( List.get(i).getEmail());
                         break;
                     }
                     else {
@@ -147,6 +151,9 @@ public class Login implements Initializable {
             return;
         }
     }
+
+
+
     /*//go to Sportsman Homepage
     public void loginAction(ActionEvent event) throws IOException {
         System.out.println("eee");
