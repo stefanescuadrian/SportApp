@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Eventplanner {
     private String firstName;
     private String lastName;
@@ -5,6 +7,8 @@ public class Eventplanner {
     private String password;
     private String phoneNumber;
     private String birthDate;
+    private ArrayList<Eveniment> Events = new ArrayList<Eveniment>();
+    private static ArrayList<Eveniment> allEvents = new ArrayList<Eveniment>();
     private final String role = "Eventplanner";
 
     public Eventplanner(){

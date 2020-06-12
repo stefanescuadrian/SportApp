@@ -20,19 +20,19 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <TextField layoutX="665.0" layoutY="180.0" prefHeight="53.0" prefWidth="486.0" promptText="Event's name" styleClass="txt" />
-      <TextField layoutX="665.0" layoutY="261.0" prefHeight="53.0" prefWidth="486.0" promptText="Location" styleClass="txt" />
-      <TextField layoutX="665.0" layoutY="350.0" prefHeight="53.0" prefWidth="486.0" promptText="Number of maximum participants" styleClass="txt" />
-      <TextField layoutX="665.0" layoutY="440.0" prefHeight="53.0" prefWidth="486.0" promptText="Date" styleClass="txt" />
+      <TextField fx:id="eventName" layoutX="665.0" layoutY="180.0" prefHeight="53.0" prefWidth="486.0" promptText="Event's name" styleClass="txt" />
+      <TextField fx:id="eventLocation" layoutX="665.0" layoutY="261.0" prefHeight="53.0" prefWidth="486.0" promptText="Location" styleClass="txt" />
+      <TextField fx:id="eventMaxNumberParticipants" layoutX="665.0" layoutY="350.0" prefHeight="53.0" prefWidth="486.0" promptText="Number of maximum participants" styleClass="txt" />
       <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="220.0" layoutY="118.0" preserveRatio="true">
          <image>
             <Image url="@icon_add.png" />
          </image>
       </ImageView>
-      <ChoiceBox fx:id="category" layoutX="668.0" layoutY="97.0" prefHeight="48.0" prefWidth="192.0" />
-      <ChoiceBox fx:id="difficulty" layoutX="995.0" layoutY="97.0" prefHeight="48.0" prefWidth="192.0" />
-      <Button fx:id="addButton" layoutX="665.0" layoutY="603.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="486.0" styleClass="btn" text="Add" />
-      <TextArea layoutX="665.0" layoutY="522.0" prefHeight="53.0" prefWidth="486.0" promptText="Short description" styleClass="txt" />
+      <ChoiceBox fx:id="eventCategory" layoutX="668.0" layoutY="97.0" prefHeight="48.0" prefWidth="192.0" />
+      <ChoiceBox fx:id="eventDifficulty" layoutX="995.0" layoutY="97.0" prefHeight="48.0" prefWidth="192.0" />
+      <Button fx:id="addButton" layoutX="665.0" layoutY="603.0" mnemonicParsing="false" onAction="#add" prefHeight="53.0" prefWidth="486.0" styleClass="btn" text="Add" />
+      <TextArea fx:id="eventDescription" layoutX="665.0" layoutY="522.0" prefHeight="53.0" prefWidth="486.0" promptText="Short description" styleClass="txt" />
       <Button fx:id="backButton" layoutX="37.0" layoutY="28.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
+      <DatePicker fx:id="eventDate" layoutX="665.0" layoutY="433.0" prefHeight="53.0" prefWidth="486.0" promptText="Date" />
    </children>
 </AnchorPane>

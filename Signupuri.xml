@@ -87,5 +87,27 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Eventplanner">
+    <void property="birthDate">
+     <string>2020-06-25</string>
+    </void>
+    <void property="email">
+     <string>w</string>
+    </void>
+    <void property="firstName">
+     <string>w</string>
+    </void>
+    <void property="lastName">
+     <string>w</string>
+    </void>
+    <void property="password">
+     <string>w</string>
+    </void>
+    <void property="phoneNumber">
+     <string>w</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

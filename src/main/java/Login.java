@@ -1,4 +1,5 @@
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -118,6 +119,7 @@ public class Login implements Initializable {
                     ok1=true;
                     if(((Eventplanner) List.get(i)).getPassword().equals(this.passwordField.getText())){
                         ok2=true;
+                        EventplannerHomePage T = new EventplannerHomePage(((Eventplanner) List.get(i)).getEmail());
                         Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
                         Scene eventplannerHomePageScene=new Scene(eventplannerHomePageView);
                         Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
