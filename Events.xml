@@ -113,5 +113,285 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Rugby</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-25</string>
+    </void>
+    <void property="eventDescription">
+     <string></string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Advanced</string>
+    </void>
+    <void property="eventLocation">
+     <string>aaaaaaaaaaaaaaa</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>32</int>
+    </void>
+    <void property="eventName">
+     <string>aaaa</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Yoga</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-24</string>
+    </void>
+    <void property="eventDescription">
+     <string></string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Beginner</string>
+    </void>
+    <void property="eventLocation">
+     <string>dadada</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>54</int>
+    </void>
+    <void property="eventName">
+     <string>dadasda</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Yoga</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-18</string>
+    </void>
+    <void property="eventDescription">
+     <string></string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Beginner</string>
+    </void>
+    <void property="eventLocation">
+     <string>dadad</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>31</int>
+    </void>
+    <void property="eventName">
+     <string>dada</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Volleyball</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-12</string>
+    </void>
+    <void property="eventDescription">
+     <string></string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Beginner</string>
+    </void>
+    <void property="eventLocation">
+     <string>dasa</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>21</int>
+    </void>
+    <void property="eventName">
+     <string>aasd</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Volleyball</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-02</string>
+    </void>
+    <void property="eventDescription">
+     <string></string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Medium</string>
+    </void>
+    <void property="eventLocation">
+     <string>dasa</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>asdas</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Basketball</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-25</string>
+    </void>
+    <void property="eventDescription">
+     <string>asdasda</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Medium</string>
+    </void>
+    <void property="eventLocation">
+     <string>dasda</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>dsa</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Rugby</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-08</string>
+    </void>
+    <void property="eventDescription">
+     <string>dsadasdaadadad</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Beginner</string>
+    </void>
+    <void property="eventLocation">
+     <string>dada</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>ada</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Volleyball</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-13</string>
+    </void>
+    <void property="eventDescription">
+     <string>eqweq</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Medium</string>
+    </void>
+    <void property="eventLocation">
+     <string>dadsa</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>asda</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Basketball</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-11</string>
+    </void>
+    <void property="eventDescription">
+     <string>12312</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Medium</string>
+    </void>
+    <void property="eventLocation">
+     <string>ad</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>adads</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Volleyball</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-11</string>
+    </void>
+    <void property="eventDescription">
+     <string>asdasda</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Advanced</string>
+    </void>
+    <void property="eventLocation">
+     <string>dadsads</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>1232312</int>
+    </void>
+    <void property="eventName">
+     <string>adsadsads</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

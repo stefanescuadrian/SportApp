@@ -146,11 +146,6 @@ public class EventForm {
             ex.printStackTrace();
         }
 
-        alert.setTitle("Information");
-        alert.setHeaderText(null);
-        alert.setContentText("Event successfully added!");
-        alert.showAndWait();
-
         Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
         Scene loginScene=new Scene(loginView);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
