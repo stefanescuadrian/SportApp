@@ -51,6 +51,10 @@ public class EventForm {
 
     @FXML
     private DatePicker eventDate;
+
+
+
+
     @FXML
     void goBack(ActionEvent event) throws IOException {
         Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));

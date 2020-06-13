@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -15,6 +16,8 @@ import javafx.stage.Stage;
 
 
 import javax.swing.text.html.ImageView;
+import java.awt.event.MouseEvent;
+import java.beans.EventHandler;
 import java.beans.XMLDecoder;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -42,6 +45,8 @@ public class EventplannerHomePage implements Initializable {
     private TableColumn<?, ?> thirdColumn;
 
 
+
+
     private static ArrayList List = new ArrayList();
     private static String eventPlannerName;
     public EventplannerHomePage(){
@@ -52,20 +57,20 @@ public class EventplannerHomePage implements Initializable {
 
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
-        firstColumn.setMinWidth(60);
-        firstColumn.setMaxWidth(60);
+       // firstColumn.setMinWidth(60);
+        //firstColumn.setMaxWidth(60);
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
 
 
-        secondColumn.setMinWidth(277);
-        secondColumn.setMaxWidth(277);
+
+       // secondColumn.setMinWidth(277);
+      //  secondColumn.setMaxWidth(277);
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
 
 
-        thirdColumn.setMinWidth(277);
-        thirdColumn.setMaxWidth(277);
+       // thirdColumn.setMinWidth(277);
+        //thirdColumn.setMaxWidth(277);
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
-
 
         //Decodificare xml
         try{
@@ -86,6 +91,7 @@ public class EventplannerHomePage implements Initializable {
         }
 
         table.setItems(data);
+
     }
     public EventplannerHomePage(String eventPlannerName) {
        this.eventPlannerName = eventPlannerName;
@@ -103,6 +109,9 @@ public class EventplannerHomePage implements Initializable {
 
     }
 
+
+
+
     @FXML
     void addEvents(ActionEvent event) throws IOException {
         Parent loginView= FXMLLoader.load(getClass().getResource("/eventForm.fxml"));
@@ -119,6 +128,8 @@ public class EventplannerHomePage implements Initializable {
         window.setScene(loginScene);
         window.show();
     }
+
+
 
 
 }

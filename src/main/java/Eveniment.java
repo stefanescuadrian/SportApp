@@ -1,17 +1,20 @@
 import javafx.beans.property.SimpleStringProperty;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import sun.java2d.pipe.SpanShapeRenderer;
+
+
 
 public class Eveniment {
     private ImageView photo;
+
     private String eventPlannerMail;
     private String eventCategory;
     private String eventDifficulty;
     private String eventName;
     private String eventLocation;
     private int eventMaxNumberParticipants;
-    private String eventDate;  //.getValue().toString()
+    private String eventDate; //getValue().toString()
     private String eventDescription;
 
 
@@ -29,7 +32,7 @@ public class Eveniment {
     public Eveniment(){
 
     }
-    public Eveniment(String eventPlannerMail, String eventCategory, String eventDifficulty, String eventName, String eventLocation, int eventMaxNumberParticipants, String eventDate, String eventDescription) {
+    public Eveniment(String eventPlannerMail, String eventCategory, String eventDifficulty, String eventName, String eventLocation, int eventMaxNumberParticipants,String eventDate,String eventDescription){
         this.eventPlannerMail = eventPlannerMail;
         this.eventCategory = eventCategory;
         this.eventDifficulty = eventDifficulty;
@@ -45,11 +48,14 @@ public class Eveniment {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
+
+
         }
         else if (eventCategory.equals("Rugby")){
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x2.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
+
         }
         else if (eventCategory.equals("Jogging")){
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x3.png")));
@@ -66,7 +72,7 @@ public class Eveniment {
             photo.setFitWidth(50);
             photo.setFitHeight(50);
         }
-        eNC = new SimpleStringProperty(eventName   +  "\n" + eventCategory);
+        eNC = new SimpleStringProperty(eventName   +  "\n" +"\n"+eventCategory);
         eD = new SimpleStringProperty(eventDescription);
     }
 
@@ -128,11 +134,11 @@ public class Eveniment {
         this.eventMaxNumberParticipants = maxNumberParticipants;
     }
 
-    public String getEventDate() {
+    public String getEventDate(){
         return eventDate;
     }
 
-    public void setEventDate(String eventDate) {
+    public void setEventDate(String eventDate){
         this.eventDate = eventDate;
     }
 

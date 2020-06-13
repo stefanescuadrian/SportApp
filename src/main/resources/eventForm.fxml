@@ -33,6 +33,6 @@
       <Button fx:id="addButton" layoutX="665.0" layoutY="603.0" mnemonicParsing="false" onAction="#add" prefHeight="53.0" prefWidth="486.0" styleClass="btn" text="Add" />
       <TextArea fx:id="eventDescription" layoutX="665.0" layoutY="522.0" prefHeight="53.0" prefWidth="486.0" promptText="Short description" styleClass="txt" />
       <Button fx:id="backButton" layoutX="37.0" layoutY="28.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
-      <DatePicker fx:id="eventDate" layoutX="665.0" layoutY="433.0" prefHeight="53.0" prefWidth="486.0" promptText="Date" />
+      <DatePicker fx:id="eventDate" layoutX="665.0" layoutY="433.0" prefHeight="53.0" prefWidth="486.0" promptText="Date" styleClass="txt" />
    </children>
 </AnchorPane>
