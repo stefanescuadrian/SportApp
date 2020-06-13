@@ -274,6 +274,7 @@ public class SportsmanHomePage implements Initializable {
     }
     @FXML
     void goToMyEventsPage(ActionEvent event) throws IOException {
+        SportsmanMyEventsPage S = new SportsmanMyEventsPage(sportsmanEmail);
         Parent sportsmanMyEventsPage= FXMLLoader.load(getClass().getResource("/sportsmanMyEventsPage.fxml"));
         Scene loginScene=new Scene(sportsmanMyEventsPage);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();

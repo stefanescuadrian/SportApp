@@ -40,14 +40,14 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="table" layoutX="219.0" layoutY="119.0" prefHeight="539.0" prefWidth="947.0">
+      <TableView fx:id="table" layoutX="215.0" layoutY="155.0" prefHeight="539.0" prefWidth="947.0">
          <columns>
             <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
             <TableColumn fx:id="secondColumn" prefWidth="75.0" styleClass="col-t" />
            <!-- <TableColumn fx:id="newColumn" prefWidth="75.0" />-->
             <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
          </columns></TableView>
-      <ImageView fitHeight="8.0" fitWidth="15.0" layoutX="686.0" layoutY="695.0" preserveRatio="true">
+      <ImageView fitHeight="8.0" fitWidth="15.0" layoutX="670.0" layoutY="712.0" preserveRatio="true">
          <image>
             <Image url="@x9.png" />
          </image>
