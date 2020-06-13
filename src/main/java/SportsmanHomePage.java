@@ -71,6 +71,8 @@ public class SportsmanHomePage implements Initializable {
 
     @FXML
     private CheckBox footballFilter;
+    @FXML
+    private Button myEventsButton;
 
     public Pane getCheckPane() {
         return checkPane;
@@ -263,6 +265,14 @@ public class SportsmanHomePage implements Initializable {
     void logoutOnAction(ActionEvent event) throws IOException {
         Parent loginView= FXMLLoader.load(getClass().getResource("/login.fxml"));
         Scene loginScene=new Scene(loginView);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(loginScene);
+        window.show();
+    }
+    @FXML
+    void goToMyEventsPage(ActionEvent event) throws IOException {
+        Parent sportsmanMyEventsPage= FXMLLoader.load(getClass().getResource("/sportsmanMyEventsPage.fxml"));
+        Scene loginScene=new Scene(sportsmanMyEventsPage);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(loginScene);
         window.show();

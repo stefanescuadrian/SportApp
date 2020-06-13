@@ -16,7 +16,7 @@
                 <Font name="System Bold" size="25.0" />
             </font>
         </Label>
-        <Button layoutX="1047.0" layoutY="96.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="141.0" styleClass="btn" text="My Events">
+        <Button fx:id="myEventsButton" layoutX="1047.0" layoutY="96.0" mnemonicParsing="false" onAction="#goToMyEventsPage" prefHeight="39.0" prefWidth="141.0" styleClass="btn" text="My Events">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
@@ -39,7 +39,7 @@
       <TableView fx:id="table" layoutX="173.0" layoutY="136.0" prefHeight="542.0" prefWidth="1025.0">
         <columns>
           <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
-          <TableColumn fx:id="secondColumn" editable="false" prefWidth="107.0" styleClass="col-t" />
+          <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
             <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
             <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-b" />
         </columns>

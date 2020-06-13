@@ -181,5 +181,10 @@
 }
 
 
-
-
+.btn_back{
+    -fx-graphic: url(arrow123.png);
+    -fx-background-color: transparent;
+}
+.btn_back:hover{
+    -fx-cursor: hand;
+}

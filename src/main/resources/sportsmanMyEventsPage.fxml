@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@sportsmanHomePage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SportsmanMyEventsPage">
+   <children>
+      <TitledPane fx:id="filters" animated="false" expanded="false" layoutX="1052.0" layoutY="84.0" prefHeight="398.0" prefWidth="305.0" styleClass="titled" text="Filters">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="306.0" styleClass="anchor">
+               <children>
+                  <Label alignment="CENTER" layoutX="68.0" layoutY="45.0" prefHeight="39.0" prefWidth="170.0" styleClass="lbl" text="Category">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="checkPane" layoutX="68.0" layoutY="92.0" prefHeight="200.0" prefWidth="170.0" styleClass="pane">
+                     <children>
+                        <CheckBox fx:id="basketFilter" layoutX="-3.0" layoutY="5.0" mnemonicParsing="true" onAction="#actionBasket" prefHeight="36.0" prefWidth="121.0" selected="true" styleClass="check" text="Basketball" />
+                        <CheckBox fx:id="tennisFilter" layoutX="-3.0" layoutY="35.0" mnemonicParsing="false" onAction="#actionTennis" selected="true" styleClass="check" text="Tennis" />
+                        <CheckBox fx:id="joggingFilter" layoutX="-3.0" layoutY="119.0" mnemonicParsing="false" onAction="#actionJogging" selected="true" styleClass="check" text="Jogging" />
+                        <CheckBox fx:id="rugbyFilter" layoutX="-2.0" layoutY="64.0" mnemonicParsing="false" onAction="#actionRugby" selected="true" styleClass="check" text="Rugby" />
+                        <CheckBox fx:id="footballFilter" layoutX="-3.0" layoutY="150.0" mnemonicParsing="false" onAction="#actionFootball" selected="true" styleClass="check" text="Football" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </TitledPane>
+      <TableView fx:id="table" layoutX="173.0" layoutY="147.0" prefHeight="542.0" prefWidth="1025.0">
+         <columns>
+            <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
+            <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
+            <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
+            <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-b" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="85.0" fitWidth="1081.0" layoutX="145.0" layoutY="95.0">
+         <image>
+            <Image url="@line.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="186.0" layoutY="92.0" text="My Events  ">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
+      <ImageView fitHeight="8.0" fitWidth="15.0" layoutX="680.0" layoutY="711.0" preserveRatio="true">
+         <image>
+            <Image url="@x9.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
