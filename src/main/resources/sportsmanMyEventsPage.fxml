@@ -8,7 +8,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@sportsmanHomePage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SportsmanMyEventsPage">
    <children>
       <TitledPane fx:id="filters" animated="false" expanded="false" layoutX="1052.0" layoutY="84.0" prefHeight="398.0" prefWidth="305.0" styleClass="titled" text="Filters">
@@ -36,7 +35,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </TitledPane>
-      <TableView fx:id="table" layoutX="173.0" layoutY="147.0" prefHeight="542.0" prefWidth="1025.0">
+      <TableView fx:id="table" layoutX="173.0" layoutY="114.0" prefHeight="542.0" prefWidth="1025.0">
          <columns>
             <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
             <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />

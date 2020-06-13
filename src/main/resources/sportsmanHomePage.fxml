@@ -36,7 +36,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="table" layoutX="174.0" layoutY="122.0" prefHeight="542.0" prefWidth="1025.0">
+      <TableView fx:id="table" layoutX="174.0" layoutY="121.0" prefHeight="542.0" prefWidth="1030.0">
         <columns>
           <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-is" />
           <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
