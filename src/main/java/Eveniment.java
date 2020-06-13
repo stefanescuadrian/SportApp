@@ -17,10 +17,13 @@ public class Eveniment {
     private String eventDescription;
     private Button button;
 
+    private Label status;
     private Label L;
     private SimpleStringProperty eNC;
     private SimpleStringProperty eD;
     private SimpleStringProperty eC;
+
+
 
     public ImageView getPhoto() {
         return photo;
@@ -109,6 +112,47 @@ public class Eveniment {
 
         this.button = button;
         this.button.setText("Join");
+    }
+
+    public Eveniment(String eventCategory, String eventDescription, String eventName, String status){
+        if (eventCategory.equals("Basketball")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Rugby")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x2.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Jogging")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x3.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Tennis")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x4.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Football")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x5.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        eNC = new SimpleStringProperty(eventName   +  "\n" + eventCategory);
+        eD = new SimpleStringProperty(eventDescription);
+
+        this.status.setText(status);
+
+    }
+
+    public Label getStatus() {
+        return status;
+    }
+
+    public void setStatus(Label status) {
+        this.status = status;
     }
 
     public String geteC() {
