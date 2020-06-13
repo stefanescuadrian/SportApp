@@ -8,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Control;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -16,8 +15,6 @@ import javafx.stage.Stage;
 
 
 import javax.swing.text.html.ImageView;
-import java.awt.event.MouseEvent;
-import java.beans.EventHandler;
 import java.beans.XMLDecoder;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -44,7 +41,8 @@ public class EventplannerHomePage implements Initializable {
     @FXML
     private TableColumn<?, ?> thirdColumn;
 
-
+    @FXML
+    private TableColumn<?, ?> newColumn;
 
 
     private static ArrayList List = new ArrayList();
@@ -57,20 +55,24 @@ public class EventplannerHomePage implements Initializable {
 
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
-       // firstColumn.setMinWidth(60);
-        //firstColumn.setMaxWidth(60);
+        firstColumn.setMinWidth(60);
+        firstColumn.setMaxWidth(60);
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
 
 
-
-       // secondColumn.setMinWidth(277);
-      //  secondColumn.setMaxWidth(277);
+        secondColumn.setMinWidth(277);
+        secondColumn.setMaxWidth(277);
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
 
+        newColumn.setMinWidth(100);
+        newColumn.setMaxWidth(100);
+        newColumn.setCellValueFactory(new PropertyValueFactory<>("eC"));
 
-       // thirdColumn.setMinWidth(277);
-        //thirdColumn.setMaxWidth(277);
+        thirdColumn.setMinWidth(277);
+        thirdColumn.setMaxWidth(277);
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
+
+
 
         //Decodificare xml
         try{
@@ -89,9 +91,7 @@ public class EventplannerHomePage implements Initializable {
                 data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName()));
             }
         }
-
         table.setItems(data);
-
     }
     public EventplannerHomePage(String eventPlannerName) {
        this.eventPlannerName = eventPlannerName;
@@ -102,15 +102,10 @@ public class EventplannerHomePage implements Initializable {
     }
 
 
-
-
     @FXML
     void goToMyEventsPage(ActionEvent event) {
 
     }
-
-
-
 
     @FXML
     void addEvents(ActionEvent event) throws IOException {
@@ -128,8 +123,6 @@ public class EventplannerHomePage implements Initializable {
         window.setScene(loginScene);
         window.show();
     }
-
-
 
 
 }

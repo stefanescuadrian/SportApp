@@ -3,7 +3,7 @@ public class Sportsman extends User{
     private final String role = "Sportsman";
 
     public Sportsman (){
-super();
+        super();
     }
 
     public String getRole() {
