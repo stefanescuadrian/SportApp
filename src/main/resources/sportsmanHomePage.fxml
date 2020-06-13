@@ -21,7 +21,7 @@
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <ImageView fitHeight="78.0" fitWidth="875.0" layoutX="237.0" layoutY="86.0">
+        <ImageView fitHeight="78.0" fitWidth="990.0" layoutX="193.0" layoutY="86.0">
             <image>
                 <Image url="@line.png" />
             </image>
@@ -36,11 +36,11 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="table" layoutX="263.0" layoutY="136.0" prefHeight="542.0" prefWidth="824.0">
+      <TableView fx:id="table" layoutX="216.0" layoutY="136.0" prefHeight="542.0" prefWidth="946.0">
         <columns>
-          <TableColumn fx:id="firstColumn" prefWidth="75.0" />
-          <TableColumn fx:id="secondColumn" prefWidth="107.0" />
-            <TableColumn fx:id="thirdColumn" prefWidth="75.0" />
+          <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
+          <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
+            <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
             <TableColumn fx:id="fourthColumn" prefWidth="114.0" />
         </columns>
       </TableView>

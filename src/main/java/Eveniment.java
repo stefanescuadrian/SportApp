@@ -72,6 +72,7 @@ public class Eveniment {
         }
         L = new Label();
         L.setText(eventCategory);
+//L.getStyleClass().add("l");
         eNC = new SimpleStringProperty(eventName + '\n' + L.getText());
         eD = new SimpleStringProperty(eventDescription);
         eC = new SimpleStringProperty(eventCategory);

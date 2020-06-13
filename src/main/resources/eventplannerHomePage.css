@@ -55,9 +55,9 @@
 -fx-text-fill: black;
     -fx-font-size:19px;
     -fx-font-weight: bold;
-    -fx-pref-width: 220;
+    -fx-pref-width: 200;
     -fx-border-color: transparent;
-    -fx-padding: 0 0 0 40;
+    -fx-padding: 0 0 0 30;
 }
 .col-i{
     -fx-pref-width: 180;
@@ -101,5 +101,16 @@
 {
     -fx-shape: " ";
     -fx-padding:0;
+}
+
+.btn_back{
+    -fx-graphic: url(arrow123.png);
+    -fx-background-color: transparent;
+}
+.btn_back:hover{
+    -fx-cursor: hand;
+}
+.l{
+    -fx-text-fill: red;
 }
 
