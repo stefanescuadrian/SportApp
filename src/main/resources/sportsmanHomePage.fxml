@@ -11,40 +11,40 @@
 
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@sportsmanHomePage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SportsmanHomePage">
     <children>
-        <Label layoutX="281.0" layoutY="86.0" text="Events">
+        <Label layoutX="180.0" layoutY="104.0" text="Events / ">
             <font>
                 <Font name="System Bold" size="25.0" />
             </font>
         </Label>
-        <Button layoutX="1169.0" layoutY="29.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="164.0" styleClass="btn" text="My Events">
+        <Button layoutX="1047.0" layoutY="96.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="141.0" styleClass="btn" text="My Events">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <ImageView fitHeight="78.0" fitWidth="990.0" layoutX="193.0" layoutY="86.0">
+        <ImageView fitHeight="85.0" fitWidth="1081.0" layoutX="145.0" layoutY="104.0">
             <image>
                 <Image url="@line.png" />
             </image>
         </ImageView>
-      <ImageView fitHeight="55.0" fitWidth="114.0" layoutX="41.0" layoutY="28.0" preserveRatio="true">
+      <ImageView fitHeight="48.0" fitWidth="102.0" layoutX="40.0" layoutY="29.0" preserveRatio="true">
          <image>
             <Image url="@logo_black.png" />
          </image>
       </ImageView>
-      <Button layoutX="1067.0" layoutY="39.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="logout-btn" text="Log out">
+      <Button layoutX="1250.0" layoutY="28.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="logout-btn" text="Log out">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="table" layoutX="216.0" layoutY="136.0" prefHeight="542.0" prefWidth="946.0">
+      <TableView fx:id="table" layoutX="173.0" layoutY="136.0" prefHeight="542.0" prefWidth="1025.0">
         <columns>
           <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
           <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
             <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
-            <TableColumn fx:id="fourthColumn" prefWidth="114.0" />
+            <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-b" />
         </columns>
       </TableView>
-        <TitledPane fx:id="filters" animated="false" expanded="false" layoutX="943.0" layoutY="78.0" prefHeight="398.0" prefWidth="305.0" styleClass="titled" text="Filters">
+        <TitledPane fx:id="filters" animated="false" expanded="false" layoutX="238.0" layoutY="96.0" prefHeight="398.0" prefWidth="305.0" styleClass="titled" text="Filters">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="306.0" styleClass="anchor">
                     <children>
@@ -67,5 +67,10 @@
                 <Font name="System Bold" size="25.0" />
             </font>
         </TitledPane>
+      <ImageView fitHeight="8.0" fitWidth="15.0" layoutX="679.0" layoutY="710.0" preserveRatio="true">
+         <image>
+            <Image url="@x9.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
