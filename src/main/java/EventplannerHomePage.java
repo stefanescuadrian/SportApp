@@ -41,6 +41,9 @@ public class EventplannerHomePage implements Initializable {
     @FXML
     private TableColumn<?, ?> thirdColumn;
 
+    @FXML
+    private TableColumn<?, ?> newColumn;
+
 
     private static ArrayList List = new ArrayList();
     private static String eventPlannerName;
@@ -61,10 +64,14 @@ public class EventplannerHomePage implements Initializable {
         secondColumn.setMaxWidth(277);
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
 
+        newColumn.setMinWidth(100);
+        newColumn.setMaxWidth(100);
+        newColumn.setCellValueFactory(new PropertyValueFactory<>("eC"));
 
         thirdColumn.setMinWidth(277);
         thirdColumn.setMaxWidth(277);
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
+
 
 
         //Decodificare xml
@@ -84,7 +91,6 @@ public class EventplannerHomePage implements Initializable {
                 data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName()));
             }
         }
-
         table.setItems(data);
     }
     public EventplannerHomePage(String eventPlannerName) {
@@ -94,8 +100,6 @@ public class EventplannerHomePage implements Initializable {
     public static String getEventPlannerName() {
         return eventPlannerName;
     }
-
-
 
 
     @FXML

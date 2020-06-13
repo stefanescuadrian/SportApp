@@ -57,34 +57,7 @@
     </void>
    </object>
   </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Yoga</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-11</string>
-    </void>
-    <void property="eventDescription">
-     <string></string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Medium</string>
-    </void>
-    <void property="eventLocation">
-     <string>q</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>12</int>
-    </void>
-    <void property="eventName">
-     <string>d</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
+  
   <void method="add">
    <object class="Eveniment">
     <void property="eventCategory">
@@ -135,6 +108,62 @@
     </void>
     <void property="eventName">
      <string>Fotbal</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Tennis</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-11</string>
+    </void>
+    <void property="eventDescription">
+     <string>ewq</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Advanced</string>
+    </void>
+    <void property="eventLocation">
+     <string>we</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>Nume</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Basketball</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-25</string>
+    </void>
+    <void property="eventDescription">
+     <string></string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Advanced</string>
+    </void>
+    <void property="eventLocation">
+     <string>ewq</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>23</int>
+    </void>
+    <void property="eventName">
+     <string>eqw</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>

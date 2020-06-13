@@ -1,4 +1,6 @@
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import sun.java2d.pipe.SpanShapeRenderer;
@@ -13,10 +15,12 @@ public class Eveniment {
     private int eventMaxNumberParticipants;
     private String eventDate;  //.getValue().toString()
     private String eventDescription;
+    private Button button;
 
-
+    private Label L;
     private SimpleStringProperty eNC;
     private SimpleStringProperty eD;
+    private SimpleStringProperty eC;
 
     public ImageView getPhoto() {
         return photo;
@@ -66,11 +70,65 @@ public class Eveniment {
             photo.setFitWidth(50);
             photo.setFitHeight(50);
         }
-        eNC = new SimpleStringProperty(eventName   +  "\n" + eventCategory);
+        L = new Label();
+        L.setText(eventCategory);
+        eNC = new SimpleStringProperty(eventName + '\n' + L.getText());
         eD = new SimpleStringProperty(eventDescription);
+        eC = new SimpleStringProperty(eventCategory);
     }
 
+    public Eveniment( String eventCategory, String eventDescription, String eventName, Button button){
+        if (eventCategory.equals("Basketball")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Rugby")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x2.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Jogging")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x3.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Tennis")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x4.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        else if (eventCategory.equals("Football")){
+            photo = new ImageView(new Image(this.getClass().getResourceAsStream("x5.png")));
+            photo.setFitWidth(50);
+            photo.setFitHeight(50);
+        }
+        eNC = new SimpleStringProperty(eventName   +  "\n" + eventCategory);
+        eD = new SimpleStringProperty(eventDescription);
 
+        this.button = button;
+        this.button.setText("Join");
+    }
+
+    public String geteC() {
+        return eC.get();
+    }
+
+    public SimpleStringProperty eCProperty() {
+        return eC;
+    }
+
+    public void seteC(String eC) {
+        this.eC.set(eC);
+    }
+
+    public Button getButton() {
+        return button;
+    }
+
+    public void setButton(Button button) {
+        this.button = button;
+    }
 
     public String getEventPlannerMail() {
         return eventPlannerMail;

@@ -100,6 +100,7 @@ public class Login implements Initializable {
                     ok1=true;
                     if ( List.get(i).getPassword().equals((this.passwordField.getText()))) {
                         ok2=true;
+                        SportsmanHomePage T = new SportsmanHomePage(List.get(i).getFirstName(), List.get(i).getLastName() ,List.get(i).getEmail());
                         Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
                         Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
                         Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
@@ -123,7 +124,7 @@ public class Login implements Initializable {
                     ok1=true;
                     if( List.get(i).getPassword().equals(this.passwordField.getText())){
                         ok2=true;
-                        EventplannerHomePage T = new EventplannerHomePage(((Eventplanner) List.get(i)).getEmail());
+                        EventplannerHomePage T = new EventplannerHomePage(List.get(i).getEmail());
                         Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
                         Scene eventplannerHomePageScene=new Scene(eventplannerHomePageView);
                         Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
