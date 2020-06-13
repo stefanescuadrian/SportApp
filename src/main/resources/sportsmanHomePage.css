@@ -132,17 +132,26 @@
     -fx-text-fill: black;
     -fx-font-size:19px;
     -fx-font-weight: bold;
-    -fx-pref-width: 200;
+    -fx-pref-width: 180;
     -fx-border-color: transparent;
-    -fx-padding: 0 0 0 30;
+    -fx-padding: 0 0 0 25;
 }
 .col-i{
     -fx-pref-width: 180;
     -fx-padding: 0 0 0 80;
 }
+.col-is{
+    -fx-pref-width: 120;
+    -fx-padding: 0 0 0 40;
+}
 .col-d{
-    -fx-pref-width: 600;
+    -fx-pref-width: 580;
     -fx-text-fill: #7a7a7a;
+}
+.col-b{
+    -fx-pref-width: 180;
+    -fx-padding: 15 0 0 0 ;
+
 }
 .table-row-cell:hover{
     -fx-background-color: #ededed;

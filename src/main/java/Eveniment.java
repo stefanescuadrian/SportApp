@@ -3,6 +3,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import sun.java2d.pipe.SpanShapeRenderer;
 
 public class Eveniment {
@@ -18,6 +19,7 @@ public class Eveniment {
     private Button button;
 
     private Label L;
+    private Text t;
     private SimpleStringProperty eNC;
     private SimpleStringProperty eD;
     private SimpleStringProperty eC;
@@ -70,9 +72,8 @@ public class Eveniment {
             photo.setFitWidth(50);
             photo.setFitHeight(50);
         }
-        L = new Label();
+       L = new Label();
         L.setText(eventCategory);
-//L.getStyleClass().add("l");
         eNC = new SimpleStringProperty(eventName + '\n' + L.getText());
         eD = new SimpleStringProperty(eventDescription);
         eC = new SimpleStringProperty(eventCategory);
