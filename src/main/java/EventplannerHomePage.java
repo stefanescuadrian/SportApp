@@ -41,9 +41,6 @@ public class EventplannerHomePage implements Initializable {
     @FXML
     private TableColumn<?, ?> thirdColumn;
 
-    @FXML
-    private TableColumn<?, ?> newColumn;
-
 
     private static ArrayList List = new ArrayList();
     private static String eventPlannerName;
@@ -55,21 +52,10 @@ public class EventplannerHomePage implements Initializable {
 
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
-        //firstColumn.setMinWidth(60);
-       // firstColumn.setMaxWidth(60);
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
 
-
-       // secondColumn.setMinWidth(277);
-       // secondColumn.setMaxWidth(277);
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
 
-       // newColumn.setMinWidth(100);
-       // newColumn.setMaxWidth(100);
-      // newColumn.setCellValueFactory(new PropertyValueFactory<>("eC"));
-
-        //thirdColumn.setMinWidth(277);
-        //thirdColumn.setMaxWidth(277);
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
 
 
@@ -104,6 +90,7 @@ public class EventplannerHomePage implements Initializable {
 
     @FXML
     void goToMyEventsPage(ActionEvent event) throws IOException {
+        EventplannerMyEventsPage E = new EventplannerMyEventsPage(eventPlannerName);
         Parent eventplannerMyEventsPageView= FXMLLoader.load(getClass().getResource("/eventplannerMyEventsPage.fxml"));
         Scene loginScene=new Scene(eventplannerMyEventsPageView);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
