@@ -5,6 +5,7 @@
     -fx-prompt-text-fill: #6e6d6b;
    -fx-prompt-text-padding:0 10 0 0;
 }
+
 .choice-box{
     -fx-background-color: transparent;
     -fx-mark-color:#A33AFF;
@@ -49,4 +50,21 @@
 }
 .btn_back:hover{
     -fx-cursor: hand;
+}
+.etxt{
+    -fx-background-color: transparent;
+-fx-font-size: 30;
+    -fx-font-weight: bold;
+}
+.etxt:hover{
+    -fx-cursor: hand;
+}
+.btn_del_par{
+    -fx-background-color: #4a4a4a;
+    -fx-text-fill: #d6d6d6;
+    -fx-font-weight: bold;
+}
+.btn_del_par:hover{
+    -fx-background-color: #5c5c5c;
+    -fx-text-fill: white;
 }

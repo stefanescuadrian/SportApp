@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@eventForm.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditEvents">
+   <children>
+      <Button fx:id="backButton" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
+      <TextArea fx:id="eventDescription" layoutX="665.0" layoutY="488.0" prefHeight="53.0" prefWidth="486.0" promptText="Short description" styleClass="txt" />
+      <Button fx:id="addButton" layoutX="665.0" layoutY="568.0" mnemonicParsing="false" onAction="#add" prefHeight="53.0" prefWidth="486.0" styleClass="btn" text="Edit" />
+      <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="220.0" layoutY="88.0" preserveRatio="true">
+         <image>
+            <Image url="@icon_add.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="eventMaxNumberParticipants" layoutX="665.0" layoutY="316.0" prefHeight="53.0" prefWidth="486.0" promptText="Number of maximum participants" styleClass="txt" />
+      <TextField fx:id="eventLocation" layoutX="665.0" layoutY="227.0" prefHeight="53.0" prefWidth="486.0" promptText="Location" styleClass="txt" />
+      <TextField fx:id="eventName" layoutX="665.0" layoutY="146.0" prefHeight="53.0" prefWidth="486.0" promptText="Event's name" styleClass="txt" />
+      <Label layoutX="285.0" layoutY="79.0" prefHeight="45.0" prefWidth="74.0" text="Edit">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="284.0" layoutY="105.0" prefHeight="45.0" prefWidth="117.0" text="Events">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="eventCategory" layoutX="652.0" layoutY="68.0" prefHeight="48.0" prefWidth="192.0" styleClass="etxt" />
+      <TextField fx:id="eventDifficulty" layoutX="982.0" layoutY="68.0" prefHeight="48.0" prefWidth="192.0" styleClass="etxt" />
+      <TextField fx:id="eventDate" layoutX="665.0" layoutY="401.0" prefHeight="53.0" prefWidth="486.0" promptText="Number of maximum participants" styleClass="txt" />
+      <Button fx:id="deleteButton" layoutX="665.0" layoutY="646.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="45.0" prefWidth="192.0" styleClass="btn_del_par" text="Delete" />
+      <Button fx:id="participantsButton" layoutX="959.0" layoutY="646.0" mnemonicParsing="false" onAction="#seeEventParticipants" prefHeight="45.0" prefWidth="192.0" styleClass="btn_del_par" text="See Participants" />
+   </children>
+</AnchorPane>

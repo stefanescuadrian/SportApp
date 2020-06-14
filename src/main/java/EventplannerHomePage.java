@@ -74,7 +74,8 @@ public class EventplannerHomePage implements Initializable {
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment) {
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName()));
+                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),
+                        ((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate()));
             }
         }
         table.setItems(data);
