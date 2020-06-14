@@ -27,8 +27,7 @@ public class Inregistrare {
         this.sportsmanLastName = sportsmanLastName;
         this.sportsmanEmail = sportsmanEmail;
         this.status = "Pending";
-
-
+        
         if (E.getEventCategory().equals("Basketball")){
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
             photo.setFitWidth(50);
@@ -153,4 +152,7 @@ public class Inregistrare {
     public void seteC(String eC) {
         this.eC.set(eC);
     }
+
 }
+
+

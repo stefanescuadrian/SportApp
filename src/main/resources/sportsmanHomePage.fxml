@@ -11,6 +11,14 @@
 
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@sportsmanHomePage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SportsmanHomePage">
     <children>
+      <TableView fx:id="table" layoutX="174.0" layoutY="121.0" prefHeight="542.0" prefWidth="1030.0">
+        <columns>
+          <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-is" />
+          <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
+            <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
+            <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-b" />
+        </columns>
+      </TableView>
         <Label layoutX="224.0" layoutY="110.0" text="Events / ">
             <font>
                 <Font name="System Bold" size="25.0" />
@@ -36,14 +44,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="table" layoutX="174.0" layoutY="121.0" prefHeight="542.0" prefWidth="1030.0">
-        <columns>
-          <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-is" />
-          <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
-            <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
-            <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-b" />
-        </columns>
-      </TableView>
         <TitledPane fx:id="filters" animated="false" expanded="false" layoutX="282.0" layoutY="102.0" prefHeight="398.0" prefWidth="305.0" styleClass="titled" text="Filters">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="306.0" styleClass="anchor">
