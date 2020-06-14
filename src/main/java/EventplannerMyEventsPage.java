@@ -1,6 +1,8 @@
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -11,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.beans.XMLDecoder;
@@ -27,7 +30,8 @@ public class EventplannerMyEventsPage implements Initializable {
 
     @FXML
     private TableColumn<?, ?> firstColumn;
-
+    @FXML
+    private Button add;
     @FXML
     private TableColumn<?, ?> secondColumn;
 
@@ -64,6 +68,7 @@ public class EventplannerMyEventsPage implements Initializable {
     }
 
     public void initialize(URL location, ResourceBundle resources){
+
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
@@ -82,14 +87,31 @@ public class EventplannerMyEventsPage implements Initializable {
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
-
+//am modificat aici
         for (int i=0; i<List.size(); i++){
             if (List.get(i) instanceof Eveniment)
             if (((Eveniment) List.get(i)).getEventPlannerMail().equals(eventPlannerName)){
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName()));
+                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),
+                        ((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate()));
             }
         }
         table.setItems(data);
+
     }
+    @FXML
+    void addB(ActionEvent event) throws IOException {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("/editEvents.fxml"));
+        Parent tableView=loader.load();
+        Scene loginScene=new Scene(tableView);
+        EditEvents controller=loader.getController();
+        controller.showDetails(table.getSelectionModel().getSelectedItem());
+       // System.out.println(table.getSelectionModel().getSelectedItem().getL());
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(loginScene);
+        window.show();
+    }
+
+
 
 }

@@ -73,6 +73,8 @@ public class SportsmanHomePage implements Initializable {
     private CheckBox footballFilter;
     @FXML
     private Button myEventsButton;
+    @FXML
+    private Button cancelButton;
 
     public Pane getCheckPane() {
         return checkPane;

@@ -54,11 +54,11 @@
                             </font></Label>
                         <Pane fx:id="checkPane" layoutX="68.0" layoutY="92.0" prefHeight="200.0" prefWidth="170.0" styleClass="pane">
                             <children>
-                                <CheckBox fx:id="basketFilter" layoutX="-3.0" layoutY="5.0" mnemonicParsing="true" onAction="#actionBasket" prefHeight="36.0" prefWidth="121.0" selected="true" styleClass="check" text="Basketball" />
-                                <CheckBox fx:id="tennisFilter" layoutX="-3.0" layoutY="35.0" mnemonicParsing="false" onAction="#actionTennis" selected="true" styleClass="check" text="Tennis" />
-                                <CheckBox fx:id="joggingFilter" layoutX="-3.0" layoutY="119.0" mnemonicParsing="false" onAction="#actionJogging" selected="true" styleClass="check" text="Jogging" />
-                                <CheckBox fx:id="rugbyFilter" layoutX="-2.0" layoutY="64.0" mnemonicParsing="false" onAction="#actionRugby" selected="true" styleClass="check" text="Rugby" />
-                                <CheckBox fx:id="footballFilter" layoutX="-3.0" layoutY="150.0" mnemonicParsing="false" onAction="#actionFootball" selected="true" styleClass="check" text="Football" />
+                                <CheckBox fx:id="basketFilter" layoutX="8.0" layoutY="5.0" mnemonicParsing="true" onAction="#actionBasket" prefHeight="36.0" prefWidth="121.0" selected="true" styleClass="check" text="Basketball" />
+                                <CheckBox fx:id="tennisFilter" layoutX="8.0" layoutY="35.0" mnemonicParsing="false" onAction="#actionTennis" selected="true" styleClass="check" text="Tennis" />
+                                <CheckBox fx:id="joggingFilter" layoutX="8.0" layoutY="95.0" mnemonicParsing="false" onAction="#actionJogging" selected="true" styleClass="check" text="Jogging" />
+                                <CheckBox fx:id="rugbyFilter" layoutX="9.0" layoutY="64.0" mnemonicParsing="false" onAction="#actionRugby" selected="true" styleClass="check" text="Rugby" />
+                                <CheckBox fx:id="footballFilter" layoutX="8.0" layoutY="126.0" mnemonicParsing="false" onAction="#actionFootball" selected="true" styleClass="check" text="Football" />
                             </children>
                         </Pane>
                     </children></AnchorPane>

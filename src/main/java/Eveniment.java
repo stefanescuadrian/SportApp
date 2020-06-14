@@ -24,6 +24,12 @@ public class Eveniment {
     private SimpleStringProperty eNC;
     private SimpleStringProperty eD;
     private SimpleStringProperty eC;
+    private SimpleStringProperty eL;
+    private SimpleStringProperty eN;
+    private SimpleStringProperty eDif;
+    private SimpleStringProperty eP;
+    private SimpleStringProperty eDate;
+    private SimpleStringProperty eM;
 
 
 
@@ -38,6 +44,7 @@ public class Eveniment {
     public Eveniment(){
 
     }
+
     public Eveniment(String eventPlannerMail, String eventCategory, String eventDifficulty, String eventName, String eventLocation, int eventMaxNumberParticipants, String eventDate, String eventDescription) {
         this.eventPlannerMail = eventPlannerMail;
         this.eventCategory = eventCategory;
@@ -49,7 +56,7 @@ public class Eveniment {
         this.eventDescription = eventDescription;
     }
 
-    public Eveniment( String eventCategory, String eventDescription, String eventName){
+    public Eveniment( String eventCategory, String eventDescription, String eventName,String eventDifficulty,String eventLocation,int eventMaxNumberParticipants,String eventDate){
         if (eventCategory.equals("Basketball")){
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
             photo.setFitWidth(50);
@@ -80,6 +87,14 @@ public class Eveniment {
         eNC = new SimpleStringProperty(eventName + '\n' + L.getText());
         eD = new SimpleStringProperty(eventDescription);
         eC = new SimpleStringProperty(eventCategory);
+        eN=new SimpleStringProperty(eventName);
+        eL=new SimpleStringProperty(eventLocation);
+        eDif=new SimpleStringProperty(eventDifficulty);
+        eDate=new SimpleStringProperty(eventDate);
+        eP=new SimpleStringProperty(Integer.toString(eventMaxNumberParticipants));
+
+
+
     }
 
     public Eveniment( String eventCategory, String eventDescription, String eventName, Button button){
@@ -159,10 +174,14 @@ public class Eveniment {
     public String geteC() {
         return eC.get();
     }
+    public String getN() {
+        return eN.get();
+    }
 
     public SimpleStringProperty eCProperty() {
         return eC;
     }
+
 
     public void seteC(String eC) {
         this.eC.set(eC);
@@ -234,6 +253,66 @@ public class Eveniment {
 
     public String getEventDate() {
         return eventDate;
+    }
+
+    public String geteL() {
+        return eL.get();
+    }
+
+    public SimpleStringProperty eLProperty() {
+        return eL;
+    }
+
+    public void seteL(String eL) {
+        this.eL.set(eL);
+    }
+
+    public String geteN() {
+        return eN.get();
+    }
+
+    public SimpleStringProperty eNProperty() {
+        return eN;
+    }
+
+    public void seteN(String eN) {
+        this.eN.set(eN);
+    }
+
+    public String geteDif() {
+        return eDif.get();
+    }
+
+    public SimpleStringProperty eDifProperty() {
+        return eDif;
+    }
+
+    public void seteDif(String eDif) {
+        this.eDif.set(eDif);
+    }
+
+    public String geteP() {
+        return eP.get();
+    }
+
+    public SimpleStringProperty ePProperty() {
+        return eP;
+    }
+
+    public void seteP(String eP) {
+        this.eP.set(eP);
+    }
+
+    public String geteDate() {
+        return eDate.get();
+    }
+
+    public SimpleStringProperty eDateProperty() {
+        return eDate;
+    }
+
+    public void seteDate(String eDate) {
+        this.eDate.set(eDate);
     }
 
     public void setEventDate(String eventDate) {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@eventplannerHomePage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeeEventParticipantsPage">
+   <children>
+      <ImageView fitHeight="219.0" fitWidth="945.0" layoutX="216.0" layoutY="58.0">
+         <image>
+            <Image url="@line.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="pendingTable" layoutX="243.0" layoutY="190.0" prefHeight="495.0" prefWidth="296.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1AAA" />
+        </columns>
+      </TableView>
+      <TableView fx:id="AcceptedTable" layoutX="537.0" layoutY="190.0" prefHeight="495.0" prefWidth="317.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+         </columns>
+      </TableView>
+      <TableView fx:id="DeclinedTable" layoutX="849.0" layoutY="190.0" prefHeight="495.0" prefWidth="284.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+         </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="41.0" layoutY="32.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
+      <Button layoutX="524.0" layoutY="99.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="172.0" styleClass="btn" text="Accept" />
+      <Button layoutX="719.0" layoutY="99.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="172.0" styleClass="add-btn" text="Decline" />
+   </children>
+</AnchorPane>
