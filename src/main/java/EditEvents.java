@@ -1,3 +1,5 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,8 +27,8 @@ public class EditEvents {
     private static String  eventPlannerMail;
     // @FXML
    // private ChoiceBox<?> eventDifficulty;
-   @FXML
-   private TextField eventDifficulty;
+   //@FXML
+   //private TextField eventDifficulty;
     // @FXML
     // private ChoiceBox<?> eventDifficulty;
     @FXML
@@ -62,6 +64,11 @@ public class EditEvents {
     @FXML
     private Button editButton;
 
+    public EditEvents(String eventName, String eventPlannerMail) {
+        this.eName = eventName;
+        this.eventPlannerMail = eventPlannerMail;
+    }
+
     public String getEName() {
         return eName;
     }
@@ -77,10 +84,6 @@ public class EditEvents {
 
     private Eveniment event;
 
-
-    public EditEvents(String eventName) {
-        this.eName = eventName;
-    }
 
     public EditEvents() {
 
@@ -160,7 +163,7 @@ public class EditEvents {
 
     @FXML
     void seeEventParticipants(ActionEvent event) throws IOException {
-        SeeEventParticipantsPage eventPP = new SeeEventParticipantsPage(this.eventPlannerMail);
+        SeeEventParticipantsPage eventPP = new SeeEventParticipantsPage(this.eventPlannerMail,eName);
         Parent eventParticipantsPage= FXMLLoader.load(getClass().getResource("/seeEventParticipantsPage.fxml"));
         Scene loginScene=new Scene(eventParticipantsPage);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();

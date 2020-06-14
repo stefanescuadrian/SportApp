@@ -26,6 +26,7 @@ import java.util.ResourceBundle;
 public class SeeEventParticipantsPage implements Initializable {
     private static ArrayList List = new ArrayList();
     private static String eventPlannerMail;
+    private static  String eName;
     @FXML
     private TableView<Inregistrare> pendingTable;
 
@@ -51,8 +52,11 @@ public class SeeEventParticipantsPage implements Initializable {
 
     }
 
-    public SeeEventParticipantsPage(String eventPlannerMail) {
+
+
+    public SeeEventParticipantsPage(String eventPlannerMail, String eName) {
         this.eventPlannerMail = eventPlannerMail;
+        this.eName = eName;
     }
 
     public String getEventPlannerMail() {
@@ -93,22 +97,15 @@ public class SeeEventParticipantsPage implements Initializable {
         }
 
         for (int i=0; i<List.size(); i++){
-            if (List.get(i) instanceof Inregistrare)
-            //System.out.println(((Inregistrare) List.get(i)).getE().getEventPlannerMail());
-            //System.out.println(getEventPlannerMail());
-            if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getE().getEventPlannerMail().equals(getEventPlannerMail())) {
-                System.out.println(((Inregistrare) List.get(i)).getStatus());
+            if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getE().getEventPlannerMail().equals(getEventPlannerMail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals(eName)) {
                 if (((Inregistrare) List.get(i)).getStatus().equals("Pending")) {
-                    //data1.add(new Inregistrare(((Inregistrare) List.get(i)).getSportsmanFirstName(), ((Inregistrare) List.get(i)).getSportsmanLastName()));
                     data1.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail()));
                 }
                 if (((Inregistrare) List.get(i)).getStatus().equals("Accepted")) {
-                    //data2.add(new Inregistrare(((Inregistrare) List.get(i)).getSportsmanFirstName(), ((Inregistrare) List.get(i)).getSportsmanLastName()));
                     data2.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail()));
 
                 }
                 if (((Inregistrare) List.get(i)).getStatus().equals("Declined")) {
-                    //data3.add(new Inregistrare(((Inregistrare) List.get(i)).getSportsmanFirstName(), ((Inregistrare) List.get(i)).getSportsmanLastName()));
                     data3.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail()));
 
                 }
@@ -133,11 +130,8 @@ public class SeeEventParticipantsPage implements Initializable {
                 ex.printStackTrace();
             }
 
-
-
             for(int i=0; i<List.size();i++){
-
-                if (List.get(i) instanceof Inregistrare) {
+                if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                     if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                         System.out.println("ok");
                         ((Inregistrare) List.get(i)).setStatus("Accepted");
@@ -181,8 +175,7 @@ public class SeeEventParticipantsPage implements Initializable {
         }
 
         for (int i=0; i<List.size(); i++){
-
-            if (List.get(i) instanceof Inregistrare) {
+            if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getE().getEventPlannerMail().equals(getEventPlannerMail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals(eName)) {
                 if (((Inregistrare) List.get(i)).getStatus().equals("Pending")) {
                     data1.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail()));
                 }
@@ -216,10 +209,8 @@ public class SeeEventParticipantsPage implements Initializable {
             }
 
 
-
             for(int i=0; i<List.size();i++){
-
-                if (List.get(i) instanceof Inregistrare) {
+                if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                     if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                         ((Inregistrare) List.get(i)).setStatus("Declined");
 

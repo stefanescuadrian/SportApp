@@ -98,27 +98,17 @@ private static String nume;//////////////////
         }
         table.setItems(data);
 
-    }
-    @FXML
-    void addB(ActionEvent event) throws IOException {
-        EditEvents E = new EditEvents(eventPlannerName); //e, de fapt, email-ul eventPlanner-ului
-        FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(getClass().getResource("/editEvents.fxml"));
-        Parent tableView=loader.load();
-        Scene loginScene=new Scene(tableView);
-        EditEvents controller=loader.getController();
-        controller.showDetails(table.getSelectionModel().getSelectedItem());
-       // System.out.println(table.getSelectionModel().getSelectedItem().getL());
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+
+
+
         table.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                EditEvents edit = new EditEvents(table.getSelectionModel().getSelectedItem().getN(), eventPlannerName); //e, de fapt, email-ul eventPlanner-ului
 
-                FXMLLoader loader=new FXMLLoader();
+                FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/editEvents.fxml"));
-                Parent tableView= null;
+                Parent tableView = null;
                 try {
                     tableView = tableView = loader.load();
                 } catch (IOException e) {
@@ -126,13 +116,10 @@ private static String nume;//////////////////
                 }
 
 
-                Scene tableViewScene=new Scene(tableView);
-                EditEvents controller=loader.getController();
+                Scene tableViewScene = new Scene(tableView);
+                EditEvents controller = loader.getController();
                 controller.showDetails(table.getSelectionModel().getSelectedItem());
-
-                EditEvents edit=new EditEvents(table.getSelectionModel().getSelectedItem().getN()); //creeaza un nou obj EditEv cu numele ev selectat
-
-                Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(tableViewScene);
                 window.show();
             }
