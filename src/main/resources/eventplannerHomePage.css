@@ -121,3 +121,7 @@
 .btn_back:hover{
     -fx-cursor: hand;
 }
+
+.cool{
+    -fx-text-fill: red;
+}

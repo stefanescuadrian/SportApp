@@ -12,7 +12,7 @@
    <children>
       <Button fx:id="backButton" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
       <TextArea fx:id="eventDescription" layoutX="665.0" layoutY="488.0" prefHeight="53.0" prefWidth="486.0" promptText="Short description" styleClass="txt" />
-      <Button fx:id="addButton" layoutX="665.0" layoutY="568.0" mnemonicParsing="false" onAction="#add" prefHeight="53.0" prefWidth="486.0" styleClass="btn" text="Edit" />
+      <Button fx:id="editButton" layoutX="665.0" layoutY="568.0" mnemonicParsing="false" onAction="#editEvent" prefHeight="53.0" prefWidth="486.0" styleClass="btn" text="Edit" />
       <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="220.0" layoutY="88.0" preserveRatio="true">
          <image>
             <Image url="@icon_add.png" />
@@ -31,10 +31,12 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="eventCategory" layoutX="652.0" layoutY="68.0" prefHeight="48.0" prefWidth="192.0" styleClass="etxt" />
-      <TextField fx:id="eventDifficulty" layoutX="982.0" layoutY="68.0" prefHeight="48.0" prefWidth="192.0" styleClass="etxt" />
+     <!-- <TextField fx:id="eventCategory" layoutX="147.0" layoutY="439.0" prefHeight="48.0" prefWidth="192.0" styleClass="etxt" />
+      <TextField fx:id="eventDifficulty" layoutX="314.0" layoutY="221.0" prefHeight="48.0" prefWidth="192.0" styleClass="etxt" />-->
       <TextField fx:id="eventDate" layoutX="665.0" layoutY="401.0" prefHeight="53.0" prefWidth="486.0" promptText="Number of maximum participants" styleClass="txt" />
       <Button fx:id="deleteButton" layoutX="665.0" layoutY="646.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="45.0" prefWidth="192.0" styleClass="btn_del_par" text="Delete" />
       <Button fx:id="participantsButton" layoutX="959.0" layoutY="646.0" mnemonicParsing="false" onAction="#seeEventParticipants" prefHeight="45.0" prefWidth="192.0" styleClass="btn_del_par" text="See Participants" />
+      <ChoiceBox fx:id="eventCategory" layoutX="670.0" layoutY="62.0" prefHeight="48.0" prefWidth="192.0" />
+      <ChoiceBox fx:id="eventDifficulty" layoutX="985.0" layoutY="62.0" prefHeight="48.0" prefWidth="192.0" />
    </children>
 </AnchorPane>

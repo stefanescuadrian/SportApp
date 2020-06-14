@@ -129,32 +129,13 @@ public class SportsmanHomePage implements Initializable {
         for(int i=0; i<buttons.length; i++) {
             buttons[i] = new Button();
             buttons[i].setOnAction(this::handleButtonAction);
-            buttons[i].setStyle("-fx-background-color: transparent;-fx-border-color: black; -fx-padding: 5 54 5 54;");
-            int finalI = i;
-            buttons[i].setOnMouseEntered(e -> buttons[finalI].setStyle("-fx-background-color: black;-fx-border-color: black; -fx-padding: 5 54 5 54;-fx-text-fill: white;"));
-            int finalI1 = i;
-            buttons[i].setOnMouseExited(e -> buttons[finalI1].setStyle("-fx-background-color: transparent;-fx-border-color: black; -fx-padding: 5 54 5 54;"));
         }
 
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
-
-        //firstColumn.setMinWidth(60);
-      //  firstColumn.setMaxWidth(60);
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
-
-
-       // secondColumn.setMinWidth(277);
-       // secondColumn.setMaxWidth(277);
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
-
-
-       // thirdColumn.setMinWidth(277);
-      //  thirdColumn.setMaxWidth(277);
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
-
-      //  fourthColumn.setMinWidth(277);
-       // fourthColumn.setMaxWidth(277);
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("button"));
 
 
@@ -182,31 +163,13 @@ public class SportsmanHomePage implements Initializable {
         for(int i=0; i<buttons.length; i++) {
             buttons[i] = new Button();
             buttons[i].setOnAction(this::handleButtonAction);
-            buttons[i].setStyle("-fx-background-color: transparent;-fx-border-color: black; -fx-padding: 5 54 5 54;");
-            int finalI = i;
-            buttons[i].setOnMouseEntered(e -> buttons[finalI].setStyle("-fx-background-color: black;-fx-border-color: black; -fx-padding: 5 54 5 54;-fx-text-fill: white;"));
-            int finalI1 = i;
-            buttons[i].setOnMouseExited(e -> buttons[finalI1].setStyle("-fx-background-color: transparent;-fx-border-color: black; -fx-padding: 5 54 5 54;"));
         }
 
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
-       // firstColumn.setMinWidth(60);
-      //  firstColumn.setMaxWidth(60);
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
-
-
-       // secondColumn.setMinWidth(277);
-       // secondColumn.setMaxWidth(277);
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
-
-
-       // thirdColumn.setMinWidth(277);
-       // thirdColumn.setMaxWidth(277);
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
-
-       // fourthColumn.setMinWidth(277);
-       // fourthColumn.setMaxWidth(277);
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("button"));
 
 

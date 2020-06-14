@@ -3,8 +3,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import sun.java2d.pipe.SpanShapeRenderer;
+import sun.plugin2.util.ColorUtil;
+
+import java.awt.*;
 
 public class Eveniment {
     private ImageView photo;
@@ -84,6 +88,8 @@ public class Eveniment {
         }
        L = new Label();
         L.setText(eventCategory);
+
+
         eNC = new SimpleStringProperty(eventName + '\n' + L.getText());
         eD = new SimpleStringProperty(eventDescription);
         eC = new SimpleStringProperty(eventCategory);
@@ -92,7 +98,6 @@ public class Eveniment {
         eDif=new SimpleStringProperty(eventDifficulty);
         eDate=new SimpleStringProperty(eventDate);
         eP=new SimpleStringProperty(Integer.toString(eventMaxNumberParticipants));
-
 
 
     }
@@ -160,6 +165,7 @@ public class Eveniment {
         eD = new SimpleStringProperty(eventDescription);
 
         this.status.setText(status);
+
 
     }
 

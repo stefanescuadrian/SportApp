@@ -43,7 +43,7 @@ public class EventplannerMyEventsPage implements Initializable {
 
     @FXML
     private TableView<Eveniment> table;
-
+private static String nume;//////////////////
     @FXML
     void goBack(ActionEvent event) throws IOException {
         Parent goBackPageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
@@ -93,6 +93,7 @@ public class EventplannerMyEventsPage implements Initializable {
             if (((Eveniment) List.get(i)).getEventPlannerMail().equals(eventPlannerName)){
                 data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),
                         ((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate()));
+
             }
         }
         table.setItems(data);
@@ -111,6 +112,32 @@ public class EventplannerMyEventsPage implements Initializable {
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(loginScene);
         window.show();
+        table.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+
+                FXMLLoader loader=new FXMLLoader();
+                loader.setLocation(getClass().getResource("/editEvents.fxml"));
+                Parent tableView= null;
+                try {
+                    tableView = tableView = loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                Scene tableViewScene=new Scene(tableView);
+                EditEvents controller=loader.getController();
+                controller.showDetails(table.getSelectionModel().getSelectedItem());
+
+                EditEvents edit=new EditEvents(table.getSelectionModel().getSelectedItem().getN()); //creeaza un nou obj EditEv cu numele ev selectat
+
+                Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+                window.setScene(tableViewScene);
+                window.show();
+            }
+        });
+
     }
 
 

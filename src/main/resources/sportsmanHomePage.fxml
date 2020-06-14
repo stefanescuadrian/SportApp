@@ -24,7 +24,7 @@
                 <Font name="System Bold" size="25.0" />
             </font>
         </Label>
-        <Button fx:id="myEventsButton" layoutX="1005.0" layoutY="102.0" mnemonicParsing="false" onAction="#goToMyEventsPage" prefHeight="39.0" prefWidth="143.0" styleClass="btn" text="My Events">
+        <Button fx:id="myEventsButton" layoutX="1007.0" layoutY="102.0" mnemonicParsing="false" onAction="#goToMyEventsPage" prefHeight="39.0" prefWidth="143.0" styleClass="btn" text="My Events">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
