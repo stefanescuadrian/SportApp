@@ -153,6 +153,16 @@
     -fx-padding: 15 0 0 0 ;
 
 }
+
+.col-b .button{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-padding: 5 54 5 54;
+}
+.col-b .button:hover{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
 .table-row-cell:hover{
     -fx-background-color: #ededed;
     -fx-cursor: hand;

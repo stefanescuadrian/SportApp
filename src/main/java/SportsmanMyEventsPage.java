@@ -102,6 +102,7 @@ public class SportsmanMyEventsPage implements Initializable {
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
 
+
         //Decodificare xml
         try{
             FileInputStream fis = new FileInputStream("./Registrations.xml");

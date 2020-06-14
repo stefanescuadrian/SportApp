@@ -4,26 +4,26 @@
   <void method="add">
    <object class="Eveniment">
     <void property="eventCategory">
-     <string>Rugby</string>
+     <string>Basketball</string>
     </void>
     <void property="eventDate">
-     <string>2020-07-02</string>
+     <string>2020-05-02</string>
     </void>
     <void property="eventDescription">
-     <string>An annual competition between six European sides: A England, France
+     <string>Is annual competition between six European sides: A England, France
 Ireland, Italy, Scotland and Wales</string>
     </void>
     <void property="eventDifficulty">
-     <string>Medium</string>
+     <string>Advanced</string>
     </void>
     <void property="eventLocation">
-     <string>a</string>
+     <string>Timisoara</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>10</int>
+     <int>20</int>
     </void>
     <void property="eventName">
-     <string>Six Nations</string>
+     <string>Good</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>
@@ -321,34 +321,6 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
     <void property="eventName">
      <string>Aaa</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Rugby</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-11</string>
-    </void>
-    <void property="eventDescription">
-     <string>gewegw</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Beginner</string>
-    </void>
-    <void property="eventLocation">
-     <string>Trr</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>123</int>
-    </void>
-    <void property="eventName">
-     <string>Eee</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>

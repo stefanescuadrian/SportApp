@@ -12,7 +12,7 @@
    <children>
       <TableView fx:id="table" layoutX="174.0" layoutY="121.0" prefHeight="542.0" prefWidth="1025.0">
          <columns>
-            <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
+            <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-is" />
             <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
             <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
             <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-b" />
@@ -59,7 +59,7 @@
             <Image url="@x9.png" />
          </image>
       </ImageView>
-      <Button fx:id="myEventsButton" layoutX="1005.0" layoutY="102.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="143.0" styleClass="btn" text="Cancel">
+      <Button fx:id="myEventsButton" layoutX="1006.0" layoutY="102.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="143.0" styleClass="btn" text="Cancel">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
