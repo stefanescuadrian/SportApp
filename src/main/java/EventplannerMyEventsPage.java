@@ -100,6 +100,7 @@ public class EventplannerMyEventsPage implements Initializable {
     }
     @FXML
     void addB(ActionEvent event) throws IOException {
+        EditEvents E = new EditEvents(eventPlannerName); //e, de fapt, email-ul eventPlanner-ului
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/editEvents.fxml"));
         Parent tableView=loader.load();

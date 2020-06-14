@@ -16,7 +16,8 @@ import java.time.LocalDate;
 
 public class EditEvents {
 
-   // @FXML
+    private static String  eventPlannerMail;
+    // @FXML
    // private ChoiceBox<?> eventDifficulty;
    @FXML
    private TextField eventDifficulty;
@@ -52,7 +53,17 @@ public class EditEvents {
     @FXML
     private TextField eventDate;
 
+
+
     private Eveniment event;
+
+    public EditEvents(){
+
+    }
+    public EditEvents(String eventPlannerMail) {
+        this.eventPlannerMail = eventPlannerMail;
+    }
+
     @FXML
     void goBack(ActionEvent event) throws IOException {
         Parent goBackView= FXMLLoader.load(getClass().getResource("/eventplannerMyEventsPage.fxml"));
@@ -79,6 +90,8 @@ public class EditEvents {
         this.eventDate.setText(event.geteDate());
     }
 
+
+
     @FXML
     void deleteEvent(ActionEvent event) throws IOException {
 
@@ -86,11 +99,13 @@ public class EditEvents {
 
     @FXML
     void seeEventParticipants(ActionEvent event) throws IOException {
+        SeeEventParticipantsPage eventPP = new SeeEventParticipantsPage(this.eventPlannerMail);
         Parent eventParticipantsPage= FXMLLoader.load(getClass().getResource("/seeEventParticipantsPage.fxml"));
         Scene loginScene=new Scene(eventParticipantsPage);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(loginScene);
         window.show();
     }
+
 
 }

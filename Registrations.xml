@@ -12,613 +12,6 @@
        <string>2020-07-02</string>
       </void>
       <void property="eventDescription">
-       <string>q</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>a</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>10</int>
-      </void>
-      <void property="eventName">
-       <string>a</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-24</string>
-      </void>
-      <void property="eventDescription">
-       <string></string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>we</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>17</int>
-      </void>
-      <void property="eventName">
-       <string>q</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Basketball</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-25</string>
-      </void>
-      <void property="eventDescription">
-       <string></string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>ewq</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>23</int>
-      </void>
-      <void property="eventName">
-       <string>eqw</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-24</string>
-      </void>
-      <void property="eventDescription">
-       <string></string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>we</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>17</int>
-      </void>
-      <void property="eventName">
-       <string>q</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-07-02</string>
-      </void>
-      <void property="eventDescription">
-       <string>q</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>a</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>10</int>
-      </void>
-      <void property="eventName">
-       <string>a</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Tennis</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-11</string>
-      </void>
-      <void property="eventDescription">
-       <string>ewq</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>we</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>12</int>
-      </void>
-      <void property="eventName">
-       <string>Nume</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-07-02</string>
-      </void>
-      <void property="eventDescription">
-       <string>q</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>a</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>10</int>
-      </void>
-      <void property="eventName">
-       <string>a</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Basketball</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-25</string>
-      </void>
-      <void property="eventDescription">
-       <string></string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>ewq</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>23</int>
-      </void>
-      <void property="eventName">
-       <string>eqw</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Football</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-16</string>
-      </void>
-      <void property="eventDescription">
-       <string>Descriere scurta </string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>Teren fotbal </string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>22</int>
-      </void>
-      <void property="eventName">
-       <string>Fotbal</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Football</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-16</string>
-      </void>
-      <void property="eventDescription">
-       <string>Descriere scurta </string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>Teren fotbal </string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>22</int>
-      </void>
-      <void property="eventName">
-       <string>Fotbal</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Basketball</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-25</string>
-      </void>
-      <void property="eventDescription">
-       <string></string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>ewq</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>23</int>
-      </void>
-      <void property="eventName">
-       <string>eqw</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Jogging</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-16</string>
-      </void>
-      <void property="eventDescription">
-       <string>rre</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>s</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>100</int>
-      </void>
-      <void property="eventName">
-       <string>s</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-24</string>
-      </void>
-      <void property="eventDescription">
-       <string></string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>we</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>17</int>
-      </void>
-      <void property="eventName">
-       <string>q</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Jogging</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-16</string>
-      </void>
-      <void property="eventDescription">
-       <string>rre</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>s</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>100</int>
-      </void>
-      <void property="eventName">
-       <string>s</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-07-02</string>
-      </void>
-      <void property="eventDescription">
        <string>An annual competition between six European sides: A England, France
 Ireland, Italy, Scotland and Wales</string>
       </void>
@@ -639,6 +32,23 @@ Ireland, Italy, Scotland and Wales</string>
       </void>
      </object>
     </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Rugby</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
     <void property="sportsmanEmail">
      <string>e</string>
     </void>
@@ -649,7 +59,7 @@ Ireland, Italy, Scotland and Wales</string>
      <string>e</string>
     </void>
     <void property="status">
-     <string>Pending</string>
+     <string>Accepted</string>
     </void>
    </object>
   </void>
@@ -661,26 +71,169 @@ Ireland, Italy, Scotland and Wales</string>
        <string>Rugby</string>
       </void>
       <void property="eventDate">
-       <string>2020-07-02</string>
+       <string>2020-06-24</string>
       </void>
       <void property="eventDescription">
-       <string>An annual competition between six European sides: A England, France
-Ireland, Italy, Scotland and Wales</string>
+       <string>The event is organized by the International Rugby Board (IRB) the sport&apos;s 
+body, and contested by the men&apos;s national teams that go through.</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Advanced</string>
+      </void>
+      <void property="eventLocation">
+       <string>we</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>17</int>
+      </void>
+      <void property="eventName">
+       <string>World Cup</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Rugby</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>e</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+    <void property="status">
+     <string>Declined</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Football</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-16</string>
+      </void>
+      <void property="eventDescription">
+       <string>Competition between the senior men’s national teams of members of the
+Union of European Football Association (UEFA), to determine the 
+continental champion. </string>
       </void>
       <void property="eventDifficulty">
        <string>Medium</string>
       </void>
       <void property="eventLocation">
-       <string>a</string>
+       <string>Teren fotbal </string>
       </void>
       <void property="eventMaxNumberParticipants">
-       <int>10</int>
+       <int>22</int>
       </void>
       <void property="eventName">
-       <string>Six Nations</string>
+       <string>UEFA Euro</string>
       </void>
       <void property="eventPlannerMail">
        <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Football</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>e</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+    <void property="status">
+     <string>Declined</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Jogging</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-16</string>
+      </void>
+      <void property="eventDescription">
+       <string>Whatever you are aiming for, whether you’re in the middle of Couch-to-5k 
+ or training for a marathon and looking for company during part
+of your long Sunday run, we’re here to support your goals.</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Advanced</string>
+      </void>
+      <void property="eventLocation">
+       <string>s</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>100</int>
+      </void>
+      <void property="eventName">
+       <string>Blast Running</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Jogging</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
       </void>
      </object>
     </void>
@@ -757,7 +310,70 @@ of your long Sunday run, we’re here to support your goals.</string>
      <string>Admin</string>
     </void>
     <void property="status">
-     <string>Pending1</string>
+     <string>Accepted</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Football</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-16</string>
+      </void>
+      <void property="eventDescription">
+       <string>Competition between the senior men’s national teams of members of the
+Union of European Football Association (UEFA), to determine the 
+continental champion. </string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Medium</string>
+      </void>
+      <void property="eventLocation">
+       <string>Teren fotbal </string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>22</int>
+      </void>
+      <void property="eventName">
+       <string>UEFA Euro</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Football</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>admin@admin.com</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>Admin</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>Admin</string>
+    </void>
+    <void property="status">
+     <string>Accepted</string>
     </void>
    </object>
   </void>
@@ -819,7 +435,7 @@ Ireland, Italy, Scotland and Wales</string>
      <string>Admin</string>
     </void>
     <void property="status">
-     <string>Pending1</string>
+     <string>Declined</string>
     </void>
    </object>
   </void>
@@ -828,36 +444,96 @@ Ireland, Italy, Scotland and Wales</string>
     <void property="e">
      <object class="Eveniment">
       <void property="eventCategory">
-       <string>Rugby</string>
+       <string>Football</string>
       </void>
       <void property="eventDate">
-       <string>2020-06-24</string>
+       <string>2020-07-02</string>
       </void>
       <void property="eventDescription">
-       <string>The event is organized by the International Rugby Board (IRB) the sport&apos;s 
-body, and contested by the men&apos;s national teams that go through.</string>
+       <string></string>
       </void>
       <void property="eventDifficulty">
        <string>Advanced</string>
       </void>
       <void property="eventLocation">
-       <string>we</string>
+       <string>d</string>
       </void>
       <void property="eventMaxNumberParticipants">
-       <int>17</int>
+       <int>12</int>
       </void>
       <void property="eventName">
-       <string>World Cup</string>
+       <string>eventw</string>
       </void>
       <void property="eventPlannerMail">
-       <string>d</string>
+       <string>w</string>
       </void>
      </object>
     </void>
     <void property="l">
      <object class="javafx.scene.control.Label">
       <void property="text">
-       <string>Rugby</string>
+       <string>Football</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>e</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+    <void property="status">
+     <string>Pending</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Football</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-07-02</string>
+      </void>
+      <void property="eventDescription">
+       <string></string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Advanced</string>
+      </void>
+      <void property="eventLocation">
+       <string>d</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>12</int>
+      </void>
+      <void property="eventName">
+       <string>eventw</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>w</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Football</string>
       </void>
      </object>
     </void>
@@ -879,194 +555,6 @@ body, and contested by the men&apos;s national teams that go through.</string>
     </void>
     <void property="sportsmanLastName">
      <string>Admin</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Football</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-16</string>
-      </void>
-      <void property="eventDescription">
-       <string>Competition between the senior men’s national teams of members of the
-Union of European Football Association (UEFA), to determine the 
-continental champion. </string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>Teren fotbal </string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>22</int>
-      </void>
-      <void property="eventName">
-       <string>UEFA Euro</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Football</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-07-02</string>
-      </void>
-      <void property="eventDescription">
-       <string>An annual competition between six European sides: A England, France
-Ireland, Italy, Scotland and Wales</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>a</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>10</int>
-      </void>
-      <void property="eventName">
-       <string>Six Nations</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Rugby</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-    <void property="status">
-     <string>Pending</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Football</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-16</string>
-      </void>
-      <void property="eventDescription">
-       <string>Competition between the senior men’s national teams of members of the
-Union of European Football Association (UEFA), to determine the 
-continental champion. </string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>Teren fotbal </string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>22</int>
-      </void>
-      <void property="eventName">
-       <string>UEFA Euro</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Football</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>e</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
     </void>
     <void property="status">
      <string>Pending</string>

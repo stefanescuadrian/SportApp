@@ -15,6 +15,8 @@ public class Inregistrare {
     private SimpleStringProperty eNC;
     private SimpleStringProperty eD;
     private SimpleStringProperty eC;
+    private SimpleStringProperty sportsmanFNLN;
+
 
 
     public Inregistrare(){
@@ -27,28 +29,24 @@ public class Inregistrare {
         this.sportsmanLastName = sportsmanLastName;
         this.sportsmanEmail = sportsmanEmail;
         this.status = "Pending";
-        
-        if (E.getEventCategory().equals("Basketball")){
+
+        if (E.getEventCategory().equals("Basketball")) {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
-        }
-        else if (E.getEventCategory().equals("Rugby")){
+        } else if (E.getEventCategory().equals("Rugby")) {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x2.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
-        }
-        else if (E.getEventCategory().equals("Jogging")){
+        } else if (E.getEventCategory().equals("Jogging")) {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x3.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
-        }
-        else if (E.getEventCategory().equals("Tennis")){
+        } else if (E.getEventCategory().equals("Tennis")) {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x4.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
-        }
-        else if (E.getEventCategory().equals("Football")){
+        } else if (E.getEventCategory().equals("Football")) {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x5.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
@@ -59,6 +57,11 @@ public class Inregistrare {
         eNC = new SimpleStringProperty(E.getEventName() + '\n' + L.getText());
         eD = new SimpleStringProperty(E.getEventDescription());
         eC = new SimpleStringProperty(E.getEventCategory());
+        sportsmanFNLN = new SimpleStringProperty(sportsmanFirstName + sportsmanLastName);
+    }
+
+    public Inregistrare(String sportsmanFirstName, String sportsmanLastName) {
+        sportsmanFNLN = new SimpleStringProperty(sportsmanFirstName + sportsmanLastName);
     }
 
     public Eveniment getE() {
@@ -153,6 +156,17 @@ public class Inregistrare {
         this.eC.set(eC);
     }
 
+    public String getSportsmanFNLN() {
+        return sportsmanFNLN.get();
+    }
+
+    public SimpleStringProperty sportsmanFNLNProperty() {
+        return sportsmanFNLN;
+    }
+
+    public void setSportsmanFNLN(String sportsmanFNLN) {
+        this.sportsmanFNLN.set(sportsmanFNLN);
+    }
 }
 
 

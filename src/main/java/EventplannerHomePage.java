@@ -88,6 +88,9 @@ public class EventplannerHomePage implements Initializable {
         return eventPlannerName;
     }
 
+    public static void setEventPlannerName(String eventPlannerName) {
+        EventplannerHomePage.eventPlannerName = eventPlannerName;
+    }
 
     @FXML
     void goToMyEventsPage(ActionEvent event) throws IOException {
