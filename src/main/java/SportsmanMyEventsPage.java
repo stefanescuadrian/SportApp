@@ -68,6 +68,9 @@ public class SportsmanMyEventsPage implements Initializable {
     private Button backButton;
 
     @FXML
+    private Button cancelButton;
+
+    @FXML
     private TableColumn<?, ?> thirdColumn;
 
     @FXML
@@ -94,13 +97,9 @@ public class SportsmanMyEventsPage implements Initializable {
         ObservableList<Inregistrare> data = FXCollections.observableArrayList();
 
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
-
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
-
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
-
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
-
 
 
         //Decodificare xml
@@ -113,27 +112,19 @@ public class SportsmanMyEventsPage implements Initializable {
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
-
-
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getSportsmanEmail().equals(sportsmanEmail)) {
-                data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail));
+                data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, ((Inregistrare) List.get(i)).getStatus()));
             }
         }
         table.setItems(data);
     }
     public void reinitializare(){
-
-
         ObservableList<Inregistrare> data = FXCollections.observableArrayList();
 
-
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
-
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
-
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
-
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
 
@@ -152,22 +143,20 @@ public class SportsmanMyEventsPage implements Initializable {
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getSportsmanEmail().equals(sportsmanEmail) ) {
                 if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Basketball") && checkList[0] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail));
+                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
                 if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Tennis") && checkList[1] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail));
+                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
                 if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Jogging") && checkList[2] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail));
+                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
                 if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Rugby") && checkList[3] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail));
+                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
                 if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Football") && checkList[4] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail));
+                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
             }
         }
 
         table.setItems(data);
     }
-
-
 
     @FXML
     void actionBasket(ActionEvent event) {
@@ -225,6 +214,43 @@ public class SportsmanMyEventsPage implements Initializable {
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(loginScene);
         window.show();
+    }
+
+    @FXML
+    void cancelAction(ActionEvent event) {
+        //Decodificare xml
+        try{
+            FileInputStream fis = new FileInputStream("./Registrations.xml");
+            XMLDecoder decoder = new XMLDecoder(fis);
+            ArrayList A = new ArrayList();
+            A = (ArrayList) decoder.readObject();
+            List =A;
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+
+        if (table.getSelectionModel().getSelectedItem() instanceof Inregistrare){
+            Inregistrare r = table.getSelectionModel().getSelectedItem();
+            for (int i=0; i<List.size(); i++){
+                if (List.get(i) instanceof Inregistrare){
+                    if (((Inregistrare) List.get(i)).getE().getEventName().equals(r.getE().getEventName()) && ((Inregistrare) List.get(i)).getSportsmanEmail().equals(r.getSportsmanEmail())){
+                        List.remove(i);
+                    }
+                }
+            }
+        }
+
+        try{
+            FileOutputStream fos = new FileOutputStream("./Registrations.xml");
+            XMLEncoder encoder = new XMLEncoder(fos);
+            encoder.writeObject(List);
+            encoder.close();
+            fos.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        reinitializare();
+
     }
 
 }

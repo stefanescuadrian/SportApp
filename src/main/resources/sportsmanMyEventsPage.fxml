@@ -59,7 +59,7 @@
             <Image url="@x9.png" />
          </image>
       </ImageView>
-      <Button fx:id="myEventsButton" layoutX="1006.0" layoutY="102.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="143.0" styleClass="btn" text="Cancel">
+      <Button fx:id="cancelButton" layoutX="1006.0" layoutY="102.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="39.0" prefWidth="143.0" styleClass="btn" text="Cancel">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

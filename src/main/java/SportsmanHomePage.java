@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.FileInputStream;
@@ -50,6 +51,7 @@ public class SportsmanHomePage implements Initializable {
     private Button goBackButton;
 
     private Button[] buttons = new Button[100];
+    private boolean[] buttons_disable_status = new boolean[100];
 
     @FXML
     private TitledPane filters;
@@ -119,7 +121,63 @@ public class SportsmanHomePage implements Initializable {
         SportsmanHomePage.sportsmanEmail = sportsmanEmail;
     }
 
+    private void verificareInregistrareaExista(String eventName, String eventplannerMail, String sportsmanMail) {
+        //O inregistrare e caracterizata in principiu de numele evenimentului, email-ul eventplanner-ului si email-ul sportsman-ului
+
+        //Decodificare xml Registrations
+        ArrayList Lista = new ArrayList();
+        ArrayList Lista1 = new ArrayList();
+        try{
+            FileInputStream fis = new FileInputStream("./Registrations.xml");
+            XMLDecoder decoder = new XMLDecoder(fis);
+            ArrayList A = new ArrayList();
+            A = (ArrayList) decoder.readObject();
+            Lista =A;
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+
+        //Decodificare xml Events
+        try{
+            FileInputStream fis = new FileInputStream("./Events.xml");
+            XMLDecoder decoder = new XMLDecoder(fis);
+            ArrayList A = new ArrayList();
+            A = (ArrayList) decoder.readObject();
+            Lista1 =A;
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+
+
+        for (int i=0;i<Lista.size();i++){
+            if(Lista.get(i) instanceof Inregistrare){
+                if (((Inregistrare) Lista.get(i)).getSportsmanEmail().equals(sportsmanMail) && ((Inregistrare) Lista.get(i)).getE().getEventPlannerMail().equals(eventplannerMail) && ((Inregistrare) Lista.get(i)).getE().getEventName().equals(eventName)){
+                    for(int j=0;j<Lista1.size();j++){
+                        if (Lista1.get(j) instanceof Eveniment){
+                            if (((Eveniment) Lista1.get(j)).getEventName().equals(eventName) && ((Eveniment) Lista1.get(j)).getEventPlannerMail().equals(eventplannerMail)){
+                                buttons_disable_status[j] = true;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+    private void initializare_status_butoane(){
+        for(int i=0; i<buttons_disable_status.length;i++){
+            buttons_disable_status[i] = false;
+        }
+    }
+    private void initializare_butoane(){
+        for (int i=0; i<buttons.length; i++){
+            buttons[i].setDisable(buttons_disable_status[i]);
+        }
+    }
+
     public void initialize(URL location, ResourceBundle resources) {
+
         checkList[0] = 1;
         checkList[1] = 1;
         checkList[2] = 1;
@@ -130,7 +188,8 @@ public class SportsmanHomePage implements Initializable {
             buttons[i] = new Button();
             buttons[i].setOnAction(this::handleButtonAction);
         }
-
+        initializare_status_butoane();
+        initializare_butoane();
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
@@ -153,6 +212,8 @@ public class SportsmanHomePage implements Initializable {
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment) {
+                verificareInregistrareaExista(((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventPlannerMail(), sportsmanEmail);
+                initializare_butoane();
                 data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
             }
         }
@@ -164,7 +225,7 @@ public class SportsmanHomePage implements Initializable {
             buttons[i] = new Button();
             buttons[i].setOnAction(this::handleButtonAction);
         }
-
+        initializare_butoane();
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
 
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
@@ -187,6 +248,8 @@ public class SportsmanHomePage implements Initializable {
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment ) {
+                verificareInregistrareaExista(((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventPlannerMail(), sportsmanEmail);
+                initializare_butoane();
                 if(((Eveniment) List.get(i)).getEventCategory().equals("Basketball") && checkList[0] == 1)
                 data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
                 if(((Eveniment) List.get(i)).getEventCategory().equals("Tennis") && checkList[1] == 1)
@@ -206,9 +269,10 @@ public class SportsmanHomePage implements Initializable {
 
     private void handleButtonAction(ActionEvent actionEvent) {
         for (int i=0; i<buttons.length; i++)
-            if (actionEvent.getSource() == buttons[i] && List.get(i) instanceof Eveniment)
-            I = new Inregistrare((Eveniment) List.get(i), SportsmanHomePage.getSportsmanFirstName(), SportsmanHomePage.getSportsmanLastName(), SportsmanHomePage.getSportsmanEmail());
+            if (actionEvent.getSource() == buttons[i] && List.get(i) instanceof Eveniment) {
 
+                I = new Inregistrare((Eveniment) List.get(i), SportsmanHomePage.getSportsmanFirstName(), SportsmanHomePage.getSportsmanLastName(), SportsmanHomePage.getSportsmanEmail(), "Pending");
+            }
         //Decodificare xml
         try{
             FileInputStream fis = new FileInputStream("./Registrations.xml");
@@ -222,6 +286,7 @@ public class SportsmanHomePage implements Initializable {
 
         //Codificare xml file
         try{
+
             List1.add(I);
             FileOutputStream fos = new FileOutputStream("./Registrations.xml");
             XMLEncoder encoder = new XMLEncoder(fos);
@@ -231,7 +296,7 @@ public class SportsmanHomePage implements Initializable {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
+        reinitializare();
     }
 
     @FXML

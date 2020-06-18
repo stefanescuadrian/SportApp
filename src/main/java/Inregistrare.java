@@ -8,7 +8,7 @@ public class Inregistrare {
     private String sportsmanFirstName;
     private String sportsmanLastName;
     private String sportsmanEmail;
-    private String status;
+    private String status = "Pending";
     private ImageView photo;
 
     private Label L;
@@ -23,12 +23,12 @@ public class Inregistrare {
 
     }
 
-    public Inregistrare(Eveniment e, String sportsmanFirstName, String sportsmanLastName, String sportsmanEmail) {
+    public Inregistrare(Eveniment e, String sportsmanFirstName, String sportsmanLastName, String sportsmanEmail, String status) {
         E = e;
         this.sportsmanFirstName = sportsmanFirstName;
         this.sportsmanLastName = sportsmanLastName;
         this.sportsmanEmail = sportsmanEmail;
-        this.status = "Pending";
+        this.status = status;
 
         if (E.getEventCategory().equals("Basketball")) {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
@@ -57,7 +57,7 @@ public class Inregistrare {
         eNC = new SimpleStringProperty(E.getEventName() + '\n' + L.getText());
         eD = new SimpleStringProperty(E.getEventDescription());
         eC = new SimpleStringProperty(E.getEventCategory());
-        sportsmanFNLN = new SimpleStringProperty(sportsmanFirstName + sportsmanLastName);
+        sportsmanFNLN = new SimpleStringProperty(sportsmanFirstName + " " +sportsmanLastName);
     }
 
     public Inregistrare(String sportsmanFirstName, String sportsmanLastName) {
@@ -97,7 +97,7 @@ public class Inregistrare {
     }
 
     public String getStatus() {
-        return status;
+        return this.status;
     }
 
     public void setStatus(String status) {

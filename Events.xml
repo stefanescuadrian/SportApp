@@ -7,7 +7,7 @@
      <string>Basketball</string>
     </void>
     <void property="eventDate">
-     <string>2020-05-02</string>
+     <string>2020-05-01</string>
     </void>
     <void property="eventDescription">
      <string>Is annual competition between six European sides: A England, France
@@ -20,10 +20,10 @@ Ireland, Italy, Scotland and Wales</string>
      <string>Timisoara</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>20</int>
+     <int>2</int>
     </void>
     <void property="eventName">
-     <string>Good</string>
+     <string>Goodd</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>
@@ -54,35 +54,6 @@ of your long Sunday run, we’re here to support your goals.</string>
     </void>
     <void property="eventName">
      <string>Blast Running</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Rugby</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-24</string>
-    </void>
-    <void property="eventDescription">
-     <string>The event is organized by the International Rugby Board (IRB) the sport&apos;s 
-body, and contested by the men&apos;s national teams that go through.</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Advanced</string>
-    </void>
-    <void property="eventLocation">
-     <string>we</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>17</int>
-    </void>
-    <void property="eventName">
-     <string>World Cup</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>
@@ -138,7 +109,7 @@ the men&apos;s national teams of the members of the International Basketball</st
      <string>Timisoara</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>12</int>
+     <int>5</int>
     </void>
     <void property="eventName">
      <string>Challenge You</string>
@@ -199,156 +170,6 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
     <void property="eventName">
      <string>Flower</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Jogging</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-11</string>
-    </void>
-    <void property="eventDescription">
-     <string>123</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Beginner</string>
-    </void>
-    <void property="eventLocation">
-     <string>asd</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>123</int>
-    </void>
-    <void property="eventName">
-     <string>asd</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Football</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-07-02</string>
-    </void>
-    <void property="eventDescription">
-     <string></string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Advanced</string>
-    </void>
-    <void property="eventLocation">
-     <string>d</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>12</int>
-    </void>
-    <void property="eventName">
-     <string>eventw</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>w</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Basketball</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-04</string>
-    </void>
-    <void property="eventDescription">
-     <string>adasdasdasdasd</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Medium</string>
-    </void>
-    <void property="eventLocation">
-     <string>De</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>12</int>
-    </void>
-    <void property="eventName">
-     <string>Aaa</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Tennis</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-18</string>
-    </void>
-    <void property="eventDescription">
-     <string>sdasaasda</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Medium</string>
-    </void>
-    <void property="eventLocation">
-     <string>Sss</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>12</int>
-    </void>
-    <void property="eventName">
-     <string>Aaa</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Basketball</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-13</string>
-    </void>
-    <void property="eventDescription">
-     <string>asdasdadasdadada</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Advanced</string>
-    </void>
-    <void property="eventLocation">
-     <string>aaa</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>12</int>
-    </void>
-    <void property="eventName">
-     <string>adddd</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>

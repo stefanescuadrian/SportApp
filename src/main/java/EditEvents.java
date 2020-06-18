@@ -76,12 +76,11 @@ public class EditEvents {
     @FXML
     private TextField eventMaxNumberParticipants;
 
-    private static ArrayList List = new ArrayList();////////////////////////////////////////
     @FXML
     private TextField eventDate;
 
-
-
+    private static ArrayList List = new ArrayList();////////////////////////////////////////
+    private static ArrayList List1 = new ArrayList();
     private Eveniment event;
 
 
@@ -140,13 +139,22 @@ public class EditEvents {
             ex.printStackTrace();
         }
 
+        try {
+            FileInputStream fis1 = new FileInputStream("./Registrations.xml");
+            XMLDecoder decoder1 = new XMLDecoder(fis1);
+            ArrayList A = new ArrayList();
+            A = (ArrayList) decoder1.readObject();
+            List1 = A;
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+
         for (int i = 0; i < List.size(); i++) {
             if (List.get(i) instanceof Eveniment)
                 if (((Eveniment) List.get(i)).getEventName().equals(eName)) {
 
                     try {
                        List.remove(i);
-
                         FileOutputStream fos = new FileOutputStream("./Events.xml");
                         XMLEncoder encoder = new XMLEncoder(fos);
                         encoder.writeObject(List);
@@ -157,13 +165,28 @@ public class EditEvents {
                     }
 
                 }
-
         }
+
+        for (int i=0; i < List1.size(); i++){
+            if (List1.get(i) instanceof Inregistrare && ((Inregistrare) List1.get(i)).getE().getEventName().equals(eName) && ((Inregistrare) List1.get(i)).getE().getEventPlannerMail().equals(eventPlannerMail)){
+                List1.remove(i);
+            }
+        }
+        try {
+            FileOutputStream fos = new FileOutputStream("./Registrations.xml");
+            XMLEncoder encoder = new XMLEncoder(fos);
+            encoder.writeObject(List1);
+            encoder.close();
+            fos.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
     }
 
     @FXML
     void seeEventParticipants(ActionEvent event) throws IOException {
-        SeeEventParticipantsPage eventPP = new SeeEventParticipantsPage(this.eventPlannerMail,eName);
+        SeeEventParticipantsPage eventPP = new SeeEventParticipantsPage(this.eventPlannerMail,eName,eventMaxNumberParticipants.getText());
         Parent eventParticipantsPage= FXMLLoader.load(getClass().getResource("/seeEventParticipantsPage.fxml"));
         Scene loginScene=new Scene(eventParticipantsPage);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
