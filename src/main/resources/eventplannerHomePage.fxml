@@ -46,6 +46,7 @@
             <TableColumn fx:id="secondColumn" prefWidth="75.0" styleClass="col-t" />
            <!-- <TableColumn fx:id="newColumn" prefWidth="75.0" />-->
             <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
+            <TableColumn fx:id="firstColumn1" prefWidth="75.0" styleClass="col-i" />
          </columns></TableView>
       <ImageView fitHeight="8.0" fitWidth="15.0" layoutX="670.0" layoutY="712.0" preserveRatio="true">
          <image>

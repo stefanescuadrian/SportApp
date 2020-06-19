@@ -2,6 +2,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 
 public class Inregistrare {
     private Eveniment E;
@@ -10,12 +11,13 @@ public class Inregistrare {
     private String sportsmanEmail;
     private String status = "Pending";
     private ImageView photo;
-
     private Label L;
     private SimpleStringProperty eNC;
     private SimpleStringProperty eD;
     private SimpleStringProperty eC;
     private SimpleStringProperty sportsmanFNLN;
+    private SimpleStringProperty sT;////////////////////////////////////
+private Text t;
 
 
 
@@ -57,6 +59,7 @@ public class Inregistrare {
         eNC = new SimpleStringProperty(E.getEventName() + '\n' + L.getText());
         eD = new SimpleStringProperty(E.getEventDescription());
         eC = new SimpleStringProperty(E.getEventCategory());
+
         sportsmanFNLN = new SimpleStringProperty(sportsmanFirstName + " " +sportsmanLastName);
     }
 

@@ -15,7 +15,7 @@
             <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-is" />
             <TableColumn fx:id="secondColumn" prefWidth="107.0" styleClass="col-t" />
             <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
-            <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-b" />
+            <TableColumn fx:id="fourthColumn" prefWidth="114.0" styleClass="col-s" />
          </columns>
       </TableView>
       <TitledPane fx:id="filters" animated="false" expanded="false" layoutX="282.0" layoutY="102.0" prefHeight="398.0" prefWidth="305.0" styleClass="titled" text="Filters">
@@ -59,7 +59,7 @@
             <Image url="@x9.png" />
          </image>
       </ImageView>
-      <Button fx:id="cancelButton" layoutX="1006.0" layoutY="102.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="39.0" prefWidth="143.0" styleClass="btn" text="Cancel">
+      <Button fx:id="cancelButton" layoutX="1006.0" layoutY="95.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="36.0" prefWidth="143.0" styleClass="btn-c" text="Cancel">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

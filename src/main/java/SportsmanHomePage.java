@@ -2,6 +2,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,7 +11,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -27,6 +30,8 @@ import java.util.ResourceBundle;
 
 public class SportsmanHomePage implements Initializable {
     Inregistrare I;
+    private static String eventPlannerName;////////////////////////////////////////////
+
     public static String sportsmanEmail;
     public static String sportsmanFirstName;
     public static String sportsmanLastName;
@@ -187,6 +192,7 @@ public class SportsmanHomePage implements Initializable {
         for(int i=0; i<buttons.length; i++) {
             buttons[i] = new Button();
             buttons[i].setOnAction(this::handleButtonAction);
+            buttons[i].setStyle("-fx-font-weight: normal;");
         }
         initializare_status_butoane();
         initializare_butoane();
@@ -214,16 +220,43 @@ public class SportsmanHomePage implements Initializable {
             if (List.get(i) instanceof Eveniment) {
                 verificareInregistrareaExista(((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventPlannerMail(), sportsmanEmail);
                 initializare_butoane();
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
+                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
             }
         }
 
         table.setItems(data);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+        table.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+               SeeEventInformationPage edit = new SeeEventInformationPage(table.getSelectionModel().getSelectedItem().getN(),eventPlannerName); //e, de fapt, email-ul eventPlanner-ului
+
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/seeEventInformationPage.fxml"));
+                Parent tableView = null;
+                try {
+                    tableView = tableView = loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                Scene tableViewScene = new Scene(tableView);
+                SeeEventInformationPage controller = loader.getController();
+                controller.showDetails(table.getSelectionModel().getSelectedItem());
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(tableViewScene);
+                window.show();
+            }
+        });
+
+
     }
     public void reinitializare(){
         for(int i=0; i<buttons.length; i++) {
             buttons[i] = new Button();
             buttons[i].setOnAction(this::handleButtonAction);
+            buttons[i].setStyle("-fx-font-weight: normal;");
         }
         initializare_butoane();
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
@@ -250,16 +283,16 @@ public class SportsmanHomePage implements Initializable {
             if (List.get(i) instanceof Eveniment ) {
                 verificareInregistrareaExista(((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventPlannerMail(), sportsmanEmail);
                 initializare_butoane();
-                if(((Eveniment) List.get(i)).getEventCategory().equals("Basketball") && checkList[0] == 1)
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
+                if(((Eveniment) List.get(i)).getEventCategory().equals("Basketball") && checkList[0] == 1)///////////////////////////////////////////
+                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
                 if(((Eveniment) List.get(i)).getEventCategory().equals("Tennis") && checkList[1] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
+                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
                 if(((Eveniment) List.get(i)).getEventCategory().equals("Jogging") && checkList[2] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
+                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
                 if(((Eveniment) List.get(i)).getEventCategory().equals("Rugby") && checkList[3] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
+                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
                 if(((Eveniment) List.get(i)).getEventCategory().equals("Football") && checkList[4] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),buttons[i]));
+                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
 
             }
         }
@@ -272,6 +305,8 @@ public class SportsmanHomePage implements Initializable {
             if (actionEvent.getSource() == buttons[i] && List.get(i) instanceof Eveniment) {
 
                 I = new Inregistrare((Eveniment) List.get(i), SportsmanHomePage.getSportsmanFirstName(), SportsmanHomePage.getSportsmanLastName(), SportsmanHomePage.getSportsmanEmail(), "Pending");
+
+
             }
         //Decodificare xml
         try{

@@ -49,6 +49,19 @@
     -fx-background-color:#A33AFF;
     -fx-text-fill:white;
 }
+.btn-c{
+    -fx-background-color: transparent;
+    -fx-border-color:#A33AFF ;
+    -fx-border-width: 4;
+}
+.btn-c:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: #787878;
+    -fx-border-color:#be73ff ;
+}
+.btn-ex{
+    -fx-background-color: transparent;
+}
 .add-btn{
     -fx-background-color:black;
     -fx-text-fill:white;
@@ -148,12 +161,16 @@
     -fx-pref-width: 580;
     -fx-text-fill: #7a7a7a;
 }
-.col-b{
+.col-b {
     -fx-pref-width: 180;
     -fx-padding: 15 0 0 0 ;
-
+    -fx-font-weight: bold;
 }
-
+.col-s{
+    -fx-pref-width: 180;
+    -fx-padding: 15 0 0 30 ;
+    -fx-font-weight: bold;
+}
 .col-b .button{
     -fx-background-color: transparent;
     -fx-border-color: black;

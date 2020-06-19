@@ -69,6 +69,192 @@ of your long Sunday run, we’re here to support your goals.</string>
     <void property="e">
      <object class="Eveniment">
       <void property="eventCategory">
+       <string>Rugby</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-08</string>
+      </void>
+      <void property="eventDescription">
+       <string>Rugby sevens is one of the core sports of the Commonwealth Games
+ and has been payed since 1998.</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Beginner</string>
+      </void>
+      <void property="eventLocation">
+       <string>Timisoara</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>23</int>
+      </void>
+      <void property="eventName">
+       <string>Flower</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Rugby</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>admin@admin.com</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>Admin</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>Admin</string>
+    </void>
+    <void property="status">
+     <string>Declined</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Basketball</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-11</string>
+      </void>
+      <void property="eventDescription">
+       <string>The FIBA Basketball World Cup is an international basketball competition for 
+the men&apos;s national teams of the members of the International Basketball</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Beginner</string>
+      </void>
+      <void property="eventLocation">
+       <string>Timisoara</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>12</int>
+      </void>
+      <void property="eventName">
+       <string>Challenge You</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Basketball</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>admin@admin.com</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>Admin</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>Admin</string>
+    </void>
+    <void property="status">
+     <string>Accepted</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Basketball</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-11</string>
+      </void>
+      <void property="eventDescription">
+       <string>The FIBA Basketball World Cup is an international basketball competition for 
+the men&apos;s national teams of the members of the International Basketball</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Beginner</string>
+      </void>
+      <void property="eventLocation">
+       <string>Timisoara</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>5</int>
+      </void>
+      <void property="eventName">
+       <string>Challenge You</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Basketball</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>e</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+    <void property="status">
+     <string>Declined</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
        <string>Tennis</string>
       </void>
       <void property="eventDate">
@@ -119,9 +305,6 @@ of your long Sunday run, we’re here to support your goals.</string>
     </void>
     <void property="sportsmanLastName">
      <string>e</string>
-    </void>
-    <void property="status">
-     <string>Accepted</string>
     </void>
    </object>
   </void>
@@ -183,9 +366,6 @@ continental champion. </string>
     <void property="sportsmanLastName">
      <string>e</string>
     </void>
-    <void property="status">
-     <string>Accepted</string>
-    </void>
    </object>
   </void>
   <void method="add">
@@ -193,27 +373,26 @@ continental champion. </string>
     <void property="e">
      <object class="Eveniment">
       <void property="eventCategory">
-       <string>Jogging</string>
+       <string>Basketball</string>
       </void>
       <void property="eventDate">
-       <string>2020-06-16</string>
+       <string>2020-05-01</string>
       </void>
       <void property="eventDescription">
-       <string>Whatever you are aiming for, whether you’re in the middle of Couch-to-5k 
- or training for a marathon and looking for company during part
-of your long Sunday run, we’re here to support your goals.</string>
+       <string>Is annual competition between six European sides: A England, France
+Ireland, Italy, Scotland and Wales</string>
       </void>
       <void property="eventDifficulty">
        <string>Advanced</string>
       </void>
       <void property="eventLocation">
-       <string>s</string>
+       <string>Timisoara</string>
       </void>
       <void property="eventMaxNumberParticipants">
-       <int>100</int>
+       <int>2</int>
       </void>
       <void property="eventName">
-       <string>Blast Running</string>
+       <string>Goodd</string>
       </void>
       <void property="eventPlannerMail">
        <string>d</string>
@@ -223,7 +402,7 @@ of your long Sunday run, we’re here to support your goals.</string>
     <void property="l">
      <object class="javafx.scene.control.Label">
       <void property="text">
-       <string>Jogging</string>
+       <string>Basketball</string>
       </void>
      </object>
     </void>
@@ -307,9 +486,6 @@ of your long Sunday run, we’re here to support your goals.</string>
     <void property="sportsmanLastName">
      <string>Admin</string>
     </void>
-    <void property="status">
-     <string>Accepted</string>
-    </void>
    </object>
   </void>
   <void method="add">
@@ -317,85 +493,26 @@ of your long Sunday run, we’re here to support your goals.</string>
     <void property="e">
      <object class="Eveniment">
       <void property="eventCategory">
-       <string>Football</string>
+       <string>Basketball</string>
       </void>
       <void property="eventDate">
-       <string>2020-06-16</string>
+       <string>2020-05-01</string>
       </void>
       <void property="eventDescription">
-       <string>Competition between the senior men’s national teams of members of the
-Union of European Football Association (UEFA), to determine the 
-continental champion. </string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>Teren fotbal </string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>1</int>
-      </void>
-      <void property="eventName">
-       <string>UEFA Euro</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Football</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>admin@admin.com</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>Admin</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>Admin</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Tennis</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-10</string>
-      </void>
-      <void property="eventDescription">
-       <string>descriere</string>
+       <string>Is annual competition between six European sides: A England, France
+Ireland, Italy, Scotland and Wales</string>
       </void>
       <void property="eventDifficulty">
        <string>Advanced</string>
       </void>
       <void property="eventLocation">
-       <string>locatie</string>
+       <string>Timisoara</string>
       </void>
       <void property="eventMaxNumberParticipants">
-       <int>10</int>
+       <int>1</int>
       </void>
       <void property="eventName">
-       <string>nume</string>
+       <string>Cool</string>
       </void>
       <void property="eventPlannerMail">
        <string>d</string>
@@ -405,7 +522,7 @@ continental champion. </string>
     <void property="l">
      <object class="javafx.scene.control.Label">
       <void property="text">
-       <string>Tennis</string>
+       <string>Basketball</string>
       </void>
      </object>
     </void>
@@ -428,6 +545,9 @@ continental champion. </string>
     <void property="sportsmanLastName">
      <string>Admin</string>
     </void>
+    <void property="status">
+     <string>Declined</string>
+    </void>
    </object>
   </void>
   <void method="add">
@@ -435,25 +555,26 @@ continental champion. </string>
     <void property="e">
      <object class="Eveniment">
       <void property="eventCategory">
-       <string>Football</string>
+       <string>Basketball</string>
       </void>
       <void property="eventDate">
-       <string>2020-06-24</string>
+       <string>2020-05-01</string>
       </void>
       <void property="eventDescription">
-       <string>sdfsddfasd</string>
+       <string>Is annual competition between six European sides: A England, France
+Ireland, Italy, Scotland and Wales</string>
       </void>
       <void property="eventDifficulty">
-       <string>Medium</string>
+       <string>Advanced</string>
       </void>
       <void property="eventLocation">
-       <string>lkkh</string>
+       <string>Timisoara</string>
       </void>
       <void property="eventMaxNumberParticipants">
-       <int>13</int>
+       <int>1</int>
       </void>
       <void property="eventName">
-       <string>qwe</string>
+       <string>Cool</string>
       </void>
       <void property="eventPlannerMail">
        <string>d</string>
@@ -463,7 +584,7 @@ continental champion. </string>
     <void property="l">
      <object class="javafx.scene.control.Label">
       <void property="text">
-       <string>Football</string>
+       <string>Basketball</string>
       </void>
      </object>
     </void>
@@ -478,7 +599,7 @@ continental champion. </string>
      </object>
     </void>
     <void property="sportsmanEmail">
-     <string>q</string>
+     <string>e</string>
     </void>
     <void property="sportsmanFirstName">
      <string>e</string>
