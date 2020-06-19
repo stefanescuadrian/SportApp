@@ -163,7 +163,7 @@ public class SeeEventParticipantsPage implements Initializable {
                 ex.printStackTrace();
             }
         }
-        else {
+        else if (pendingTable.getSelectionModel().getSelectedItem() instanceof Inregistrare && numberOfAcceptedSportsman >= eventMaxParticipants) {
             alert.setTitle("ERROR");
             alert.setHeaderText(null);
             alert.setContentText("Number of maximum participants was reached !");

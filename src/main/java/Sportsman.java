@@ -9,8 +9,8 @@ public class Sportsman extends User{
     public String getRole() {
         return role;
     }
-    public Sportsman(String firstName, String lastName, String email, String password){
-    super(firstName,lastName,email,password);
+    public Sportsman(String firstName, String lastName, String email, String password, byte[] salt){
+    super(firstName,lastName,email,password,salt);
     }
 
     public String toString() {

@@ -64,3 +64,45 @@ Last Name: aaaa
 Email: aaaaa 
 Password: aaaaa
 
+Role: Sportsman 
+First Name: Prenume 
+Last Name: Nume 
+Email: ContNou 
+Password: parola1
+
+Role: Sportsman 
+First Name: Nume1 
+Last Name: Prenume1 
+Email: mail 
+Password: parola1
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+
+Role: Sportsman 
+First Name: w 
+Last Name: w 
+Email: w 
+Password: e
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: q 
+Password: e
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+

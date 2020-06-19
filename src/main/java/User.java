@@ -4,6 +4,7 @@ public abstract  class User {
     private String email;
     private String password;
     private String role;
+    private byte[] salt;
 
     public String getFirstName() {
         return firstName;
@@ -42,11 +43,21 @@ public abstract  class User {
     public User(){
 
  }
-    public User(String firstName, String lastName, String email, String password) {
+
+    public byte[] getSalt() {
+        return salt;
+    }
+
+    public void setSalt(byte[] salt) {
+        this.salt = salt;
+    }
+
+    public User(String firstName, String lastName, String email, String password, byte[] salt) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.salt = salt;
     }
     public String toString(){
         return "Role: "  + " FirstName: " + this.getFirstName() + " LastName: " + this.getLastName() + " Email: " + this.getEmail() + " Password: " + this.getPassword() + " PhoneNumber: " ;

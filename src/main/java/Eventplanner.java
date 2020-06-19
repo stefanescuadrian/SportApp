@@ -6,8 +6,8 @@ public class Eventplanner extends User {
     public Eventplanner(){
     super();
     }
-    public Eventplanner(String firstName, String lastName, String email, String password, String phoneNumber, String birthDate) {
-        super(firstName,lastName,email,password);
+    public Eventplanner(String firstName, String lastName, String email, String password, String phoneNumber, String birthDate, byte[] salt) {
+        super(firstName,lastName,email,password,salt);
         this.phoneNumber = phoneNumber;
         this.birthDate = birthDate;
 

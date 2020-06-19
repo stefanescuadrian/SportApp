@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 
@@ -48,7 +49,7 @@ public class EventplannerSignupForm {
         window.setScene(signupScene);
         window.show();
     }
-    public void saveEventPlannerData(ActionEvent e) throws IOException {
+    public void saveEventPlannerData(ActionEvent e) throws IOException, NoSuchAlgorithmException {
 
         if (firstNameEP.getText().isEmpty()) {
             alert.setTitle("ERROR");
@@ -137,10 +138,11 @@ public class EventplannerSignupForm {
         alert.setContentText("Welcome " + firstNameEP.getText() + " " + lastNameEP.getText() + "!");
         alert.showAndWait();
 
-
+        byte[] salt = CodificareParola.getSalt();
+        String T = CodificareParola.getSHA512Password(passwordEP.getText(),salt);
         //Codificare xml file
         try{
-            Eventplanner S = new Eventplanner(firstNameEP.getText(), lastNameEP.getText(), emailAddressEP.getText(), passwordEP.getText(),phoneNumberEP.getText(),dateOfBirthEP.getValue().toString());
+            Eventplanner S = new Eventplanner(firstNameEP.getText(), lastNameEP.getText(), emailAddressEP.getText(), T,phoneNumberEP.getText(),dateOfBirthEP.getValue().toString(),salt);
             List.add(S);
             FileOutputStream fos = new FileOutputStream("./Signupuri.xml");
             XMLEncoder encoder = new XMLEncoder(fos);

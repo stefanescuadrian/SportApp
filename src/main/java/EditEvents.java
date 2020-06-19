@@ -151,20 +151,20 @@ public class EditEvents {
 
         for (int i = 0; i < List.size(); i++) {
             if (List.get(i) instanceof Eveniment)
-                if (((Eveniment) List.get(i)).getEventName().equals(eName)) {
-
-                    try {
-                       List.remove(i);
-                        FileOutputStream fos = new FileOutputStream("./Events.xml");
-                        XMLEncoder encoder = new XMLEncoder(fos);
-                        encoder.writeObject(List);
-                        encoder.close();
-                        fos.close();
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
-
+                if (((Eveniment) List.get(i)).getEventName().equals(eName) && ((Eveniment) List.get(i)).getEventPlannerMail().equals(eventPlannerMail)) {
+                    List.remove(i);
                 }
+            System.out.println(List.size());
+        }
+
+        try {
+            FileOutputStream fos = new FileOutputStream("./Events.xml");
+            XMLEncoder encoder = new XMLEncoder(fos);
+            encoder.writeObject(List);
+            encoder.close();
+            fos.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
 
         for (int i=0; i < List1.size(); i++){

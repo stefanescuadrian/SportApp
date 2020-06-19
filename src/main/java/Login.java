@@ -98,7 +98,9 @@ public class Login implements Initializable {
             if (List.get(i).getRole().equals("Sportsman")) {
                 if ( List.get(i).getEmail().equals(this.usernameField.getText())) {
                     ok1=true;
-                    if ( List.get(i).getPassword().equals((this.passwordField.getText()))) {
+                    String Parola = CodificareParola.getSHA512Password(this.passwordField.getText(),List.get(i).getSalt());
+                    System.out.println(Parola);
+                    if (List.get(i).getPassword().equals(Parola)) {
                         ok2=true;
                         SportsmanHomePage T = new SportsmanHomePage(List.get(i).getFirstName(), List.get(i).getLastName() ,List.get(i).getEmail());
                         Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
@@ -122,7 +124,9 @@ public class Login implements Initializable {
             if (List.get(i).getRole().equals("Eventplanner")){
                 if( List.get(i).getEmail().equals(this.usernameField.getText())){
                     ok1=true;
-                    if( List.get(i).getPassword().equals(this.passwordField.getText())){
+                    String Parola = CodificareParola.getSHA512Password(this.passwordField.getText(),List.get(i).getSalt());
+                    System.out.println(Parola);
+                    if( List.get(i).getPassword().equals(Parola)){
                         ok2=true;
                         EventplannerHomePage T = new EventplannerHomePage(List.get(i).getEmail());
                         Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));

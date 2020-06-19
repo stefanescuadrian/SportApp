@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 
@@ -48,7 +49,7 @@ public class SportsmanSignupForm {
         window.show();
     }
 
-    public void saveSportsmanData(ActionEvent e) throws IOException {
+    public void saveSportsmanData(ActionEvent e) throws IOException, NoSuchAlgorithmException {
 
         if (firstName.getText().isEmpty()) {
             alert.setTitle("ERROR");
@@ -93,6 +94,7 @@ public class SportsmanSignupForm {
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
+
         //ACCOUNT ALREADY EXISTS CHECK
         for(int i = 0; i< List.size(); i++){
             if(List.get(i) instanceof Sportsman){
@@ -121,10 +123,11 @@ public class SportsmanSignupForm {
         alert.setHeaderText(null);
         alert.setContentText("Welcome " + firstName.getText() + " " + lastName.getText() + "!");
         alert.showAndWait();
-
+        byte[] salt = CodificareParola.getSalt();
+        String T = CodificareParola.getSHA512Password(password.getText(),salt);
         //Codificare xml file
         try{
-            Sportsman S = new Sportsman(firstName.getText(), lastName.getText(), emailAddress.getText(), password.getText());
+            Sportsman S = new Sportsman(firstName.getText(), lastName.getText(), emailAddress.getText(), T,salt);
             List.add(S);
             FileOutputStream fos = new FileOutputStream("./Signupuri.xml");
             XMLEncoder encoder = new XMLEncoder(fos);
