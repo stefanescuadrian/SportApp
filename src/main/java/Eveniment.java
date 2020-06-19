@@ -38,7 +38,43 @@ public class Eveniment {
     private SimpleStringProperty eDate;
     private SimpleStringProperty eM;
 
-private File ImageFile;
+    public ImageView getPhoto1() {
+        return photo1;
+    }
+
+    public void setPhoto1(ImageView photo1) {
+        this.photo1 = photo1;
+    }
+
+    public Label getL() {
+        return L;
+    }
+
+    public void setL(Label l) {
+        L = l;
+    }
+
+    public Text getT() {
+        return t;
+    }
+
+    public void setT(Text t) {
+        this.t = t;
+    }
+
+    public String geteM() {
+        return eM.get();
+    }
+
+    public SimpleStringProperty eMProperty() {
+        return eM;
+    }
+
+    public void seteM(String eM) {
+        this.eM.set(eM);
+    }
+
+    private File ImageFile;
 
     public File getImageFile() {
         return ImageFile;
@@ -149,7 +185,7 @@ L.setText(eventCategory);
         eDate=new SimpleStringProperty(eventDate);
         eP=new SimpleStringProperty(Integer.toString(eventMaxNumberParticipants));
         this.button = button;
-        this.button.setText("Join");
+        //this.button.setText("Join");
     }
 
     public Eveniment(String eventCategory, String eventDescription, String eventName, String status){

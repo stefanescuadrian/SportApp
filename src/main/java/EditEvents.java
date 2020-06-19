@@ -25,29 +25,18 @@ import java.util.ArrayList;
 public class EditEvents {
 
     private static String  eventPlannerMail;
-    // @FXML
-   // private ChoiceBox<?> eventDifficulty;
-   //@FXML
-   //private TextField eventDifficulty;
-    // @FXML
-    // private ChoiceBox<?> eventDifficulty;
+
     @FXML
     private ChoiceBox eventCategory;////////////////
     @FXML
     private ChoiceBox eventDifficulty;
     ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
     ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
-    //@FXML
-   // private TextField eventDifficulty;
+
     @FXML
     private Button deleteButton;
     @FXML
     private Button participantsButton;
-
-    //@FXML
-    // private ChoiceBox<?> eventCategory;
-   // @FXML
-    //private TextField eventCategory;
 
     @FXML
     private TextField eventLocation;
@@ -79,8 +68,11 @@ public class EditEvents {
     @FXML
     private TextField eventDate;
 
-    private static ArrayList List = new ArrayList();////////////////////////////////////////
-    private static ArrayList List1 = new ArrayList();
+    private static ArrayList<Eveniment> List = new ArrayList();////////////////////////////////////////
+    private static ArrayList<Inregistrare> List1 = new ArrayList();
+    private static ArrayList Lista = new ArrayList();
+    private static ArrayList Lista1 = new ArrayList();
+
     private Eveniment event;
 
 
@@ -113,14 +105,11 @@ public class EditEvents {
     void showDetails(Eveniment event) {
         this.event = event;
         this.eventName.setText(event.geteN());
-       // this.eventCategory.setText(event.geteC());
         this.eventCategory.setValue(event.geteC());
         this.eventDifficulty.setValue(event.geteDif());
         this.eventDescription.setText(event.geteD());
-       // this.eventDifficulty.setText(event.geteDif());
         this.eventLocation.setText(event.geteL());
         this.eventMaxNumberParticipants.setText(event.geteP());
-        //this.eventDate.setValue(LocalDate.parse(event.getEventDate()));
         this.eventDate.setText(event.geteDate());
 
     }
@@ -151,16 +140,16 @@ public class EditEvents {
 
         for (int i = 0; i < List.size(); i++) {
             if (List.get(i) instanceof Eveniment)
-                if (((Eveniment) List.get(i)).getEventName().equals(eName) && ((Eveniment) List.get(i)).getEventPlannerMail().equals(eventPlannerMail)) {
-                    List.remove(i);
+                if (!(List.get(i).getEventName().equals(eName) && List.get(i).getEventPlannerMail().equals(eventPlannerMail))) {
+                   // List.remove(i);
+                    Lista.add(List.get(i));
                 }
-            System.out.println(List.size());
         }
 
         try {
             FileOutputStream fos = new FileOutputStream("./Events.xml");
             XMLEncoder encoder = new XMLEncoder(fos);
-            encoder.writeObject(List);
+            encoder.writeObject(Lista);
             encoder.close();
             fos.close();
         } catch (IOException ex) {
@@ -168,20 +157,27 @@ public class EditEvents {
         }
 
         for (int i=0; i < List1.size(); i++){
-            if (List1.get(i) instanceof Inregistrare && ((Inregistrare) List1.get(i)).getE().getEventName().equals(eName) && ((Inregistrare) List1.get(i)).getE().getEventPlannerMail().equals(eventPlannerMail)){
-                List1.remove(i);
+            if (List1.get(i) instanceof Inregistrare){
+            if (!(List1.get(i).getE().getEventName().equals(eName) && List1.get(i).getE().getEventPlannerMail().equals(eventPlannerMail))) {
+                //List1.remove(i);
+                Lista1.add(List1.get(i));
+            }
             }
         }
         try {
             FileOutputStream fos = new FileOutputStream("./Registrations.xml");
             XMLEncoder encoder = new XMLEncoder(fos);
-            encoder.writeObject(List1);
+            encoder.writeObject(Lista1);
             encoder.close();
             fos.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
+        Parent goBackPageView= FXMLLoader.load(getClass().getResource("/eventplannerMyEventsPage.fxml"));
+        Scene loginScene=new Scene(goBackPageView);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(loginScene);
+        window.show();
     }
 
     @FXML
@@ -208,17 +204,17 @@ public class EditEvents {
 
         for (int i = 0; i < List.size(); i++) {
             if (List.get(i) instanceof Eveniment)
-                if (((Eveniment) List.get(i)).getEventName().equals(eName)) {
+                if (List.get(i).getEventName().equals(eName)) {
 
                     try {
-                        ((Eveniment) List.get(i)).setEventName(this.eventName.getText());
-                        ((Eveniment) List.get(i)).setEventCategory(this.eventCategory.getValue().toString());
-                        ((Eveniment) List.get(i)).setEventDifficulty(this.eventDifficulty.getValue().toString());
-                        ((Eveniment) List.get(i)).setEventLocation(this.eventLocation.getText());
-                        ((Eveniment) List.get(i)).setEventLocation(this.eventLocation.getText());
-                        ((Eveniment) List.get(i)).setEventMaxNumberParticipants(Integer.parseInt(this.eventMaxNumberParticipants.getText()));
-                        ((Eveniment) List.get(i)).setEventDate(this.eventDate.getText());
-                        ((Eveniment) List.get(i)).setEventDescription(this.eventDescription.getText());
+                        List.get(i).setEventName(this.eventName.getText());
+                        List.get(i).setEventCategory(this.eventCategory.getValue().toString());
+                        List.get(i).setEventDifficulty(this.eventDifficulty.getValue().toString());
+                        List.get(i).setEventLocation(this.eventLocation.getText());
+                        List.get(i).setEventLocation(this.eventLocation.getText());
+                        List.get(i).setEventMaxNumberParticipants(Integer.parseInt(this.eventMaxNumberParticipants.getText()));
+                        List.get(i).setEventDate(this.eventDate.getText());
+                        List.get(i).setEventDescription(this.eventDescription.getText());
 
 
                         FileOutputStream fos = new FileOutputStream("./Events.xml");
@@ -231,7 +227,7 @@ public class EditEvents {
                     }
 
                 }
-
         }
+
     }
 }

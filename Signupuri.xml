@@ -285,5 +285,79 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Eventplanner">
+    <void property="birthDate">
+     <string>2020-06-02</string>
+    </void>
+    <void property="email">
+     <string>t</string>
+    </void>
+    <void property="firstName">
+     <string>t</string>
+    </void>
+    <void property="lastName">
+     <string>t</string>
+    </void>
+    <void property="password">
+     <string>391ae2f51eecf5ac0169d555975eaf888fdb96037d1b53518dae28ed5560dd1a4e5481fb818732c0e9d4a20202d1278e9e063d1b5cc390b624e827bfbebb8efa</string>
+    </void>
+    <void property="phoneNumber">
+     <string>07</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>111</byte>
+      </void>
+      <void index="1">
+       <byte>-91</byte>
+      </void>
+      <void index="2">
+       <byte>-82</byte>
+      </void>
+      <void index="3">
+       <byte>91</byte>
+      </void>
+      <void index="4">
+       <byte>-117</byte>
+      </void>
+      <void index="5">
+       <byte>-93</byte>
+      </void>
+      <void index="6">
+       <byte>3</byte>
+      </void>
+      <void index="7">
+       <byte>8</byte>
+      </void>
+      <void index="8">
+       <byte>-33</byte>
+      </void>
+      <void index="9">
+       <byte>28</byte>
+      </void>
+      <void index="10">
+       <byte>11</byte>
+      </void>
+      <void index="11">
+       <byte>59</byte>
+      </void>
+      <void index="12">
+       <byte>-88</byte>
+      </void>
+      <void index="13">
+       <byte>-120</byte>
+      </void>
+      <void index="14">
+       <byte>-87</byte>
+      </void>
+      <void index="15">
+       <byte>-84</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

@@ -42,10 +42,6 @@ public class Login implements Initializable {
     private Hyperlink signupHyperlink;
 
 
-
-    //public void buttonClicked(){
-      //  System.out.println("eee");
-   // }
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
         Parent signupView= FXMLLoader.load(getClass().getResource("/signup.fxml"));
         Scene signupScene=new Scene(signupView);
@@ -85,9 +81,6 @@ public class Login implements Initializable {
             A = (ArrayList) decoder.readObject();
             List = A;
 
-            for(int i=0; i < List.size(); i++){
-                //System.out.println(List.get(i).toString());
-            }
         } catch (
                 FileNotFoundException ex) {
             ex.printStackTrace();
@@ -99,7 +92,7 @@ public class Login implements Initializable {
                 if ( List.get(i).getEmail().equals(this.usernameField.getText())) {
                     ok1=true;
                     String Parola = CodificareParola.getSHA512Password(this.passwordField.getText(),List.get(i).getSalt());
-                    System.out.println(Parola);
+                    //System.out.println(Parola);
                     if (List.get(i).getPassword().equals(Parola)) {
                         ok2=true;
                         SportsmanHomePage T = new SportsmanHomePage(List.get(i).getFirstName(), List.get(i).getLastName() ,List.get(i).getEmail());
@@ -125,8 +118,8 @@ public class Login implements Initializable {
                 if( List.get(i).getEmail().equals(this.usernameField.getText())){
                     ok1=true;
                     String Parola = CodificareParola.getSHA512Password(this.passwordField.getText(),List.get(i).getSalt());
-                    System.out.println(Parola);
-                    if( List.get(i).getPassword().equals(Parola)){
+                    //System.out.println(Parola);
+                    if(List.get(i).getPassword().equals(Parola)){
                         ok2=true;
                         EventplannerHomePage T = new EventplannerHomePage(List.get(i).getEmail());
                         Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
@@ -158,28 +151,4 @@ public class Login implements Initializable {
             return;
         }
     }
-
-
-
-    /*//go to Sportsman Homepage
-    public void loginAction(ActionEvent event) throws IOException {
-        System.out.println("eee");
-        Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
-        Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(sportsmanHomePageScene);
-        window.show();
-    }*/
-
- /*//go to Event Planner Homepage
-    public void loginAction(ActionEvent event) throws IOException {
-        //System.out.println("eee");
-          Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-          Scene eventplannerHomePageScene=new Scene(eventplannerHomePageView);
-          Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-         window.setScene(eventplannerHomePageScene);
-          window.show();
-         }*/
-
-
 }

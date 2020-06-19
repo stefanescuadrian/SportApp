@@ -35,7 +35,7 @@ public class SportsmanMyEventsPage implements Initializable {
     public static String sportsmanFirstName;
     public static String sportsmanLastName;
     private static int[] checkList = new int[5];
-    private static ArrayList List = new ArrayList();
+    private static ArrayList<Inregistrare> List = new ArrayList();
 
 private Text t;
 
@@ -115,8 +115,8 @@ private Text t;
             ex.printStackTrace();
         }
         for(int i=0; i<List.size();i++){
-            if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getSportsmanEmail().equals(sportsmanEmail)) {
-                data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, ((Inregistrare) List.get(i)).getStatus()));
+            if (List.get(i) instanceof Inregistrare && List.get(i).getSportsmanEmail().equals(sportsmanEmail)) {
+                data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
             }
         }
         table.setItems(data);
@@ -144,17 +144,17 @@ private Text t;
 
 
         for(int i=0; i<List.size();i++){
-            if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getSportsmanEmail().equals(sportsmanEmail) ) {
-                if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Basketball") && checkList[0] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
-                if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Tennis") && checkList[1] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
-                if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Jogging") && checkList[2] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
-                if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Rugby") && checkList[3] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
-                if(((Inregistrare) List.get(i)).getE().getEventCategory().equals("Football") && checkList[4] == 1)
-                    data.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail,((Inregistrare) List.get(i)).getStatus()));
+            if (List.get(i) instanceof Inregistrare && List.get(i).getSportsmanEmail().equals(sportsmanEmail) ) {
+                if(List.get(i).getE().getEventCategory().equals("Basketball") && checkList[0] == 1)
+                    data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
+                if(List.get(i).getE().getEventCategory().equals("Tennis") && checkList[1] == 1)
+                    data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
+                if(List.get(i).getE().getEventCategory().equals("Jogging") && checkList[2] == 1)
+                    data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
+                if(List.get(i).getE().getEventCategory().equals("Rugby") && checkList[3] == 1)
+                    data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
+                if(List.get(i).getE().getEventCategory().equals("Football") && checkList[4] == 1)
+                    data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
             }
         }
 
@@ -236,7 +236,7 @@ private Text t;
             Inregistrare r = table.getSelectionModel().getSelectedItem();
             for (int i=0; i<List.size(); i++){
                 if (List.get(i) instanceof Inregistrare){
-                    if (((Inregistrare) List.get(i)).getE().getEventName().equals(r.getE().getEventName()) && ((Inregistrare) List.get(i)).getSportsmanEmail().equals(r.getSportsmanEmail())){
+                    if (List.get(i).getE().getEventName().equals(r.getE().getEventName()) && List.get(i).getSportsmanEmail().equals(r.getSportsmanEmail())){
                         List.remove(i);
                     }
                 }

@@ -59,7 +59,6 @@ public class SeePlannerEventInformationPage {
     public SeePlannerEventInformationPage(String eventName,String eventPlannerMail) {
         this.eName = eventName;
         this.eventPlannerMail=eventPlannerMail;
-
     }
 
     @FXML

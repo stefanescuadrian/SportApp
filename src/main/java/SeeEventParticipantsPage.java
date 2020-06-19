@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class SeeEventParticipantsPage implements Initializable {
-    private static ArrayList List = new ArrayList();
+    private static ArrayList<Inregistrare> List = new ArrayList();
     private static String eventPlannerMail;
     private static int eventMaxParticipants;
     private static  String eName;
@@ -118,16 +118,16 @@ public class SeeEventParticipantsPage implements Initializable {
         }
 
         for (int i=0; i<List.size(); i++){
-            if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getE().getEventPlannerMail().equals(getEventPlannerMail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals(eName)) {
-                if (((Inregistrare) List.get(i)).getStatus().equals("Pending")) {
-                    data1.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail(),((Inregistrare) List.get(i)).getStatus()));
+            if (List.get(i) instanceof Inregistrare && List.get(i).getE().getEventPlannerMail().equals(getEventPlannerMail()) && List.get(i).getE().getEventName().equals(eName)) {
+                if (List.get(i).getStatus().equals("Pending")) {
+                    data1.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
                 }
-                if (((Inregistrare) List.get(i)).getStatus().equals("Accepted")) {
-                    data2.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail(),((Inregistrare) List.get(i)).getStatus()));
+                if (List.get(i).getStatus().equals("Accepted")) {
+                    data2.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
                     numberOfAcceptedSportsman++;
                 }
-                if (((Inregistrare) List.get(i)).getStatus().equals("Declined")) {
-                    data3.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail(),((Inregistrare) List.get(i)).getStatus()));
+                if (List.get(i).getStatus().equals("Declined")) {
+                    data3.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
 
                 }
             }
@@ -156,9 +156,9 @@ public class SeeEventParticipantsPage implements Initializable {
 
             for(int i=0; i<List.size();i++){
                 if(List.get(i) instanceof Inregistrare){
-                if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
-                    if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
-                        ((Inregistrare) List.get(i)).setStatus("Accepted");
+                if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
+                    if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
+                        List.get(i).setStatus("Accepted");
                     }
                 }
                 }
@@ -209,16 +209,16 @@ public class SeeEventParticipantsPage implements Initializable {
         }
 
         for (int i=0; i<List.size(); i++){
-            if (List.get(i) instanceof Inregistrare && ((Inregistrare) List.get(i)).getE().getEventPlannerMail().equals(getEventPlannerMail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals(eName)) {
-                if (((Inregistrare) List.get(i)).getStatus().equals("Pending")) {
-                    data1.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail(),((Inregistrare) List.get(i)).getStatus()));
+            if (List.get(i) instanceof Inregistrare && List.get(i).getE().getEventPlannerMail().equals(getEventPlannerMail()) && List.get(i).getE().getEventName().equals(eName)) {
+                if (List.get(i).getStatus().equals("Pending")) {
+                    data1.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
                 }
-                if (((Inregistrare) List.get(i)).getStatus().equals("Accepted")) {
-                    data2.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail(),((Inregistrare) List.get(i)).getStatus()));
+                if (List.get(i).getStatus().equals("Accepted")) {
+                    data2.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
 
                 }
-                if (((Inregistrare) List.get(i)).getStatus().equals("Declined")) {
-                    data3.add(new Inregistrare(((Inregistrare) List.get(i)).getE(),((Inregistrare) List.get(i)).getSportsmanFirstName(),((Inregistrare) List.get(i)).getSportsmanLastName(),((Inregistrare) List.get(i)).getSportsmanEmail(),((Inregistrare) List.get(i)).getStatus()));
+                if (List.get(i).getStatus().equals("Declined")) {
+                    data3.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
 
                 }
             }
@@ -245,10 +245,9 @@ public class SeeEventParticipantsPage implements Initializable {
 
             for(int i=0; i<List.size();i++){
                 if(List.get(i) instanceof Inregistrare){
-                if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
-                    if (((Inregistrare) List.get(i)).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && ((Inregistrare) List.get(i)).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
-                        ((Inregistrare) List.get(i)).setStatus("Declined");
-
+                if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
+                    if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
+                        List.get(i).setStatus("Declined");
                     }
                 }
                 }

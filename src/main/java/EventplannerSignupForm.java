@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class EventplannerSignupForm {
     private Alert alert = new Alert(Alert.AlertType.INFORMATION);
-    private ArrayList List = new ArrayList();
+    private ArrayList<User> List = new ArrayList();
     @FXML
     private TextField firstNameEP;
     @FXML
@@ -111,7 +111,7 @@ public class EventplannerSignupForm {
         //ACCOUNT ALREADY EXISTS CHECK
         for(int i = 0; i< List.size(); i++){
             if(List.get(i) instanceof Sportsman){
-                if ( ((Sportsman) List.get(i)).getEmail().equals(this.emailAddressEP.getText())){
+                if ( List.get(i).getEmail().equals(this.emailAddressEP.getText())){
                     alert.setTitle("ERROR");
                     alert.setHeaderText(null);
                     alert.setContentText("Account already exists! Please enter another email address!");
@@ -121,7 +121,7 @@ public class EventplannerSignupForm {
                 }
             }
             if(List.get(i) instanceof Eventplanner){
-                if ( ((Eventplanner) List.get(i)).getEmail().equals(this.emailAddressEP.getText())){
+                if ( List.get(i).getEmail().equals(this.emailAddressEP.getText())){
                     alert.setTitle("ERROR");
                     alert.setHeaderText(null);
                     alert.setContentText("Account already exists! Please enter another email address!");
@@ -214,7 +214,6 @@ public class EventplannerSignupForm {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-
 
         firstNameEP.clear();
         lastNameEP.clear();

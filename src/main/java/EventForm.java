@@ -65,13 +65,68 @@ public class EventForm {
     }
 
 
-
     @FXML
     private void initialize(){
         eventCategory.setValue("Category");
         eventCategory.setItems(categoryList);
         eventDifficulty.setValue("Difficulty");
         eventDifficulty.setItems(difficultyList);
+    }
+
+    public ChoiceBox getEventCategory() {
+        return eventCategory;
+    }
+
+    public void setEventCategory(ChoiceBox eventCategory) {
+        this.eventCategory = eventCategory;
+    }
+
+    public ChoiceBox getEventDifficulty() {
+        return eventDifficulty;
+    }
+
+    public void setEventDifficulty(ChoiceBox eventDifficulty) {
+        this.eventDifficulty = eventDifficulty;
+    }
+
+    public TextField getEventLocation() {
+        return eventLocation;
+    }
+
+    public void setEventLocation(TextField eventLocation) {
+        this.eventLocation = eventLocation;
+    }
+
+    public TextArea getEventDescription() {
+        return eventDescription;
+    }
+
+    public void setEventDescription(TextArea eventDescription) {
+        this.eventDescription = eventDescription;
+    }
+
+    public TextField getEventName() {
+        return eventName;
+    }
+
+    public void setEventName(TextField eventName) {
+        this.eventName = eventName;
+    }
+
+    public TextField getEventMaxNumberParticipants() {
+        return eventMaxNumberParticipants;
+    }
+
+    public void setEventMaxNumberParticipants(TextField eventMaxNumberParticipants) {
+        this.eventMaxNumberParticipants = eventMaxNumberParticipants;
+    }
+
+    public DatePicker getEventDate() {
+        return eventDate;
+    }
+
+    public void setEventDate(DatePicker eventDate) {
+        this.eventDate = eventDate;
     }
 
     @FXML
@@ -157,6 +212,7 @@ public class EventForm {
         window.setScene(loginScene);
         window.show();
     }
+
 }
 
 

@@ -26,8 +26,6 @@ public class Signup{
     @FXML
     private Button sportsmanForm;
 
-
-
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
         Parent signupView= FXMLLoader.load(getClass().getResource("/login.fxml"));
         Scene signupScene=new Scene(signupView);

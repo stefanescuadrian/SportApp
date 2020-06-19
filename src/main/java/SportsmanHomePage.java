@@ -36,7 +36,7 @@ public class SportsmanHomePage implements Initializable {
     public static String sportsmanFirstName;
     public static String sportsmanLastName;
     private static int[] checkList = new int[5];
-    private static ArrayList List = new ArrayList();
+    private static ArrayList<Eveniment> List = new ArrayList();
     private static ArrayList List1 = new ArrayList();
     @FXML
     private TableColumn<?, ?> firstColumn;
@@ -57,6 +57,7 @@ public class SportsmanHomePage implements Initializable {
 
     private Button[] buttons = new Button[100];
     private boolean[] buttons_disable_status = new boolean[100];
+    private String[] textButtons = new String[100];
 
     @FXML
     private TitledPane filters;
@@ -130,8 +131,8 @@ public class SportsmanHomePage implements Initializable {
         //O inregistrare e caracterizata in principiu de numele evenimentului, email-ul eventplanner-ului si email-ul sportsman-ului
 
         //Decodificare xml Registrations
-        ArrayList Lista = new ArrayList();
-        ArrayList Lista1 = new ArrayList();
+        ArrayList<Inregistrare> Lista = new ArrayList();
+        ArrayList<Eveniment> Lista1 = new ArrayList();
         try{
             FileInputStream fis = new FileInputStream("./Registrations.xml");
             XMLDecoder decoder = new XMLDecoder(fis);
@@ -156,11 +157,12 @@ public class SportsmanHomePage implements Initializable {
 
         for (int i=0;i<Lista.size();i++){
             if(Lista.get(i) instanceof Inregistrare){
-                if (((Inregistrare) Lista.get(i)).getSportsmanEmail().equals(sportsmanMail) && ((Inregistrare) Lista.get(i)).getE().getEventPlannerMail().equals(eventplannerMail) && ((Inregistrare) Lista.get(i)).getE().getEventName().equals(eventName)){
+                if (Lista.get(i).getSportsmanEmail().equals(sportsmanMail) && Lista.get(i).getE().getEventPlannerMail().equals(eventplannerMail) && Lista.get(i).getE().getEventName().equals(eventName)){
                     for(int j=0;j<Lista1.size();j++){
                         if (Lista1.get(j) instanceof Eveniment){
-                            if (((Eveniment) Lista1.get(j)).getEventName().equals(eventName) && ((Eveniment) Lista1.get(j)).getEventPlannerMail().equals(eventplannerMail)){
+                            if (Lista1.get(j).getEventName().equals(eventName) && Lista1.get(j).getEventPlannerMail().equals(eventplannerMail)){
                                 buttons_disable_status[j] = true;
+                                textButtons[j] = "Joined";
                             }
                         }
                     }
@@ -173,11 +175,14 @@ public class SportsmanHomePage implements Initializable {
     private void initializare_status_butoane(){
         for(int i=0; i<buttons_disable_status.length;i++){
             buttons_disable_status[i] = false;
+            textButtons[i] = "Join";
+
         }
     }
     private void initializare_butoane(){
         for (int i=0; i<buttons.length; i++){
             buttons[i].setDisable(buttons_disable_status[i]);
+            buttons[i].setText(textButtons[i]);
         }
     }
 
@@ -218,9 +223,9 @@ public class SportsmanHomePage implements Initializable {
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment) {
-                verificareInregistrareaExista(((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventPlannerMail(), sportsmanEmail);
+                verificareInregistrareaExista(List.get(i).getEventName(), List.get(i).getEventPlannerMail(), sportsmanEmail);
                 initializare_butoane();
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
+                data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(), List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate(),buttons[i]));
             }
         }
 
@@ -281,18 +286,18 @@ public class SportsmanHomePage implements Initializable {
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment ) {
-                verificareInregistrareaExista(((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventPlannerMail(), sportsmanEmail);
+                verificareInregistrareaExista(List.get(i).getEventName(), List.get(i).getEventPlannerMail(), sportsmanEmail);
                 initializare_butoane();
-                if(((Eveniment) List.get(i)).getEventCategory().equals("Basketball") && checkList[0] == 1)///////////////////////////////////////////
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
-                if(((Eveniment) List.get(i)).getEventCategory().equals("Tennis") && checkList[1] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
-                if(((Eveniment) List.get(i)).getEventCategory().equals("Jogging") && checkList[2] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
-                if(((Eveniment) List.get(i)).getEventCategory().equals("Rugby") && checkList[3] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
-                if(((Eveniment) List.get(i)).getEventCategory().equals("Football") && checkList[4] == 1)
-                    data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate(),buttons[i]));
+                if(List.get(i).getEventCategory().equals("Basketball") && checkList[0] == 1)///////////////////////////////////////////
+                data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(), List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate(),buttons[i]));
+                if(List.get(i).getEventCategory().equals("Tennis") && checkList[1] == 1)
+                    data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(), List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate(),buttons[i]));
+                if(List.get(i).getEventCategory().equals("Jogging") && checkList[2] == 1)
+                    data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(), List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate(),buttons[i]));
+                if(List.get(i).getEventCategory().equals("Rugby") && checkList[3] == 1)
+                    data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(), List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate(),buttons[i]));
+                if(List.get(i).getEventCategory().equals("Football") && checkList[4] == 1)
+                    data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(), List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate(),buttons[i]));
 
             }
         }
@@ -303,10 +308,7 @@ public class SportsmanHomePage implements Initializable {
     private void handleButtonAction(ActionEvent actionEvent) {
         for (int i=0; i<buttons.length; i++)
             if (actionEvent.getSource() == buttons[i] && List.get(i) instanceof Eveniment) {
-
-                I = new Inregistrare((Eveniment) List.get(i), SportsmanHomePage.getSportsmanFirstName(), SportsmanHomePage.getSportsmanLastName(), SportsmanHomePage.getSportsmanEmail(), "Pending");
-
-
+                I = new Inregistrare(List.get(i), SportsmanHomePage.getSportsmanFirstName(), SportsmanHomePage.getSportsmanLastName(), SportsmanHomePage.getSportsmanEmail(), "Pending");
             }
         //Decodificare xml
         try{
@@ -321,7 +323,6 @@ public class SportsmanHomePage implements Initializable {
 
         //Codificare xml file
         try{
-
             List1.add(I);
             FileOutputStream fos = new FileOutputStream("./Registrations.xml");
             XMLEncoder encoder = new XMLEncoder(fos);

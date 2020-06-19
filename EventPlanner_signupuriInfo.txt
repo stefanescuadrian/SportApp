@@ -70,3 +70,11 @@ Password: asd
 Phone Number: 0723
 BirthDate: 2006-05-31
 
+Role: Sportsman 
+First Name: t 
+Last Name: t 
+Email: t 
+Password: t
+Phone Number: 07
+BirthDate: 2020-06-02
+

@@ -179,25 +179,81 @@ the men&apos;s national teams of the members of the International Basketball</st
   <void method="add">
    <object class="Eveniment">
     <void property="eventCategory">
-     <string>Jogging</string>
+     <string>Tennis</string>
     </void>
     <void property="eventDate">
-     <string>2020-06-23</string>
+     <string>2020-06-25</string>
     </void>
     <void property="eventDescription">
-     <string>Aici e descriereaaaaa</string>
+     <string>wqaweqweqweqw</string>
     </void>
     <void property="eventDifficulty">
-     <string>Beginner</string>
+     <string>Advanced</string>
     </void>
     <void property="eventLocation">
-     <string>Timisoara, Strada O</string>
+     <string>qweqwe</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>3</int>
+     <int>10</int>
     </void>
     <void property="eventName">
-     <string>Dull</string>
+     <string>qweqwe</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Football</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-11</string>
+    </void>
+    <void property="eventDescription">
+     <string>tergddfgsdsdfs</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Advanced</string>
+    </void>
+    <void property="eventLocation">
+     <string>w</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>19</int>
+    </void>
+    <void property="eventName">
+     <string>w</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Football</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-24</string>
+    </void>
+    <void property="eventDescription">
+     <string>trtr</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Advanced</string>
+    </void>
+    <void property="eventLocation">
+     <string>dfg</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>990</int>
+    </void>
+    <void property="eventName">
+     <string>dgfdgf</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>

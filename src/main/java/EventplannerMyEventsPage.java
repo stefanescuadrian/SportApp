@@ -26,7 +26,7 @@ import java.util.ResourceBundle;
 
 public class EventplannerMyEventsPage implements Initializable {
     private static String eventPlannerName;
-    private static ArrayList List = new ArrayList();
+    private static ArrayList<Eveniment> List = new ArrayList();
 
     @FXML
     private TableColumn<?, ?> firstColumn;
@@ -90,16 +90,13 @@ private static String nume;//////////////////
 //am modificat aici
         for (int i=0; i<List.size(); i++){
             if (List.get(i) instanceof Eveniment)
-            if (((Eveniment) List.get(i)).getEventPlannerMail().equals(eventPlannerName)){
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),
-                        ((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate()));
+            if (List.get(i).getEventPlannerMail().equals(eventPlannerName)){
+                data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(),
+                        List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate()));
 
             }
         }
         table.setItems(data);
-
-
-
 
         table.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override

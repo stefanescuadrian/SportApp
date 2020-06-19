@@ -45,7 +45,7 @@ public class EventplannerHomePage implements Initializable {
     private TableColumn<?, ?> thirdColumn;
 
 
-    private static ArrayList List = new ArrayList();
+    private static ArrayList<Eveniment> List = new ArrayList();
     private static String eventPlannerName;
     public EventplannerHomePage(){
 
@@ -54,14 +54,9 @@ public class EventplannerHomePage implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         ObservableList<Eveniment> data = FXCollections.observableArrayList();
-
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
-
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
-
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
-
-
 
         //Decodificare xml
         try{
@@ -77,13 +72,12 @@ public class EventplannerHomePage implements Initializable {
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment) {
-                data.add(new Eveniment(((Eveniment) List.get(i)).getEventCategory(),((Eveniment) List.get(i)).getEventDescription(),((Eveniment) List.get(i)).getEventName(),
-                        ((Eveniment) List.get(i)).getEventDifficulty(),((Eveniment) List.get(i)).getEventLocation(),((Eveniment) List.get(i)).getEventMaxNumberParticipants(),((Eveniment) List.get(i)).getEventDate()));
+                data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(),
+                        List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate()));
             }
         }
         table.setItems(data);
 
-        ///////////////////////////////////////////////////
         table.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
