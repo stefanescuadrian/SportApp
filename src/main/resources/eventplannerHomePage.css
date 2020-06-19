@@ -60,6 +60,7 @@
     -fx-padding: 0 0 0 30;
 }
 
+
 .col-i{
     -fx-pref-width: 180;
     -fx-padding: 0 0 0 80;
@@ -124,4 +125,7 @@
 
 .cool{
     -fx-text-fill: red;
+}
+.col_img {
+
 }

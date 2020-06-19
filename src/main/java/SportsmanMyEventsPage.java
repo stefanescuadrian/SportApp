@@ -15,6 +15,8 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.beans.XMLDecoder;
@@ -35,7 +37,7 @@ public class SportsmanMyEventsPage implements Initializable {
     private static int[] checkList = new int[5];
     private static ArrayList List = new ArrayList();
 
-
+private Text t;
 
     @FXML
     private TableColumn<?, ?> secondColumn;
@@ -96,11 +98,11 @@ public class SportsmanMyEventsPage implements Initializable {
 
         ObservableList<Inregistrare> data = FXCollections.observableArrayList();
 
+
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
-
 
         //Decodificare xml
         try{
@@ -118,6 +120,7 @@ public class SportsmanMyEventsPage implements Initializable {
             }
         }
         table.setItems(data);
+
     }
     public void reinitializare(){
         ObservableList<Inregistrare> data = FXCollections.observableArrayList();

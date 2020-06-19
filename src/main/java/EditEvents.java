@@ -112,7 +112,7 @@ public class EditEvents {
 
     void showDetails(Eveniment event) {
         this.event = event;
-        this.eventName.setText(event.getN());
+        this.eventName.setText(event.geteN());
        // this.eventCategory.setText(event.geteC());
         this.eventCategory.setValue(event.geteC());
         this.eventDifficulty.setValue(event.geteDif());

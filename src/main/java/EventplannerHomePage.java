@@ -1,6 +1,7 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,9 +9,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 
@@ -79,6 +82,31 @@ public class EventplannerHomePage implements Initializable {
             }
         }
         table.setItems(data);
+
+        ///////////////////////////////////////////////////
+        table.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                SeePlannerEventInformationPage edit = new SeePlannerEventInformationPage(table.getSelectionModel().getSelectedItem().getN(),eventPlannerName); //e, de fapt, email-ul eventPlanner-ului
+
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/seePlannerEventInformationPage.fxml"));
+                Parent tableView = null;
+                try {
+                    tableView = tableView = loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                Scene tableViewScene = new Scene(tableView);
+                SeePlannerEventInformationPage controller = loader.getController();
+                controller.showDetails(table.getSelectionModel().getSelectedItem());
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(tableViewScene);
+                window.show();
+            }
+        });
     }
     public EventplannerHomePage(String eventPlannerName) {
        this.eventPlannerName = eventPlannerName;

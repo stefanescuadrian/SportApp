@@ -22,7 +22,7 @@
             <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
          </columns>
       </TableView>
-      <Label layoutX="226.0" layoutY="102.0" prefHeight="45.0" prefWidth="166.0" text="My Events">
+      <Label layoutX="562.0" layoutY="88.0" prefHeight="45.0" prefWidth="236.0" text="Edit my events">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

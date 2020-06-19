@@ -9,9 +9,11 @@ import sun.java2d.pipe.SpanShapeRenderer;
 import sun.plugin2.util.ColorUtil;
 
 import java.awt.*;
+import java.io.File;
 
 public class Eveniment {
     private ImageView photo;
+    private ImageView photo1;////////////////////////////////////
     private String eventPlannerMail;
     private String eventCategory;
     private String eventDifficulty;
@@ -24,6 +26,7 @@ public class Eveniment {
 
     private Label status;
     private Label L;
+
     private Text t;
     private SimpleStringProperty eNC;
     private SimpleStringProperty eD;
@@ -35,7 +38,15 @@ public class Eveniment {
     private SimpleStringProperty eDate;
     private SimpleStringProperty eM;
 
+private File ImageFile;
 
+    public File getImageFile() {
+        return ImageFile;
+    }
+
+    public void setImageFile(File imageFile) {
+        ImageFile = imageFile;
+    }
 
     public ImageView getPhoto() {
         return photo;
@@ -65,6 +76,7 @@ public class Eveniment {
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
             photo.setFitWidth(50);
             photo.setFitHeight(50);
+            setImageFile(new File("x1.png"));
         }
         else if (eventCategory.equals("Rugby")){
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x2.png")));
@@ -87,8 +99,8 @@ public class Eveniment {
             photo.setFitHeight(50);
         }
        L = new Label();
-        L.setText(eventCategory);
 
+L.setText(eventCategory);
 
         eNC = new SimpleStringProperty(eventName + '\n' + L.getText());
         eD = new SimpleStringProperty(eventDescription);
@@ -101,8 +113,8 @@ public class Eveniment {
 
 
     }
-
-    public Eveniment( String eventCategory, String eventDescription, String eventName, Button button){
+//////////////////////////////////////////////////////////////////////////////////////////////modificat constructor
+    public Eveniment( String eventCategory, String eventDescription, String eventName,String eventDifficulty,String eventLocation,int eventMaxNumberParticipants,String eventDate, Button button){
         if (eventCategory.equals("Basketball")){
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
             photo.setFitWidth(50);
@@ -130,7 +142,12 @@ public class Eveniment {
         }
         eNC = new SimpleStringProperty(eventName   +  "\n" + eventCategory);
         eD = new SimpleStringProperty(eventDescription);
-
+        eN=new SimpleStringProperty(eventName);/////////////////////////////////////////////////////////////////
+        eC = new SimpleStringProperty(eventCategory);
+        eL=new SimpleStringProperty(eventLocation);
+        eDif=new SimpleStringProperty(eventDifficulty);
+        eDate=new SimpleStringProperty(eventDate);
+        eP=new SimpleStringProperty(Integer.toString(eventMaxNumberParticipants));
         this.button = button;
         this.button.setText("Join");
     }

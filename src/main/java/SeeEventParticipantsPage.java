@@ -31,6 +31,14 @@ public class SeeEventParticipantsPage implements Initializable {
     private static  String eName;
     private static int numberOfAcceptedSportsman;
     private Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+    @FXML
+    private TableColumn<?, ?> pendingImage;   ///////////////////////////////////////////
+    @FXML
+    private TableColumn<?, ?> acceptedImage;
+    @FXML
+    private TableColumn<?, ?> declinedImage;   ////////////////////////////////////////
+
     @FXML
     private TableView<Inregistrare> pendingTable;
 
@@ -76,7 +84,7 @@ public class SeeEventParticipantsPage implements Initializable {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        Parent goBackPageView= FXMLLoader.load(getClass().getResource("/editEvents.fxml"));
+        Parent goBackPageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
         Scene loginScene=new Scene(goBackPageView);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(loginScene);
@@ -89,6 +97,10 @@ public class SeeEventParticipantsPage implements Initializable {
         ObservableList<Inregistrare> data1 = FXCollections.observableArrayList(); //for pendingTable
         ObservableList<Inregistrare> data2 = FXCollections.observableArrayList(); //for acceptedTable
         ObservableList<Inregistrare> data3 = FXCollections.observableArrayList(); //for declinedTable
+
+        pendingColumn.setText("Pending");
+        acceptedColumn.setText("Accepted");
+        declinedColumn.setText("Declined");
 
         pendingColumn.setCellValueFactory(new PropertyValueFactory<>("sportsmanFNLN"));
         acceptedColumn.setCellValueFactory(new PropertyValueFactory<>("sportsmanFNLN"));
@@ -176,6 +188,10 @@ public class SeeEventParticipantsPage implements Initializable {
         ObservableList<Inregistrare> data1 = FXCollections.observableArrayList(); //for pendingTable
         ObservableList<Inregistrare> data2 = FXCollections.observableArrayList(); //for acceptedTable
         ObservableList<Inregistrare> data3 = FXCollections.observableArrayList(); //for declinedTable
+        pendingColumn.setText("Pending");
+        acceptedColumn.setText("Accepted");
+        declinedColumn.setText("Declined");
+
 
         pendingColumn.setCellValueFactory(new PropertyValueFactory<>("sportsmanFNLN"));
         acceptedColumn.setCellValueFactory(new PropertyValueFactory<>("sportsmanFNLN"));

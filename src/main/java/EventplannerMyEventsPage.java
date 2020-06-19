@@ -105,7 +105,6 @@ private static String nume;//////////////////
             @Override
             public void handle(MouseEvent event) {
                 EditEvents edit = new EditEvents(table.getSelectionModel().getSelectedItem().getN(), eventPlannerName); //e, de fapt, email-ul eventPlanner-ului
-
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/editEvents.fxml"));
                 Parent tableView = null;

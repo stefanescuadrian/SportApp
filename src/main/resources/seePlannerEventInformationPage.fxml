@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@seeEventParticipantsPage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeePlannerEventInformationPage">
+   <children>
+      <Button fx:id="backButton" layoutX="39.0" layoutY="30.0" mnemonicParsing="false" onAction="#goBack" styleClass="btn_b" text=" &lt; Back to Events">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imageViewLocation" fitHeight="22.0" fitWidth="29.0" layoutX="701.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="eventNameLabel1" layoutX="757.0" layoutY="211.0" prefHeight="67.0" prefWidth="185.0" styleClass="titleSecondary" text="Event" />
+      <Label fx:id="eventLocationLabel" layoutX="741.0" layoutY="550.0" prefHeight="32.0" prefWidth="366.0" styleClass="loc-date" text="Label" />
+      <Label fx:id="eventDateLabel" layoutX="741.0" layoutY="579.0" prefHeight="32.0" prefWidth="134.0" styleClass="loc-date" text="Label" />
+      <Label fx:id="eventMaxParticipantsLabel" layoutX="913.0" layoutY="438.0" prefHeight="32.0" prefWidth="173.0" styleClass="participantsLabel" text="Label" />
+      <Label fx:id="eventDifficultyLabel" layoutX="1100.0" layoutY="438.0" prefHeight="32.0" prefWidth="141.0" styleClass="difficultyLabel" text="Label" />
+      <ImageView fx:id="imageViewCat" fitHeight="57.0" fitWidth="76.0" layoutX="659.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView" fitHeight="494.0" fitWidth="448.0" layoutX="141.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="eventCategoryLabel" layoutX="758.0" layoutY="438.0" prefHeight="32.0" prefWidth="141.0" styleClass="categoryLabel" text="Label" />
+      <Label fx:id="eventDescriptionLabel" layoutX="756.0" layoutY="232.0" prefHeight="224.0" prefWidth="514.0" styleClass="descriptionLabel" text="Label" />
+      <Label fx:id="eventNameLabel" layoutX="756.0" layoutY="179.0" prefHeight="67.0" prefWidth="185.0" styleClass="titleLabel" text="Label" />
+      <ImageView fitHeight="1.0" fitWidth="632.0" layoutX="675.0" layoutY="517.0">
+         <image>
+            <Image url="@line_info.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

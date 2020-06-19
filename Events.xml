@@ -20,10 +20,10 @@ Ireland, Italy, Scotland and Wales</string>
      <string>Timisoara</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>2</int>
+     <int>1</int>
     </void>
     <void property="eventName">
-     <string>Goodd</string>
+     <string>Errrr</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>
@@ -50,7 +50,7 @@ of your long Sunday run, we’re here to support your goals.</string>
      <string>s</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>100</int>
+     <int>2</int>
     </void>
     <void property="eventName">
      <string>Blast Running</string>
@@ -170,6 +170,34 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
     <void property="eventName">
      <string>Flower</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Jogging</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-23</string>
+    </void>
+    <void property="eventDescription">
+     <string>Aici e descriereaaaaa</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Beginner</string>
+    </void>
+    <void property="eventLocation">
+     <string>Timisoara, Strada O</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>3</int>
+    </void>
+    <void property="eventName">
+     <string>Dull</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>
