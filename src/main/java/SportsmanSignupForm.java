@@ -16,7 +16,8 @@ import java.util.ArrayList;
 
 
 public class SportsmanSignupForm {
-    //public Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    //private static Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
     private ArrayList<User> List = new ArrayList();
     @FXML
     TextField firstName;
@@ -26,6 +27,7 @@ public class SportsmanSignupForm {
     TextField emailAddress;
     @FXML
     PasswordField password;
+private SceneChanger scene=new SceneChanger();
 
     public ArrayList<User> getList() {
         return List;
@@ -98,13 +100,6 @@ public class SportsmanSignupForm {
         return true;
     }
 
-    private void loadNewPage(String NewPage, ActionEvent e) throws IOException {
-        Parent signupView= FXMLLoader.load(getClass().getResource(NewPage));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
-    }
 
     public void saveSportsmanData(ActionEvent e) throws IOException, NoSuchAlgorithmException {
 
@@ -121,7 +116,7 @@ public class SportsmanSignupForm {
         emailAddress.clear();
         password.clear();
 
-        loadNewPage("/login.fxml", e);
+        scene.changeScenes(e,"/login.fxml");
     }
 }
 

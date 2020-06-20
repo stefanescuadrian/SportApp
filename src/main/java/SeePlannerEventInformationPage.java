@@ -50,6 +50,7 @@ public class SeePlannerEventInformationPage {
 
     @FXML
     private Label eventDescriptionLabel;
+    public SceneChanger scene=new SceneChanger();
 
     @FXML
     private Label eventNameLabel;
@@ -63,11 +64,7 @@ public class SeePlannerEventInformationPage {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        Parent goBackView = FXMLLoader.load(getClass().getResource("/eventPlannerHomePage.fxml"));
-        Scene loginScene = new Scene(goBackView);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventPlannerHomePage.fxml");
 
     }
     void check_category(Eveniment event){

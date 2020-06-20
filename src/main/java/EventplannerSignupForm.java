@@ -30,7 +30,7 @@ public class EventplannerSignupForm {
     @FXML
     private DatePicker dateOfBirthEP;
 
-
+private SceneChanger scene=new SceneChanger();
     @FXML
     private Label signupLabel;
 
@@ -43,11 +43,7 @@ public class EventplannerSignupForm {
 
     @FXML
     void changeScreenButtonPushed(ActionEvent event) throws IOException {
-        Parent signupView= FXMLLoader.load(getClass().getResource("/signup.fxml"));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
+        scene.changeScenes(event,"/signup.fxml");
     }
 
     public boolean checkIfAllFieldsCompleted(){
@@ -120,11 +116,8 @@ public class EventplannerSignupForm {
         phoneNumberEP.clear();
         dateOfBirthEP.setValue(null);
 
-        Parent signupView= FXMLLoader.load(getClass().getResource("/login.fxml"));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
+
+       scene.changeScenes(e,"/login.fxml");
 
     }
 

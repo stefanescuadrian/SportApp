@@ -38,7 +38,7 @@ public class SeeEventInformationPage {
     @FXML
     private Label eventDateLabel;
 
-
+private SceneChanger scene=new SceneChanger();
 
     @FXML
     private ImageView imageViewCat;
@@ -80,14 +80,10 @@ public class SeeEventInformationPage {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        Parent goBackView = FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
-        Scene loginScene = new Scene(goBackView);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
-
+        scene.changeScenes(event,"/sportsmanHomePage.fxml");
     }
-void check_category(Eveniment event){
+
+    void check_category(Eveniment event){
         this.event=event;
         if(event.geteC().equals("Jogging")){
             Image img=new Image("/jogging_photo.jpg");

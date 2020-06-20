@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 
 public class Login implements Initializable {
 
-
+private SceneChanger scene=new SceneChanger();
     private static ArrayList<User> List = new ArrayList();
 
     @FXML
@@ -43,11 +43,7 @@ public class Login implements Initializable {
 
 
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
-        Parent signupView= FXMLLoader.load(getClass().getResource("/signup.fxml"));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
+        scene.changeScenes(event,"/signup.fxml");
     }
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -95,11 +91,7 @@ public class Login implements Initializable {
                     if (List.get(i).getPassword().equals(Parola)) {
                         ok2=true;
                         SportsmanHomePage T = new SportsmanHomePage(List.get(i).getFirstName(), List.get(i).getLastName() ,List.get(i).getEmail());
-                        Parent sportsmanHomePageView= FXMLLoader.load(getClass().getResource("/sportsmanHomePage.fxml"));
-                        Scene sportsmanHomePageScene=new Scene(sportsmanHomePageView);
-                        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
-                        window.setScene(sportsmanHomePageScene);
-                        window.show();
+                        scene.changeScenes(e,"/sportsmanHomePage.fxml");
                         returnCurrentEmail( List.get(i).getEmail());
                         break;
                     }
@@ -121,11 +113,7 @@ public class Login implements Initializable {
                     if(List.get(i).getPassword().equals(Parola)){
                         ok2=true;
                         EventplannerHomePage T = new EventplannerHomePage(List.get(i).getEmail());
-                        Parent eventplannerHomePageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-                        Scene eventplannerHomePageScene=new Scene(eventplannerHomePageView);
-                        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
-                        window.setScene(eventplannerHomePageScene);
-                        window.show();
+                        scene.changeScenes(e,"/eventplannerHomePage.fxml");
                         returnCurrentEmail( List.get(i).getEmail());
                         break;
                     }

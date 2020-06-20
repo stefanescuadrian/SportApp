@@ -1,3 +1,4 @@
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -60,7 +61,7 @@ public class SeeEventParticipantsPage implements Initializable {
     @FXML
     private TableColumn<?, ?> acceptedColumn;
 
-
+    private SceneChanger scene=new SceneChanger();
 
     public SeeEventParticipantsPage(){
 
@@ -84,11 +85,7 @@ public class SeeEventParticipantsPage implements Initializable {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        Parent goBackPageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-        Scene loginScene=new Scene(goBackPageView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventplannerHomePage.fxml");
     }
 
     public void initialize(URL location, ResourceBundle resources) {

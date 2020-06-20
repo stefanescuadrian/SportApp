@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class EventForm {
+    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
     private ArrayList List = new ArrayList();
     ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
     ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
@@ -51,16 +52,12 @@ public class EventForm {
     @FXML
     private DatePicker eventDate;
 
-
+private SceneChanger scene=new SceneChanger();
 
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-        Scene loginScene=new Scene(loginView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventplannerHomePage.fxml");
     }
 
 
@@ -160,11 +157,8 @@ public class EventForm {
         List.add(E);
         XMLDE.XMLEncoder("./Events.xml",List);
 
-        Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-        Scene loginScene=new Scene(loginView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventplannerHomePage.fxml");
+
     }
 
 }

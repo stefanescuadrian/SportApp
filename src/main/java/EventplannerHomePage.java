@@ -44,7 +44,7 @@ public class EventplannerHomePage implements Initializable {
     @FXML
     private TableColumn<?, ?> thirdColumn;
 
-
+private SceneChanger scene=new SceneChanger();
     private static ArrayList<Eveniment> List = new ArrayList();
     private static String eventPlannerName;
     public EventplannerHomePage(){
@@ -81,7 +81,6 @@ public class EventplannerHomePage implements Initializable {
                     e.printStackTrace();
                 }
 
-
                 Scene tableViewScene = new Scene(tableView);
                 SeePlannerEventInformationPage controller = loader.getController();
                 controller.showDetails(table.getSelectionModel().getSelectedItem());
@@ -106,28 +105,17 @@ public class EventplannerHomePage implements Initializable {
     @FXML
     void goToMyEventsPage(ActionEvent event) throws IOException {
         EventplannerMyEventsPage E = new EventplannerMyEventsPage(eventPlannerName);
-        Parent eventplannerMyEventsPageView= FXMLLoader.load(getClass().getResource("/eventplannerMyEventsPage.fxml"));
-        Scene loginScene=new Scene(eventplannerMyEventsPageView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventplannerMyEventsPage.fxml");
+
     }
 
     @FXML
     void addEvents(ActionEvent event) throws IOException {
-        Parent loginView= FXMLLoader.load(getClass().getResource("/eventForm.fxml"));
-        Scene loginScene=new Scene(loginView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventForm.fxml");
     }
     @FXML
     void logoutOnAction(ActionEvent event) throws IOException {
-        Parent loginView= FXMLLoader.load(getClass().getResource("/login.fxml"));
-        Scene loginScene=new Scene(loginView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/login.fxml");
     }
 
 

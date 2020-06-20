@@ -838,403 +838,66 @@
   <void method="add">
    <object class="Sportsman">
     <void property="email">
-     <string>owq</string>
+     <string>ssaa</string>
     </void>
     <void property="firstName">
-     <string>o</string>
+     <string>a</string>
     </void>
     <void property="lastName">
-     <string>o</string>
+     <string>a</string>
     </void>
     <void property="password">
-     <string>0a9dc7d81421abcd7f5501062659ad89df0b40055d9872e708dafe4e904504f77d734bfe78871d6dbae8940ae79a152d241b6d7546bd4dca6901822be77d849c</string>
+     <string>0d2cefd617e2689207ba94d7df5b5d475b5ee9fc340653700d03c09e115756940df9119e7806d4cb38fcf4fd86596c26027fcc77a4957cb8d2fd18016407d1dc</string>
     </void>
     <void property="salt">
      <array class="byte" length="16">
       <void index="0">
-       <byte>46</byte>
-      </void>
-      <void index="1">
-       <byte>-66</byte>
-      </void>
-      <void index="2">
-       <byte>117</byte>
-      </void>
-      <void index="3">
-       <byte>-4</byte>
-      </void>
-      <void index="4">
-       <byte>72</byte>
-      </void>
-      <void index="5">
        <byte>-60</byte>
       </void>
-      <void index="6">
-       <byte>13</byte>
-      </void>
-      <void index="7">
-       <byte>-120</byte>
-      </void>
-      <void index="8">
-       <byte>-80</byte>
-      </void>
-      <void index="9">
-       <byte>-8</byte>
-      </void>
-      <void index="10">
-       <byte>-38</byte>
-      </void>
-      <void index="11">
-       <byte>-110</byte>
-      </void>
-      <void index="12">
-       <byte>86</byte>
-      </void>
-      <void index="13">
-       <byte>-89</byte>
-      </void>
-      <void index="14">
-       <byte>85</byte>
-      </void>
-      <void index="15">
-       <byte>89</byte>
-      </void>
-     </array>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Sportsman">
-    <void property="email">
-     <string>z</string>
-    </void>
-    <void property="firstName">
-     <string>zxc</string>
-    </void>
-    <void property="lastName">
-     <string>f</string>
-    </void>
-    <void property="password">
-     <string>585ade9c5e8061f7f30e893d9f8fc4acc0cf53cdc3c696cfb0ce9168427a0bbe85ee136193767e504209115fcee1a90d7d9921eac5aac93839f7fc1d5060627a</string>
-    </void>
-    <void property="salt">
-     <array class="byte" length="16">
-      <void index="0">
-       <byte>101</byte>
-      </void>
       <void index="1">
-       <byte>-1</byte>
+       <byte>-16</byte>
       </void>
       <void index="2">
-       <byte>-104</byte>
+       <byte>46</byte>
       </void>
       <void index="3">
-       <byte>111</byte>
+       <byte>-69</byte>
       </void>
       <void index="4">
-       <byte>5</byte>
+       <byte>-59</byte>
       </void>
       <void index="5">
-       <byte>124</byte>
+       <byte>15</byte>
       </void>
       <void index="6">
-       <byte>-53</byte>
+       <byte>64</byte>
       </void>
       <void index="7">
-       <byte>-8</byte>
+       <byte>65</byte>
       </void>
       <void index="8">
-       <byte>24</byte>
+       <byte>-119</byte>
       </void>
       <void index="9">
-       <byte>-9</byte>
-      </void>
-      <void index="10">
-       <byte>90</byte>
-      </void>
-      <void index="11">
-       <byte>98</byte>
-      </void>
-      <void index="12">
-       <byte>31</byte>
-      </void>
-      <void index="13">
-       <byte>-81</byte>
-      </void>
-      <void index="14">
-       <byte>-45</byte>
-      </void>
-      <void index="15">
-       <byte>7</byte>
-      </void>
-     </array>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Sportsman">
-    <void property="email">
-     <string>i</string>
-    </void>
-    <void property="firstName">
-     <string>r</string>
-    </void>
-    <void property="lastName">
-     <string>r</string>
-    </void>
-    <void property="password">
-     <string>8dba7c47a5fbc4fa2649171a3f12bf74da204e33973c92014dfa10a9c1175de05f4dc47ce0adfcbc38ffabf9ad28699b3c69745c83041f927c7f7d5a8b31d81f</string>
-    </void>
-    <void property="salt">
-     <array class="byte" length="16">
-      <void index="0">
        <byte>-82</byte>
       </void>
-      <void index="1">
-       <byte>98</byte>
-      </void>
-      <void index="2">
-       <byte>21</byte>
-      </void>
-      <void index="3">
-       <byte>47</byte>
-      </void>
-      <void index="4">
-       <byte>-1</byte>
-      </void>
-      <void index="5">
-       <byte>-43</byte>
-      </void>
-      <void index="6">
-       <byte>-103</byte>
-      </void>
-      <void index="7">
-       <byte>60</byte>
-      </void>
-      <void index="8">
-       <byte>9</byte>
-      </void>
-      <void index="9">
-       <byte>122</byte>
-      </void>
       <void index="10">
-       <byte>82</byte>
+       <byte>14</byte>
       </void>
       <void index="11">
-       <byte>-44</byte>
+       <byte>24</byte>
       </void>
       <void index="12">
-       <byte>48</byte>
+       <byte>-41</byte>
       </void>
       <void index="13">
-       <byte>3</byte>
+       <byte>114</byte>
       </void>
       <void index="14">
-       <byte>-38</byte>
+       <byte>43</byte>
       </void>
       <void index="15">
-       <byte>88</byte>
-      </void>
-     </array>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Sportsman">
-    <void property="email">
-     <string></string>
-    </void>
-    <void property="firstName">
-     <string>o</string>
-    </void>
-    <void property="lastName">
-     <string>o</string>
-    </void>
-    <void property="password">
-     <string>1a11fa963cfae7928db72774b8850c3a031ab027c4087288fbe5937d01b7f612d08b658b24ef8f4430bd0c39734e19d8afa2e15ad945125229e7ca2062de3837</string>
-    </void>
-    <void property="salt">
-     <array class="byte" length="16">
-      <void index="0">
-       <byte>47</byte>
-      </void>
-      <void index="1">
-       <byte>48</byte>
-      </void>
-      <void index="2">
-       <byte>50</byte>
-      </void>
-      <void index="3">
-       <byte>-112</byte>
-      </void>
-      <void index="4">
-       <byte>-8</byte>
-      </void>
-      <void index="5">
-       <byte>-95</byte>
-      </void>
-      <void index="6">
-       <byte>-43</byte>
-      </void>
-      <void index="7">
-       <byte>-114</byte>
-      </void>
-      <void index="8">
-       <byte>-99</byte>
-      </void>
-      <void index="9">
-       <byte>36</byte>
-      </void>
-      <void index="10">
-       <byte>-99</byte>
-      </void>
-      <void index="11">
-       <byte>41</byte>
-      </void>
-      <void index="12">
-       <byte>-95</byte>
-      </void>
-      <void index="13">
-       <byte>-75</byte>
-      </void>
-      <void index="14">
-       <byte>-114</byte>
-      </void>
-      <void index="15">
-       <byte>122</byte>
-      </void>
-     </array>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Sportsman">
-    <void property="email">
-     <string>owqq</string>
-    </void>
-    <void property="firstName">
-     <string>o</string>
-    </void>
-    <void property="lastName">
-     <string>o</string>
-    </void>
-    <void property="password">
-     <string>a2b2639b40ecaf7bab13ebbd319355397bb42ee4da3bb1ac8eda014ed59d1f88ce1046c1b913aac80d244bf69da10f97e176b539e4cdf8377437d08f0ea694c4</string>
-    </void>
-    <void property="salt">
-     <array class="byte" length="16">
-      <void index="0">
-       <byte>58</byte>
-      </void>
-      <void index="1">
-       <byte>69</byte>
-      </void>
-      <void index="2">
-       <byte>7</byte>
-      </void>
-      <void index="3">
-       <byte>120</byte>
-      </void>
-      <void index="4">
-       <byte>11</byte>
-      </void>
-      <void index="5">
-       <byte>89</byte>
-      </void>
-      <void index="6">
-       <byte>-73</byte>
-      </void>
-      <void index="7">
-       <byte>-101</byte>
-      </void>
-      <void index="8">
-       <byte>-89</byte>
-      </void>
-      <void index="9">
-       <byte>-115</byte>
-      </void>
-      <void index="10">
-       <byte>-93</byte>
-      </void>
-      <void index="11">
-       <byte>-40</byte>
-      </void>
-      <void index="12">
-       <byte>-61</byte>
-      </void>
-      <void index="13">
-       <byte>-104</byte>
-      </void>
-      <void index="14">
-       <byte>-47</byte>
-      </void>
-      <void index="15">
-       <byte>-79</byte>
-      </void>
-     </array>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Sportsman">
-    <void property="email">
-     <string>k</string>
-    </void>
-    <void property="firstName">
-     <string>w</string>
-    </void>
-    <void property="lastName">
-     <string>w</string>
-    </void>
-    <void property="password">
-     <string>a6ff2d9a8912c9c7d26c8735e47f2dcd5d1a0554ec3df722d4b7ecebbb8efb8ea9975e50c8a68298bc408324dc3c9d036d64660c7df6a76319dc1fd64f3a33fa</string>
-    </void>
-    <void property="salt">
-     <array class="byte" length="16">
-      <void index="0">
-       <byte>75</byte>
-      </void>
-      <void index="1">
-       <byte>5</byte>
-      </void>
-      <void index="3">
-       <byte>-53</byte>
-      </void>
-      <void index="4">
-       <byte>-36</byte>
-      </void>
-      <void index="5">
-       <byte>45</byte>
-      </void>
-      <void index="6">
-       <byte>77</byte>
-      </void>
-      <void index="7">
-       <byte>-118</byte>
-      </void>
-      <void index="8">
-       <byte>-95</byte>
-      </void>
-      <void index="9">
-       <byte>39</byte>
-      </void>
-      <void index="10">
-       <byte>121</byte>
-      </void>
-      <void index="11">
-       <byte>-98</byte>
-      </void>
-      <void index="12">
-       <byte>-89</byte>
-      </void>
-      <void index="13">
-       <byte>1</byte>
-      </void>
-      <void index="14">
-       <byte>84</byte>
-      </void>
-      <void index="15">
-       <byte>-122</byte>
+       <byte>74</byte>
       </void>
      </array>
     </void>
