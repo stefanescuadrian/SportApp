@@ -14,6 +14,8 @@ public class SeeEventInformationPageTest extends ApplicationTest {
     private SeeEventInformationPage S;
     private Eveniment E;
     private static final SimpleStringProperty eventCategory = new SimpleStringProperty("Jogging");
+    private String eventplanner="Ana";
+    private String eventName="fain";
     @BeforeClass
     public static void setupClass() throws Exception{
     }
@@ -67,5 +69,24 @@ public class SeeEventInformationPageTest extends ApplicationTest {
         E.setMaxNumberParticipants(10);
         E.seteDate("12-04-2000");
         S.showDetails(E);
+    }
+    @Test
+    public  void testGetAndSetEvent(){
+        S.setEvent(E);
+        assertEquals(E,S.getEvent());
+    }
+    @Test
+    public void testConstructor(){
+        SeeEventInformationPage Is=new SeeEventInformationPage(eventName,eventplanner);
+        assertEquals("fain",SeeEventInformationPage.geteName());
+        assertEquals("Ana",SeeEventInformationPage.getEventPlannerMail());
+    }
+
+    @Test
+    public void testGetAndSetEventPlannerMail(){
+       SeeEventInformationPage.seteName("Lia");
+       SeeEventInformationPage.setEventPlannerMail("Cool");
+        assertEquals("Lia",SeeEventInformationPage.geteName());
+        assertEquals("Cool",SeeEventInformationPage.getEventPlannerMail());
     }
 }

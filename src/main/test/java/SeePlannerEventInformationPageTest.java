@@ -131,6 +131,20 @@ I.showDetails(E);
         I.setEvent(E);
         assertEquals(E,I.getEvent());
     }
+    @Test
+    public void testConstructor(){
+        SeePlannerEventInformationPage Is=new SeePlannerEventInformationPage(eName,eventPlanner);
+        assertEquals("Cool",SeePlannerEventInformationPage.geteName());
+        assertEquals("You",SeePlannerEventInformationPage.getEventPlannerMail());
+    }
+
+    @Test
+    public void testGetAndSetEventPlannerMail(){
+        SeePlannerEventInformationPage.seteName("Lia");
+        SeePlannerEventInformationPage.setEventPlannerMail("Cool");
+        assertEquals("Lia",SeePlannerEventInformationPage.geteName());
+        assertEquals("Cool",SeePlannerEventInformationPage.getEventPlannerMail());
+    }
 
 }
 

@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 public class SeeEventInformationPage {
-    ///////////////////////////////////////////////////////////
     private static String  eventPlannerMail;
     private static String eName;
     private Eveniment event;
@@ -31,7 +30,6 @@ public class SeeEventInformationPage {
     @FXML
      Label eventDifficultyLabel;
 
-
     @FXML
     Label eventMaxParticipantsLabel;
 
@@ -43,15 +41,11 @@ private SceneChanger scene=new SceneChanger();
     @FXML
      ImageView imageViewCat;
 
-
     @FXML
      Label eventCategoryLabel;
 
-
-
     @FXML
      Label eventDescriptionLabel;
-
 
     @FXML
      Label eventNameLabel;
@@ -69,14 +63,14 @@ private SceneChanger scene=new SceneChanger();
         return eventPlannerMail;
     }
 
-    public static void setEventPlannerMail(String eventPlannerMail) {//////////////////////
+    public static void setEventPlannerMail(String eventPlannerMail) {
         SeeEventInformationPage.eventPlannerMail = eventPlannerMail;
     }
 
     public static String geteName() {///////////////////
         return eName;
     }
-    /////////////////////////////////////////////////////////
+
     public static void seteName(String eName) {
         SeeEventInformationPage.eName = eName;
     }
@@ -155,7 +149,6 @@ private SceneChanger scene=new SceneChanger();
         this.eventLocationLabel.setText(event.geteL());
         this.eventMaxParticipantsLabel.setText(event.geteP()+" participants");
         this.eventDateLabel.setText(event.geteDate());
-
 
     }
 

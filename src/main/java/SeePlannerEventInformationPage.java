@@ -129,21 +129,21 @@ public class SeePlannerEventInformationPage {
         this.eventDateLabel.setText(event.geteDate());
     }
 
-   // public static String getEventPlannerMail() {
-   //     return eventPlannerMail;
-   // }
+    public static String getEventPlannerMail() {
+        return eventPlannerMail;
+    }
 
-    //public static void setEventPlannerMail(String eventPlannerMail) {
-    //    SeePlannerEventInformationPage.eventPlannerMail = eventPlannerMail;
-   // }
+    public static void setEventPlannerMail(String eventPlannerMail) {
+        SeePlannerEventInformationPage.eventPlannerMail = eventPlannerMail;
+    }
 
-    //public static String geteName() {
-        //return eName;
-   // }
+    public static String geteName() {
+        return eName;
+    }
 
-   // public static void seteName(String eName) {
-    //    SeePlannerEventInformationPage.eName = eName;
-   // }
+    public static void seteName(String eName) {
+        SeePlannerEventInformationPage.eName = eName;
+    }
 
     public Eveniment getEvent() {
         return event;
