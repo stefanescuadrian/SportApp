@@ -259,5 +259,33 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Tennis</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-13</string>
+    </void>
+    <void property="eventDescription">
+     <string>dasdadada</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Medium</string>
+    </void>
+    <void property="eventLocation">
+     <string>sssss</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>aaaassssaaaaa</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

@@ -29,14 +29,14 @@ public class Eveniment {
     private Label L;
 
     private Text t;
-    private SimpleStringProperty eNC;
-    private SimpleStringProperty eD;
-    private SimpleStringProperty eC;
-    private SimpleStringProperty eL;
-    private SimpleStringProperty eN;
-    private SimpleStringProperty eDif;
-    private SimpleStringProperty eP;
-    private SimpleStringProperty eDate;
+    private SimpleStringProperty eNC=new SimpleStringProperty();
+    private SimpleStringProperty eD=new SimpleStringProperty();
+    private SimpleStringProperty eC=new SimpleStringProperty();
+    private SimpleStringProperty eL=new SimpleStringProperty();
+    private SimpleStringProperty eN=new SimpleStringProperty();
+    private SimpleStringProperty eDif=new SimpleStringProperty();
+    private SimpleStringProperty eP=new SimpleStringProperty();
+    private SimpleStringProperty eDate=new SimpleStringProperty();
     private SimpleStringProperty eM;
 
     public ImageView getPhoto1() {
