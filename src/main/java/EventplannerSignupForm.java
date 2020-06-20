@@ -11,24 +11,25 @@ import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 
 public class EventplannerSignupForm {
-    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
     private ArrayList<User> List = new ArrayList();
     @FXML
-    private TextField firstNameEP;
+     TextField firstNameEP;
     @FXML
-    private TextField lastNameEP;
+    TextField lastNameEP;
     @FXML
-    private TextField emailAddressEP;
+     TextField emailAddressEP;
     @FXML
-    private PasswordField passwordEP;
+     PasswordField passwordEP;
     @FXML
-    private TextField phoneNumberEP;
+     TextField phoneNumberEP;
     @FXML
-    private DatePicker dateOfBirthEP;
+     DatePicker dateOfBirthEP;
 
 private SceneChanger scene=new SceneChanger();
     @FXML
@@ -40,6 +41,13 @@ private SceneChanger scene=new SceneChanger();
     @FXML
     private Button signupButtonForm;
 
+    public ArrayList<User> getList() {
+        return List;
+    }
+
+    public void setList(ArrayList<User> list) {
+        List = list;
+    }
 
     @FXML
     void changeScreenButtonPushed(ActionEvent event) throws IOException {
@@ -69,8 +77,12 @@ private SceneChanger scene=new SceneChanger();
         return true;
     }
 
-    public boolean addEventPlannerAccount() throws NoSuchAlgorithmException {
-        List = XMLDE.XMLDecoder("./Signupuri.xml");
+    public boolean addEventPlannerAccount(String filePath) throws NoSuchAlgorithmException {
+        try {
+            List = XMLDE.XMLDecoder(filePath);
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }
         //ACCOUNT ALREADY EXISTS CHECK
         for(int i = 0; i< List.size(); i++){
             if(List.get(i) instanceof Sportsman){
@@ -97,7 +109,7 @@ private SceneChanger scene=new SceneChanger();
 
         Eventplanner S = new Eventplanner(firstNameEP.getText(), lastNameEP.getText(), emailAddressEP.getText(), T,phoneNumberEP.getText(),dateOfBirthEP.getValue().toString(),salt);
         List.add(S);
-        XMLDE.XMLEncoder("./Signupuri.xml",List);
+        XMLDE.XMLEncoder(filePath,List);
         return true;
     }
 
@@ -105,7 +117,7 @@ private SceneChanger scene=new SceneChanger();
         if (!checkIfAllFieldsCompleted()){
             return;
         }
-        if (!addEventPlannerAccount()){
+        if (!addEventPlannerAccount("./Signupuri.xml")){
             return;
         }
 

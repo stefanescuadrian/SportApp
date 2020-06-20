@@ -67,8 +67,6 @@ public class SeeEventParticipantsPage implements Initializable {
 
     }
 
-
-
     public SeeEventParticipantsPage(String eventPlannerMail, String eName, String eventMaxParticipants) {
         this.eventPlannerMail = eventPlannerMail;
         this.eName = eName;
@@ -104,18 +102,10 @@ public class SeeEventParticipantsPage implements Initializable {
         declinedColumn.setCellValueFactory(new PropertyValueFactory<>("sportsmanFNLN"));
 
         //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Registrations.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List = A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        List = XMLDE.XMLDecoder("./Registrations.xml");
 
         for (int i=0; i<List.size(); i++){
-            if (List.get(i) instanceof Inregistrare && List.get(i).getE().getEventPlannerMail().equals(getEventPlannerMail()) && List.get(i).getE().getEventName().equals(eName)) {
+            if (List.get(i) != null && List.get(i).getE().getEventPlannerMail().equals(getEventPlannerMail()) && List.get(i).getE().getEventName().equals(eName)) {
                 if (List.get(i).getStatus().equals("Pending")) {
                     data1.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
                 }
@@ -137,22 +127,14 @@ public class SeeEventParticipantsPage implements Initializable {
 
     @FXML
     void acceptParticipant(ActionEvent event) throws IOException {
-        if (pendingTable.getSelectionModel().getSelectedItem() instanceof Inregistrare && numberOfAcceptedSportsman < eventMaxParticipants){
+        if (pendingTable.getSelectionModel().getSelectedItem() != null && numberOfAcceptedSportsman < eventMaxParticipants){
             numberOfAcceptedSportsman++;
             System.out.println(numberOfAcceptedSportsman);
             //Decodificare xml
-            try{
-                FileInputStream fis = new FileInputStream("./Registrations.xml");
-                XMLDecoder decoder = new XMLDecoder(fis);
-                ArrayList A = new ArrayList();
-                A = (ArrayList) decoder.readObject();
-                List = A;
-            } catch (FileNotFoundException ex) {
-                ex.printStackTrace();
-            }
+            List = XMLDE.XMLDecoder("./Registrations.xml");
 
             for(int i=0; i<List.size();i++){
-                if(List.get(i) instanceof Inregistrare){
+                if(List.get(i) != null){
                 if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                     if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                         List.get(i).setStatus("Accepted");
@@ -160,19 +142,10 @@ public class SeeEventParticipantsPage implements Initializable {
                 }
                 }
             }
-
             //Codificare xml file
-            try{
-                FileOutputStream fos = new FileOutputStream("./Registrations.xml");
-                XMLEncoder encoder = new XMLEncoder(fos);
-                encoder.writeObject(List);
-                encoder.close();
-                fos.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
+            XMLDE.XMLEncoder("./Registrations.xml",List);
         }
-        else if (pendingTable.getSelectionModel().getSelectedItem() instanceof Inregistrare && numberOfAcceptedSportsman >= eventMaxParticipants) {
+        else if (pendingTable.getSelectionModel().getSelectedItem() != null && numberOfAcceptedSportsman >= eventMaxParticipants) {
             alert.setTitle("ERROR");
             alert.setHeaderText(null);
             alert.setContentText("Number of maximum participants was reached !");
@@ -194,19 +167,10 @@ public class SeeEventParticipantsPage implements Initializable {
         acceptedColumn.setCellValueFactory(new PropertyValueFactory<>("sportsmanFNLN"));
         declinedColumn.setCellValueFactory(new PropertyValueFactory<>("sportsmanFNLN"));
 
-        //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Registrations.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List = A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        List = XMLDE.XMLDecoder("./Registrations.xml");
 
         for (int i=0; i<List.size(); i++){
-            if (List.get(i) instanceof Inregistrare && List.get(i).getE().getEventPlannerMail().equals(getEventPlannerMail()) && List.get(i).getE().getEventName().equals(eName)) {
+            if (List.get(i) != null && List.get(i).getE().getEventPlannerMail().equals(getEventPlannerMail()) && List.get(i).getE().getEventName().equals(eName)) {
                 if (List.get(i).getStatus().equals("Pending")) {
                     data1.add(new Inregistrare(List.get(i).getE(), List.get(i).getSportsmanFirstName(), List.get(i).getSportsmanLastName(), List.get(i).getSportsmanEmail(), List.get(i).getStatus()));
                 }
@@ -227,21 +191,12 @@ public class SeeEventParticipantsPage implements Initializable {
 
     @FXML
     void declineParticipant(ActionEvent event) {
-        if (pendingTable.getSelectionModel().getSelectedItem() instanceof Inregistrare){
-            //Decodificare xml
-            try{
-                FileInputStream fis = new FileInputStream("./Registrations.xml");
-                XMLDecoder decoder = new XMLDecoder(fis);
-                ArrayList A = new ArrayList();
-                A = (ArrayList) decoder.readObject();
-                List = A;
-            } catch (FileNotFoundException ex) {
-                ex.printStackTrace();
-            }
+        if (pendingTable.getSelectionModel().getSelectedItem() != null){
+            List = XMLDE.XMLDecoder("./Registrations.xml");
 
 
             for(int i=0; i<List.size();i++){
-                if(List.get(i) instanceof Inregistrare){
+                if(List.get(i) != null){
                 if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                     if (List.get(i).getSportsmanEmail().equals(pendingTable.getSelectionModel().getSelectedItem().getSportsmanEmail()) && List.get(i).getE().getEventName().equals((pendingTable.getSelectionModel().getSelectedItem().getE().getEventName()))) {
                         List.get(i).setStatus("Declined");
@@ -249,17 +204,8 @@ public class SeeEventParticipantsPage implements Initializable {
                 }
                 }
             }
+            XMLDE.XMLEncoder("./Registrations.xml",List);
 
-            //Codificare xml file
-            try{
-                FileOutputStream fos = new FileOutputStream("./Registrations.xml");
-                XMLEncoder encoder = new XMLEncoder(fos);
-                encoder.writeObject(List);
-                encoder.close();
-                fos.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
         }
         reinitialize();
     }

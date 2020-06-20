@@ -903,5 +903,206 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>owqq</string>
+    </void>
+    <void property="firstName">
+     <string>o</string>
+    </void>
+    <void property="lastName">
+     <string>o</string>
+    </void>
+    <void property="password">
+     <string>9e6ec93055676d28787c3ccd7d62da11603be5912e3ff781fd713a1a49b21a2c108eb6bc7766a7cea448071bc313b811940c2a8a4f6a46f22bcd9f7aec854559</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>-53</byte>
+      </void>
+      <void index="1">
+       <byte>45</byte>
+      </void>
+      <void index="2">
+       <byte>115</byte>
+      </void>
+      <void index="3">
+       <byte>-97</byte>
+      </void>
+      <void index="4">
+       <byte>6</byte>
+      </void>
+      <void index="6">
+       <byte>-74</byte>
+      </void>
+      <void index="7">
+       <byte>16</byte>
+      </void>
+      <void index="8">
+       <byte>31</byte>
+      </void>
+      <void index="9">
+       <byte>-78</byte>
+      </void>
+      <void index="10">
+       <byte>-107</byte>
+      </void>
+      <void index="11">
+       <byte>-42</byte>
+      </void>
+      <void index="12">
+       <byte>41</byte>
+      </void>
+      <void index="13">
+       <byte>-6</byte>
+      </void>
+      <void index="14">
+       <byte>-113</byte>
+      </void>
+      <void index="15">
+       <byte>39</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>owqqq</string>
+    </void>
+    <void property="firstName">
+     <string>o</string>
+    </void>
+    <void property="lastName">
+     <string>o</string>
+    </void>
+    <void property="password">
+     <string>b2b218eba0444cd82bcf730ec7ae2be658f08a22d8f9becb8f2b7c600a454ff41940b3fd87a3609b4f2744773dc10198edb2be8a5568b6b9e73eeea7d0d3c264</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>46</byte>
+      </void>
+      <void index="1">
+       <byte>41</byte>
+      </void>
+      <void index="2">
+       <byte>-86</byte>
+      </void>
+      <void index="3">
+       <byte>29</byte>
+      </void>
+      <void index="4">
+       <byte>-55</byte>
+      </void>
+      <void index="5">
+       <byte>97</byte>
+      </void>
+      <void index="6">
+       <byte>-58</byte>
+      </void>
+      <void index="7">
+       <byte>-66</byte>
+      </void>
+      <void index="8">
+       <byte>74</byte>
+      </void>
+      <void index="9">
+       <byte>92</byte>
+      </void>
+      <void index="10">
+       <byte>-67</byte>
+      </void>
+      <void index="11">
+       <byte>-99</byte>
+      </void>
+      <void index="12">
+       <byte>79</byte>
+      </void>
+      <void index="13">
+       <byte>-36</byte>
+      </void>
+      <void index="14">
+       <byte>69</byte>
+      </void>
+      <void index="15">
+       <byte>123</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>j</string>
+    </void>
+    <void property="firstName">
+     <string>yy</string>
+    </void>
+    <void property="lastName">
+     <string>y</string>
+    </void>
+    <void property="password">
+     <string>142f3123ec72d96a1e72f83341048b3fbdc71c82b7f9d4349cf250c9c3a3e7c186bda0c28002a3e39b7b3da2edd316eba3840f8a5d822e16a7e6869c5bec4266</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>72</byte>
+      </void>
+      <void index="1">
+       <byte>-75</byte>
+      </void>
+      <void index="2">
+       <byte>-111</byte>
+      </void>
+      <void index="3">
+       <byte>-99</byte>
+      </void>
+      <void index="4">
+       <byte>74</byte>
+      </void>
+      <void index="5">
+       <byte>-9</byte>
+      </void>
+      <void index="6">
+       <byte>-43</byte>
+      </void>
+      <void index="7">
+       <byte>3</byte>
+      </void>
+      <void index="8">
+       <byte>17</byte>
+      </void>
+      <void index="9">
+       <byte>-94</byte>
+      </void>
+      <void index="10">
+       <byte>-114</byte>
+      </void>
+      <void index="11">
+       <byte>14</byte>
+      </void>
+      <void index="12">
+       <byte>42</byte>
+      </void>
+      <void index="13">
+       <byte>61</byte>
+      </void>
+      <void index="14">
+       <byte>-84</byte>
+      </void>
+      <void index="15">
+       <byte>78</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

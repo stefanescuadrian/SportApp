@@ -1,9 +1,6 @@
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class XMLDE {
@@ -30,5 +27,10 @@ public class XMLDE {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public static FileOutputStream XMLCreate(String filePath) throws FileNotFoundException {
+        FileOutputStream fos = new FileOutputStream(filePath);
+        return fos;
     }
 }

@@ -1,3 +1,4 @@
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,10 +64,14 @@ private SceneChanger scene=new SceneChanger();
         return true;
     }
 
-    public boolean addSportsmanAccount() throws NoSuchAlgorithmException {
+    public boolean addSportsmanAccount(String filePath) throws NoSuchAlgorithmException {
+        try{
         //Decodificare XML File
-        List = XMLDE.XMLDecoder("./Signupuri.xml");
-
+        List = XMLDE.XMLDecoder(filePath);
+       }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }
         //ACCOUNT ALREADY EXISTS CHECK
         for(int i = 0; i< List.size(); i++){
             if(List.get(i) instanceof Sportsman){
@@ -95,7 +100,7 @@ private SceneChanger scene=new SceneChanger();
         List.add(S);
 
         //Codificare XML File
-        XMLDE.XMLEncoder("./Signupuri.xml",List);
+        XMLDE.XMLEncoder(filePath,List);
 
         return true;
     }
@@ -107,7 +112,7 @@ private SceneChanger scene=new SceneChanger();
             return;
         }
 
-        if (!addSportsmanAccount()){
+        if (!addSportsmanAccount("./Signupuri.xml")){
             return;
         }
 

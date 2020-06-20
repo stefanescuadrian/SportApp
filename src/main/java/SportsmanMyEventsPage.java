@@ -81,6 +81,7 @@ private Text t;
     @FXML
     private TableColumn<?, ?> fourthColumn;
     private SceneChanger scene=new SceneChanger();
+    private ArrayList Lista = new ArrayList();
 
     public SportsmanMyEventsPage(){
 
@@ -99,24 +100,16 @@ private Text t;
 
         ObservableList<Inregistrare> data = FXCollections.observableArrayList();
 
-
         firstColumn.setCellValueFactory(new PropertyValueFactory<>("photo"));
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
+        List = XMLDE.XMLDecoder("./Registrations.xml");
         //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Registrations.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+
         for(int i=0; i<List.size();i++){
-            if (List.get(i) instanceof Inregistrare && List.get(i).getSportsmanEmail().equals(sportsmanEmail)) {
+            if (List.get(i) != null && List.get(i).getSportsmanEmail().equals(sportsmanEmail)) {
                 data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
             }
         }
@@ -131,21 +124,11 @@ private Text t;
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-
-        //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Registrations.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        List = XMLDE.XMLDecoder("./Registrations.xml");
 
 
         for(int i=0; i<List.size();i++){
-            if (List.get(i) instanceof Inregistrare && List.get(i).getSportsmanEmail().equals(sportsmanEmail) ) {
+            if (List.get(i) != null && List.get(i).getSportsmanEmail().equals(sportsmanEmail) ) {
                 if(List.get(i).getE().getEventCategory().equals("Basketball") && checkList[0] == 1)
                     data.add(new Inregistrare(List.get(i).getE(),sportsmanFirstName,sportsmanLastName,sportsmanEmail, List.get(i).getStatus()));
                 if(List.get(i).getE().getEventCategory().equals("Tennis") && checkList[1] == 1)
@@ -218,37 +201,20 @@ private Text t;
 
     @FXML
     void cancelAction(ActionEvent event) {
-        //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Registrations.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        List = XMLDE.XMLDecoder("./Registrations.xml");
 
-        if (table.getSelectionModel().getSelectedItem() instanceof Inregistrare){
+        if (table.getSelectionModel().getSelectedItem() != null){
             Inregistrare r = table.getSelectionModel().getSelectedItem();
             for (int i=0; i<List.size(); i++){
-                if (List.get(i) instanceof Inregistrare){
-                    if (List.get(i).getE().getEventName().equals(r.getE().getEventName()) && List.get(i).getSportsmanEmail().equals(r.getSportsmanEmail())){
-                        List.remove(i);
+                if (List.get(i) != null){
+                    if (!(List.get(i).getE().getEventName().equals(r.getE().getEventName()) && List.get(i).getSportsmanEmail().equals(r.getSportsmanEmail()))){
+                        //List.remove(i);
+                        Lista.add(List.get(i));
                     }
                 }
             }
         }
-
-        try{
-            FileOutputStream fos = new FileOutputStream("./Registrations.xml");
-            XMLEncoder encoder = new XMLEncoder(fos);
-            encoder.writeObject(List);
-            encoder.close();
-            fos.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        XMLDE.XMLEncoder("./Registrations.xml",Lista);
         reinitializare();
 
     }

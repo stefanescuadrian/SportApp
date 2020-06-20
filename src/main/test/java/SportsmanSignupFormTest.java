@@ -2,6 +2,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.assertj.core.util.introspection.FieldUtils;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -12,29 +13,29 @@ import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.nio.file.Files;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SportsmanSignupFormTest extends ApplicationTest {
-    private static final String email = "owqq";
+    private static final String email = "t";
     private static final String password = "o";
     private static final String firstName = "o";
     private static final String lastName = "o";
     private static ArrayList List = new ArrayList();
     private SportsmanSignupForm S;
-    //private Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
 
     @BeforeClass
     public static void setupClass() throws Exception{
-       List =  XMLDE.XMLDecoder("./Signupuri.xml");
-       XMLDE.XMLEncoder("./SignupuriTest",List);
+
     }
 
     @Before
     public void setUp() throws Exception {
-
+        XMLDE.XMLCreate("./SignupuriTest.xml");
         S = new SportsmanSignupForm();
         S.emailAddress = new TextField();
         S.lastName = new TextField();
@@ -49,12 +50,18 @@ public class SportsmanSignupFormTest extends ApplicationTest {
 
     @Test
     public void testAddSportsmanAccount() throws NoSuchAlgorithmException {
-        int i = List.size();
-        S.addSportsmanAccount();
-        List.add(S);
-        assertEquals(1 , List.size()- i);
-
+        S.addSportsmanAccount("./SignupuriTest.xml");
+        assertEquals(1 , S.getList().size());
     }
 
+    @Test
+    public void testCheckIfAllFieldsCompleted(){
+        assertTrue(S.checkIfAllFieldsCompleted());
+    }
 
+    @Test
+    public void testAddTwoTimesSportsmanAccount()throws NoSuchAlgorithmException{
+          assertEquals(true, S.addSportsmanAccount("./SignupuriTest.xml"));
+          assertEquals(false, S.addSportsmanAccount("./SignupuriTest.xml"));
+    }
 }

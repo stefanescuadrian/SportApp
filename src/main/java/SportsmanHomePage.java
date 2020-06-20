@@ -128,29 +128,16 @@ private SceneChanger scene=new SceneChanger();
     private void verificareInregistrareaExista(String eventName, String eventplannerMail, String sportsmanMail) {
         //O inregistrare e caracterizata in principiu de numele evenimentului, email-ul eventplanner-ului si email-ul sportsman-ului
 
-        //Decodificare xml Registrations
+
         ArrayList<Inregistrare> Lista = new ArrayList();
         ArrayList<Eveniment> Lista1 = new ArrayList();
-        try{
-            FileInputStream fis = new FileInputStream("./Registrations.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            Lista =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+
+        //Decodificare xml Registrations
+        Lista = XMLDE.XMLDecoder("./Registrations.xml");
 
         //Decodificare xml Events
-        try{
-            FileInputStream fis = new FileInputStream("./Events.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            Lista1 =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        Lista1 = XMLDE.XMLDecoder("./Events.xml");
+
 
 
         for (Inregistrare inregistrare : Lista) {
@@ -208,15 +195,7 @@ private SceneChanger scene=new SceneChanger();
 
 
         //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Events.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList<Eveniment> A = new ArrayList();
-            A = (ArrayList<Eveniment>) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        List = XMLDE.XMLDecoder("./Events.xml");
 
 
         for(int i=0; i<List.size();i++){
@@ -270,16 +249,9 @@ private SceneChanger scene=new SceneChanger();
         fourthColumn.setCellValueFactory(new PropertyValueFactory<>("button"));
 
 
+
         //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Events.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        List = XMLDE.XMLDecoder("./Events.xml");
 
 
         for(int i=0; i<List.size();i++){
@@ -305,15 +277,7 @@ private SceneChanger scene=new SceneChanger();
 
     private void handleButtonAction(ActionEvent actionEvent) {
         //Decodificare xml
-        try {
-            FileInputStream fis = new FileInputStream("./Registrations.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List1 = A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+            List1 = XMLDE.XMLDecoder("./Registrations.xml");
 
         Inregistrare I;
         for (int i=0; i<buttons.length; i++){
@@ -323,17 +287,9 @@ private SceneChanger scene=new SceneChanger();
                 List1.add(I);
             }
         }
-        
+
         //Codificare xml file
-        try {
-            FileOutputStream fos = new FileOutputStream("./Registrations.xml");
-            XMLEncoder encoder = new XMLEncoder(fos);
-            encoder.writeObject(List1);
-            encoder.close();
-            fos.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        XMLDE.XMLEncoder("./Registrations.xml",List1);
         reinitializare();
     }
 

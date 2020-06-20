@@ -45,6 +45,7 @@ private SceneChanger scene=new SceneChanger();
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
         scene.changeScenes(event,"/signup.fxml");
     }
+
     public void initialize(URL location, ResourceBundle resources) {
 
     }
