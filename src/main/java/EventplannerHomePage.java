@@ -61,7 +61,7 @@ private SceneChanger scene=new SceneChanger();
         List = XMLDE.XMLDecoder("./Events.xml");
 
         for(int i=0; i<List.size();i++){
-            if (List.get(i) instanceof Eveniment) {
+            if (List.get(i) != null) {
                 data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(),
                         List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate()));
             }

@@ -27,14 +27,14 @@ public class Login implements Initializable {
 
 private SceneChanger scene=new SceneChanger();
     private static ArrayList<User> List = new ArrayList();
+    boolean ok1=false, ok2=false;
+    @FXML
+    TextField usernameField;
 
     @FXML
-    private TextField usernameField;
+    TextField passwordField;
 
-    @FXML
-    private TextField passwordField;
-
-    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
+   // private Alert alert = new Alert(Alert.AlertType.INFORMATION);
     @FXML
     private Button loginButton;
 
@@ -46,97 +46,72 @@ private SceneChanger scene=new SceneChanger();
         scene.changeScenes(event,"/signup.fxml");
     }
 
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
+    public void initialize(URL location, ResourceBundle resources) {}
 
     public String returnCurrentEmail(String email){
-        return email;
-    }
+        return email;}
 
-   public void loginAction(ActionEvent e) throws IOException {
+    public boolean checkIfAllFieldsCompleted(){
         if (usernameField.getText().isEmpty()) {
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter your email address!");
-            alert.showAndWait();
-            return;
+            return false;
         }
 
         if (passwordField.getText().isEmpty()) {
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter your password!");
-            alert.showAndWait();
-            return;
+            return false;
         }
+        return true;
+    }
 
-        try{
-            FileInputStream fis = new FileInputStream("./Signupuri.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List = A;
-        } catch (
-                FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
-        boolean ok1=false, ok2=false;
+    public int login(){
+        List = XMLDE.XMLDecoder("./Signupuri.xml");
         //Check Credentials
         for(int i =0; i<List.size();i++) {
             if (List.get(i).getRole().equals("Sportsman")) {
                 if ( List.get(i).getEmail().equals(this.usernameField.getText())) {
                     ok1=true;
                     String Parola = CodificareParola.getSHA512Password(this.passwordField.getText(),List.get(i).getSalt());
-                    //System.out.println(Parola);
                     if (List.get(i).getPassword().equals(Parola)) {
                         ok2=true;
-                        SportsmanHomePage T = new SportsmanHomePage(List.get(i).getFirstName(), List.get(i).getLastName() ,List.get(i).getEmail());
-                        scene.changeScenes(e,"/sportsmanHomePage.fxml");
-                        returnCurrentEmail( List.get(i).getEmail());
-                        break;
+                        return i;
                     }
                     else {
-                        alert.setTitle("ERROR");
-                        alert.setHeaderText(null);
-                        alert.setContentText("The password is incorrect!");
-                        alert.showAndWait();
                         this.passwordField.clear();
-                        return;
+                        return -1;
                     }
                 }
             }
             if (List.get(i).getRole().equals("Eventplanner")){
-                if( List.get(i).getEmail().equals(this.usernameField.getText())){
+                if(List.get(i).getEmail().equals(this.usernameField.getText())){
                     ok1=true;
                     String Parola = CodificareParola.getSHA512Password(this.passwordField.getText(),List.get(i).getSalt());
-                    //System.out.println(Parola);
                     if(List.get(i).getPassword().equals(Parola)){
                         ok2=true;
-                        EventplannerHomePage T = new EventplannerHomePage(List.get(i).getEmail());
-                        scene.changeScenes(e,"/eventplannerHomePage.fxml");
-                        returnCurrentEmail( List.get(i).getEmail());
-                        break;
+                        return i;
                     }
                     else {
-                        alert.setTitle("ERROR");
-                        alert.setHeaderText(null);
-                        alert.setContentText("The password is incorrect!");
-                        alert.showAndWait();
                         this.passwordField.clear();
-                        return;
+                        return -1;
                     }
                 }
             }
         }
-        if (!ok1){
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("This account doesn't exist!");
-            alert.showAndWait();
-            this.usernameField.clear();
-            this.passwordField.clear();
+        this.usernameField.clear();
+        this.passwordField.clear();
+        return -1;
+    }
+
+   public void loginAction(ActionEvent e) throws IOException {
+        if (!checkIfAllFieldsCompleted()){
             return;
         }
+        int i = login();
+        if (ok1 && ok2 && i>=0 && List.get(login()).getRole().equals("Sportsman")) {
+            SportsmanHomePage T = new SportsmanHomePage(List.get(i).getFirstName(), List.get(i).getLastName() ,List.get(i).getEmail());
+            scene.changeScenes(e, "/sportsmanHomePage.fxml");
+        }
+       if (ok1 && ok2 && i>=0 && List.get(login()).getRole().equals("Eventplanner")) {
+           EventplannerHomePage T = new EventplannerHomePage(List.get(i).getEmail());
+           scene.changeScenes(e, "/eventplannerHomePage.fxml");
+       }
     }
 }

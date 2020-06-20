@@ -2,12 +2,9 @@
 <java version="1.8.0_241" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="Eventplanner">
-    <void property="birthDate">
-     <string>2020-06-20</string>
-    </void>
+   <object class="Sportsman">
     <void property="email">
-     <string>owqq</string>
+     <string>t</string>
     </void>
     <void property="firstName">
      <string>o</string>
@@ -16,60 +13,54 @@
      <string>o</string>
     </void>
     <void property="password">
-     <string>6566204684601b053b5c7ac26d826e768d024cc018cf46b92dce0438d900a15b0acf9ac1346adbd1dece814070f89a79aecc65fc5a244ac29cce45c1f3282a6b</string>
-    </void>
-    <void property="phoneNumber">
-     <string>123</string>
+     <string>e16d386abf96c7019157c12dc1be5901c3330e0a6a129f851d680eb0653f4a5ec6372b1b26dc097833b9054dfc3ec900bde4849120b68c5c778968aa93134c7f</string>
     </void>
     <void property="salt">
      <array class="byte" length="16">
       <void index="0">
-       <byte>91</byte>
+       <byte>45</byte>
       </void>
       <void index="1">
-       <byte>20</byte>
+       <byte>55</byte>
       </void>
       <void index="2">
-       <byte>-76</byte>
+       <byte>-53</byte>
       </void>
       <void index="3">
-       <byte>46</byte>
+       <byte>-28</byte>
       </void>
       <void index="4">
-       <byte>6</byte>
+       <byte>57</byte>
       </void>
       <void index="5">
-       <byte>23</byte>
+       <byte>-6</byte>
       </void>
       <void index="6">
-       <byte>-30</byte>
+       <byte>-85</byte>
       </void>
       <void index="7">
-       <byte>-12</byte>
+       <byte>48</byte>
       </void>
       <void index="8">
-       <byte>-25</byte>
+       <byte>118</byte>
       </void>
       <void index="9">
-       <byte>64</byte>
+       <byte>98</byte>
       </void>
       <void index="10">
-       <byte>-55</byte>
+       <byte>-85</byte>
       </void>
       <void index="11">
-       <byte>-4</byte>
+       <byte>11</byte>
       </void>
       <void index="12">
-       <byte>121</byte>
+       <byte>-80</byte>
       </void>
       <void index="13">
-       <byte>81</byte>
+       <byte>-76</byte>
       </void>
       <void index="14">
-       <byte>-115</byte>
-      </void>
-      <void index="15">
-       <byte>90</byte>
+       <byte>21</byte>
       </void>
      </array>
     </void>
