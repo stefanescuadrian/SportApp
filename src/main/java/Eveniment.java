@@ -8,6 +8,7 @@ import javafx.scene.text.Text;
 import sun.java2d.pipe.SpanShapeRenderer;
 import sun.plugin2.util.ColorUtil;
 
+import javax.lang.model.util.SimpleElementVisitor6;
 import java.awt.*;
 import java.io.File;
 
@@ -29,15 +30,15 @@ public class Eveniment {
     private Label L;
 
     private Text t;
-    private SimpleStringProperty eNC=new SimpleStringProperty();
-    private SimpleStringProperty eD=new SimpleStringProperty();
-    private SimpleStringProperty eC=new SimpleStringProperty();
-    private SimpleStringProperty eL=new SimpleStringProperty();
-    private SimpleStringProperty eN=new SimpleStringProperty();
-    private SimpleStringProperty eDif=new SimpleStringProperty();
-    private SimpleStringProperty eP=new SimpleStringProperty();
-    private SimpleStringProperty eDate=new SimpleStringProperty();
-    private SimpleStringProperty eM;
+    private SimpleStringProperty eNC = new SimpleStringProperty();
+    private SimpleStringProperty eD = new SimpleStringProperty();
+    private SimpleStringProperty eC = new SimpleStringProperty();
+    private SimpleStringProperty eL = new SimpleStringProperty();
+    private SimpleStringProperty eN = new SimpleStringProperty();
+    private SimpleStringProperty eDif = new SimpleStringProperty();
+    private SimpleStringProperty eP = new SimpleStringProperty();
+    private SimpleStringProperty eDate = new SimpleStringProperty();
+    private SimpleStringProperty eM = new SimpleStringProperty();
 
     public ImageView getPhoto1() {
         return photo1;
@@ -239,7 +240,6 @@ L.setText(eventCategory);
     public SimpleStringProperty eCProperty() {
         return eC;
     }
-
 
     public void seteC(String eC) {
         this.eC.set(eC);

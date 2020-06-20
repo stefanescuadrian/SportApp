@@ -31,37 +31,50 @@ public class SeeEventParticipantsPage implements Initializable {
     private static int eventMaxParticipants;
     private static  String eName;
     private static int numberOfAcceptedSportsman;
-    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
 
     @FXML
-    private TableColumn<?, ?> pendingImage;   ///////////////////////////////////////////
+    TableColumn<?, ?> pendingImage;   ///////////////////////////////////////////
     @FXML
-    private TableColumn<?, ?> acceptedImage;
+    TableColumn<?, ?> acceptedImage;
     @FXML
-    private TableColumn<?, ?> declinedImage;   ////////////////////////////////////////
+    TableColumn<?, ?> declinedImage;   ////////////////////////////////////////
 
     @FXML
-    private TableView<Inregistrare> pendingTable;
+    Button acceptButton;
 
     @FXML
-    private TableView<Inregistrare> acceptedTable;
+    TableView<Inregistrare> pendingTable;
 
     @FXML
-    private Button backButton;
+    TableView<Inregistrare> acceptedTable;
 
     @FXML
-    private TableView<Inregistrare> declinedTable;
+    Button backButton;
+
+
 
     @FXML
-    private TableColumn<?, ?> declinedColumn;
+    TableView<Inregistrare> declinedTable;
 
     @FXML
-    private TableColumn<?, ?> pendingColumn;
+    TableColumn<?, ?> declinedColumn;
 
     @FXML
-    private TableColumn<?, ?> acceptedColumn;
+    TableColumn<?, ?> pendingColumn;
+
+    @FXML
+    TableColumn<?, ?> acceptedColumn;
 
     private SceneChanger scene=new SceneChanger();
+
+    public SceneChanger getScene() {
+        return scene;
+    }
+
+    public void setScene(SceneChanger scene) {
+        this.scene = scene;
+    }
 
     public SeeEventParticipantsPage(){
 
@@ -84,6 +97,22 @@ public class SeeEventParticipantsPage implements Initializable {
     @FXML
     void goBack(ActionEvent event) throws IOException {
         scene.changeScenes(event,"/eventplannerHomePage.fxml");
+    }
+
+    public  int getEventMaxParticipants() {
+        return eventMaxParticipants;
+    }
+
+    public  void setEventMaxParticipants(int eventMaxParticipants) {
+        SeeEventParticipantsPage.eventMaxParticipants = eventMaxParticipants;
+    }
+
+    public  String geteName() {
+        return eName;
+    }
+
+    public  void seteName(String eName) {
+        SeeEventParticipantsPage.eName = eName;
     }
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -119,6 +148,9 @@ public class SeeEventParticipantsPage implements Initializable {
                 }
             }
         }
+        if (numberOfAcceptedSportsman == eventMaxParticipants)
+            acceptButton.setDisable(true);
+
         pendingTable.setItems(data1);
         acceptedTable.setItems(data2);
         declinedTable.setItems(data3);
@@ -126,7 +158,7 @@ public class SeeEventParticipantsPage implements Initializable {
     }
 
     @FXML
-    void acceptParticipant(ActionEvent event) throws IOException {
+    void acceptParticipant() throws IOException {
         if (pendingTable.getSelectionModel().getSelectedItem() != null && numberOfAcceptedSportsman < eventMaxParticipants){
             numberOfAcceptedSportsman++;
             System.out.println(numberOfAcceptedSportsman);
@@ -145,11 +177,8 @@ public class SeeEventParticipantsPage implements Initializable {
             //Codificare xml file
             XMLDE.XMLEncoder("./Registrations.xml",List);
         }
-        else if (pendingTable.getSelectionModel().getSelectedItem() != null && numberOfAcceptedSportsman >= eventMaxParticipants) {
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("Number of maximum participants was reached !");
-            alert.showAndWait();
+        else if (pendingTable.getSelectionModel().getSelectedItem() != null && numberOfAcceptedSportsman == eventMaxParticipants) {
+            acceptButton.setDisable(true);
         }
         reinitialize();
     }
@@ -190,7 +219,7 @@ public class SeeEventParticipantsPage implements Initializable {
     }
 
     @FXML
-    void declineParticipant(ActionEvent event) {
+    void declineParticipant() {
         if (pendingTable.getSelectionModel().getSelectedItem() != null){
             List = XMLDE.XMLDecoder("./Registrations.xml");
 

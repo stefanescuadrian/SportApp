@@ -34,36 +34,6 @@ of your long Sunday run, we’re here to support your goals.</string>
   <void method="add">
    <object class="Eveniment">
     <void property="eventCategory">
-     <string>Football</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-06-16</string>
-    </void>
-    <void property="eventDescription">
-     <string>Competition between the senior men’s national teams of members of the
-Union of European Football Association (UEFA), to determine the 
-continental champion. </string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Medium</string>
-    </void>
-    <void property="eventLocation">
-     <string>Teren fotbal </string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>22</int>
-    </void>
-    <void property="eventName">
-     <string>UEFA Euro</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
      <string>Basketball</string>
     </void>
     <void property="eventDate">
@@ -108,7 +78,7 @@ the men&apos;s national teams of the members of the International Basketball</st
      <string>rwerwe</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>21212</int>
+     <int>1</int>
     </void>
     <void property="eventName">
      <string>Wimbledon</string>
@@ -137,7 +107,7 @@ the men&apos;s national teams of the members of the International Basketball</st
      <string>Timisoara</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>23</int>
+     <int>1</int>
     </void>
     <void property="eventName">
      <string>Flower</string>
@@ -165,7 +135,7 @@ the men&apos;s national teams of the members of the International Basketball</st
      <string>qweqwe</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>10</int>
+     <int>1</int>
     </void>
     <void property="eventName">
      <string>qweqwe</string>
@@ -193,7 +163,7 @@ the men&apos;s national teams of the members of the International Basketball</st
      <string>dfg</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>990</int>
+     <int>1</int>
     </void>
     <void property="eventName">
      <string>dgfdgf</string>
@@ -221,7 +191,7 @@ the men&apos;s national teams of the members of the International Basketball</st
      <string>aaa</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>12</int>
+     <int>2</int>
     </void>
     <void property="eventName">
      <string>aaa</string>

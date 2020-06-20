@@ -31,6 +31,7 @@ public class SeeEventInformationPage {
     @FXML
      Label eventDifficultyLabel;
 
+
     @FXML
     Label eventMaxParticipantsLabel;
 
@@ -42,15 +43,27 @@ private SceneChanger scene=new SceneChanger();
     @FXML
      ImageView imageViewCat;
 
+
     @FXML
      Label eventCategoryLabel;
+
 
 
     @FXML
      Label eventDescriptionLabel;
 
+
     @FXML
      Label eventNameLabel;
+
+
+    public Eveniment getEvent() {
+        return event;
+    }
+
+    public void setEvent(Eveniment event) {
+        this.event = event;
+    }
 
     public static String getEventPlannerMail() {////////////////////////////////
         return eventPlannerMail;
