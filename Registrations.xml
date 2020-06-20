@@ -306,6 +306,9 @@ continental champion. </string>
     <void property="sportsmanLastName">
      <string>a</string>
     </void>
+    <void property="status">
+     <string>Accepted</string>
+    </void>
    </object>
   </void>
   <void method="add">
@@ -545,6 +548,9 @@ continental champion. </string>
     </void>
     <void property="sportsmanLastName">
      <string>e</string>
+    </void>
+    <void property="status">
+     <string>Declined</string>
     </void>
    </object>
   </void>

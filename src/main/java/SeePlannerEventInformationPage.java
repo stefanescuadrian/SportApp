@@ -15,108 +15,108 @@ import java.io.IOException;
 
 public class SeePlannerEventInformationPage {
 
-    private static String  eventPlannerMail;
+    private static String eventPlannerMail;
     private static String eName;
     private Eveniment event;
     @FXML
-    private ImageView imageViewLocation;
+    ImageView imageViewLocation;
 
     @FXML
-    private Label eventLocationLabel;
+    Label eventLocationLabel;
 
     @FXML
-    private Label eventCategoryLabel;
+    Label eventCategoryLabel;
 
     @FXML
-    private Button backButton;
+    Button backButton;
 
     @FXML
-    private Label eventDifficultyLabel;
+    Label eventDifficultyLabel;
 
     @FXML
-    private ImageView imageView;
+    ImageView imageView;
 
     @FXML
-    private Label eventDateLabel;
+    Label eventDateLabel;
 
     @FXML
-    private Label eventMaxParticipantsLabel;
+    Label eventMaxParticipantsLabel;
 
     @FXML
-    private ImageView imageViewCat;
+    ImageView imageViewCat;
 
     @FXML
-    private Label eventNameLabel1;
+    Label eventNameLabel1;
 
     @FXML
-    private Label eventDescriptionLabel;
-    public SceneChanger scene=new SceneChanger();
+    Label eventDescriptionLabel;
+    public SceneChanger scene = new SceneChanger();
 
     @FXML
-    private Label eventNameLabel;
-    public SeePlannerEventInformationPage(){
+    Label eventNameLabel;
+
+    public SeePlannerEventInformationPage() {
 
     }
-    public SeePlannerEventInformationPage(String eventName,String eventPlannerMail) {
+
+    public SeePlannerEventInformationPage(String eventName, String eventPlannerMail) {
         this.eName = eventName;
-        this.eventPlannerMail=eventPlannerMail;
+        this.eventPlannerMail = eventPlannerMail;
     }
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        scene.changeScenes(event,"/eventPlannerHomePage.fxml");
+        scene.changeScenes(event, "/eventPlannerHomePage.fxml");
 
     }
-    void check_category(Eveniment event){
-        this.event=event;
-        if(event.geteC().equals("Jogging")){
-            Image img=new Image("/jogging_photo.jpg");
-            Image img1=new Image("/x3.png");
+
+    void check_category(Eveniment event) {
+        this.event = event;
+        if (event.geteC().equals("Jogging")) {
+            Image img = new Image("/jogging_photo.jpg");
+            Image img1 = new Image("/x3.png");
             imageViewCat.setImage(img1);
             imageView.setImage(img);
             eventCategoryLabel.setStyle("-fx-background-color: #c9ecf0; ");
-            Image img2=new Image("/g6.png");
+            Image img2 = new Image("/g6.png");
             imageViewLocation.setImage(img2);
 
-        }
-        else if(event.geteC().equals("Basketball")){
-            Image img=new Image("/basketball_photo.jpg");
+        } else if (event.geteC().equals("Basketball")) {
+            Image img = new Image("/basketball_photo.jpg");
             imageView.setImage(img);
-            Image img1=new Image("/x1.png");
+            Image img1 = new Image("/x1.png");
             imageViewCat.setImage(img1);
             eventCategoryLabel.setStyle("-fx-background-color: #f1d1c6;");
-            Image img2=new Image("/g5.png");
+            Image img2 = new Image("/g5.png");
             imageViewLocation.setImage(img2);
 
-        }
-        else if(event.geteC().equals("Tennis")){
-            Image img=new Image("/tennis_photo.jpg");
+        } else if (event.geteC().equals("Tennis")) {
+            Image img = new Image("/tennis_photo.jpg");
             imageView.setImage(img);
-            Image img1=new Image("/x4.png");
+            Image img1 = new Image("/x4.png");
             imageViewCat.setImage(img1);
             eventCategoryLabel.setStyle("-fx-background-color: #c1ebc7;");
-            Image img2=new Image("/g2.png");
+            Image img2 = new Image("/g2.png");
             imageViewLocation.setImage(img2);
-        }
-        else if(event.geteC().equals("Football")){
-            Image img=new Image("/football_photo.jpg");
+        } else if (event.geteC().equals("Football")) {
+            Image img = new Image("/football_photo.jpg");
             imageView.setImage(img);
-            Image img1=new Image("/x5.png");
+            Image img1 = new Image("/x5.png");
             imageViewCat.setImage(img1);
             eventCategoryLabel.setStyle("-fx-background-color: #f1d1c6 ;");
-            Image img2=new Image("/g1.png");
+            Image img2 = new Image("/g1.png");
             imageViewLocation.setImage(img2);
-        }
-        else if(event.geteC().equals("Rugby")){
-            Image img=new Image("/rugby_photo.jpg");
+        } else if (event.geteC().equals("Rugby")) {
+            Image img = new Image("/rugby_photo.jpg");
             imageView.setImage(img);
-            Image img1=new Image("/x2.png");
+            Image img1 = new Image("/x2.png");
             imageViewCat.setImage(img1);
             eventCategoryLabel.setStyle("-fx-background-color: #d1c3c0;");
-            Image img2=new Image("/g4.png");
+            Image img2 = new Image("/g4.png");
             imageViewLocation.setImage(img2);
         }
     }
+
     void showDetails(Eveniment event) {
         this.event = event;
         this.eventNameLabel.setText(event.geteN());
@@ -125,10 +125,88 @@ public class SeePlannerEventInformationPage {
         check_category(event);
         this.eventDifficultyLabel.setText(event.geteDif());
         this.eventLocationLabel.setText(event.geteL());
-        this.eventMaxParticipantsLabel.setText(event.geteP()+" participants");
+        this.eventMaxParticipantsLabel.setText(event.geteP() + " participants");
         this.eventDateLabel.setText(event.geteDate());
-
-
     }
 
+   // public static String getEventPlannerMail() {
+   //     return eventPlannerMail;
+   // }
+
+    //public static void setEventPlannerMail(String eventPlannerMail) {
+    //    SeePlannerEventInformationPage.eventPlannerMail = eventPlannerMail;
+   // }
+
+    //public static String geteName() {
+        //return eName;
+   // }
+
+   // public static void seteName(String eName) {
+    //    SeePlannerEventInformationPage.eName = eName;
+   // }
+
+    public Eveniment getEvent() {
+        return event;
+    }
+
+    public void setEvent(Eveniment event) {
+        this.event = event;
+    }
+
+    public Label getEventLocationLabel() {
+        return eventLocationLabel;
+    }
+
+    public void setEventLocationLabel(Label eventLocationLabel) {
+        this.eventLocationLabel = eventLocationLabel;
+    }
+
+    public Label getEventCategoryLabel() {
+        return eventCategoryLabel;
+    }
+
+    public void setEventCategoryLabel(Label eventCategoryLabel) {
+        this.eventCategoryLabel = eventCategoryLabel;
+    }
+
+    public Label getEventDifficultyLabel() {
+        return eventDifficultyLabel;
+    }
+
+    public void setEventDifficultyLabel(Label eventDifficultyLabel) {
+        this.eventDifficultyLabel = eventDifficultyLabel;
+    }
+
+    public Label getEventDateLabel() {
+        return eventDateLabel;
+    }
+
+    public void setEventDateLabel(Label eventDateLabel) {
+        this.eventDateLabel = eventDateLabel;
+    }
+
+    public Label getEventMaxParticipantsLabel() {
+        return eventMaxParticipantsLabel;
+    }
+
+    public void setEventMaxParticipantsLabel(Label eventMaxParticipantsLabel) {
+        this.eventMaxParticipantsLabel = eventMaxParticipantsLabel;
+    }
+
+
+    public Label getEventDescriptionLabel() {
+        return eventDescriptionLabel;
+    }
+
+    public void setEventDescriptionLabel(Label eventDescriptionLabel) {
+        this.eventDescriptionLabel = eventDescriptionLabel;
+    }
+
+    public Label getEventNameLabel() {
+        return eventNameLabel;
+    }
+
+    public void setEventNameLabel(Label eventNameLabel) {
+        this.eventNameLabel = eventNameLabel;
+    }
 }
