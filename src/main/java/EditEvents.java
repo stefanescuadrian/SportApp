@@ -32,22 +32,22 @@ public class EditEvents {
     private static ArrayList Lista1 = new ArrayList();
 
     @FXML
-    private ChoiceBox eventCategory;
+    ChoiceBox eventCategory;
     @FXML
-    private ChoiceBox eventDifficulty;
+     ChoiceBox eventDifficulty;
     ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
     ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
 
     @FXML
-    private Button deleteButton;
+     Button deleteButton;
     @FXML
-    private Button participantsButton;
+     Button participantsButton;
     @FXML
-    private TextField eventLocation;
+    TextField eventLocation;
     @FXML
-    private Button backButton;
+     Button backButton;
     @FXML
-    private TextArea eventDescription;
+     TextArea eventDescription;
 
     public static String getEventPlannerMail() {
         return eventPlannerMail;
@@ -130,7 +130,7 @@ public class EditEvents {
     }
 
     @FXML
-    private TextField eventName;
+     TextField eventName;
     @FXML
     private Button editButton;
 
@@ -143,9 +143,9 @@ public class EditEvents {
         return eName;
     }
     @FXML
-    private TextField eventMaxNumberParticipants;
+     TextField eventMaxNumberParticipants;
     @FXML
-    private TextField eventDate;
+     TextField eventDate;
 
     private Eveniment event;
     private SceneChanger scene=new SceneChanger();
