@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_241" class="java.beans.XMLDecoder">
+<java version="1.8.0_251" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="Eveniment">
     <void property="eventCategory">
-     <string>Jogging</string>
+     <string>Football</string>
     </void>
     <void property="eventDate">
      <string>2020-06-16</string>
@@ -15,13 +15,13 @@
 of your long Sunday run, we’re here to support your goals.</string>
     </void>
     <void property="eventDifficulty">
-     <string>Advanced</string>
+     <string>Medium</string>
     </void>
     <void property="eventLocation">
-     <string>s</string>
+     <string>q</string>
     </void>
     <void property="eventMaxNumberParticipants">
-     <int>100</int>
+     <int>1</int>
     </void>
     <void property="eventName">
      <string>Blast Running</string>
@@ -251,6 +251,34 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
     <void property="eventName">
      <string>aaaassssaaaaa</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Football</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-24</string>
+    </void>
+    <void property="eventDescription">
+     <string>jghjgh</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Medium</string>
+    </void>
+    <void property="eventLocation">
+     <string>y</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>17</int>
+    </void>
+    <void property="eventName">
+     <string>y</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>

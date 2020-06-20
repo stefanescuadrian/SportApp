@@ -6,7 +6,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import sun.java2d.pipe.SpanShapeRenderer;
-import sun.plugin2.util.ColorUtil;
 
 import javax.lang.model.util.SimpleElementVisitor6;
 import java.awt.*;

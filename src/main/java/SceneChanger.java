@@ -1,4 +1,3 @@
-import com.sun.deploy.util.FXLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_241" class="java.beans.XMLDecoder">
+<java version="1.8.0_251" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="Inregistrare">
@@ -784,6 +784,303 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
     <void property="sportsmanEmail">
      <string>q</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Tennis</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-13</string>
+      </void>
+      <void property="eventDescription">
+       <string>dasdadada</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Medium</string>
+      </void>
+      <void property="eventLocation">
+       <string>sssss</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>12</int>
+      </void>
+      <void property="eventName">
+       <string>aaaassssaaaaa</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Tennis</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>q</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Football</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-24</string>
+      </void>
+      <void property="eventDescription">
+       <string>jghjgh</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Medium</string>
+      </void>
+      <void property="eventLocation">
+       <string>y</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>17</int>
+      </void>
+      <void property="eventName">
+       <string>y</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Football</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>q</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Tennis</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-16</string>
+      </void>
+      <void property="eventDescription">
+       <string>Wimbledon takes place over two weeks in late June/early July.</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Medium</string>
+      </void>
+      <void property="eventLocation">
+       <string>rwerwe</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>1</int>
+      </void>
+      <void property="eventName">
+       <string>Wimbledon</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Tennis</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>q</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Football</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-16</string>
+      </void>
+      <void property="eventDescription">
+       <string>Whatever you are aiming for, whether you’re in the middle of Couch-to-5k 
+ or training for a marathon and looking for company during part
+of your long Sunday run, we’re here to support your goals.</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Medium</string>
+      </void>
+      <void property="eventLocation">
+       <string>q</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>100</int>
+      </void>
+      <void property="eventName">
+       <string>Blast Running</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Football</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>q</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+    <void property="status">
+     <string>Accepted</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Football</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-16</string>
+      </void>
+      <void property="eventDescription">
+       <string>Whatever you are aiming for, whether you’re in the middle of Couch-to-5k 
+ or training for a marathon and looking for company during part
+of your long Sunday run, we’re here to support your goals.</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Medium</string>
+      </void>
+      <void property="eventLocation">
+       <string>q</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>100</int>
+      </void>
+      <void property="eventName">
+       <string>Blast Running</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Football</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>e</string>
     </void>
     <void property="sportsmanFirstName">
      <string>e</string>
