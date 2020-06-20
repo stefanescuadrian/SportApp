@@ -59,122 +59,8 @@ of your long Sunday run, we’re here to support your goals.</string>
     <void property="sportsmanLastName">
      <string>a</string>
     </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Basketball</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-05-01</string>
-      </void>
-      <void property="eventDescription">
-       <string>Is annual competition between six European sides: A England, France
-Ireland, Italy, Scotland and Wales</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>Timisoara</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>1</int>
-      </void>
-      <void property="eventName">
-       <string>Errrr</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Basketball</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>a</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>a</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>a</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Football</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-11</string>
-      </void>
-      <void property="eventDescription">
-       <string>tergddfgsdsdfs</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Advanced</string>
-      </void>
-      <void property="eventLocation">
-       <string>w</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>19</int>
-      </void>
-      <void property="eventName">
-       <string>w</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Football</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>a</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>a</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>a</string>
+    <void property="status">
+     <string>Declined</string>
     </void>
    </object>
   </void>
@@ -590,6 +476,66 @@ continental champion. </string>
     </void>
     <void property="sportsmanLastName">
      <string>s</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Football</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-16</string>
+      </void>
+      <void property="eventDescription">
+       <string>Competition between the senior men’s national teams of members of the
+Union of European Football Association (UEFA), to determine the 
+continental champion. </string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Medium</string>
+      </void>
+      <void property="eventLocation">
+       <string>Teren fotbal </string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>22</int>
+      </void>
+      <void property="eventName">
+       <string>UEFA Euro</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Football</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>e</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
     </void>
    </object>
   </void>

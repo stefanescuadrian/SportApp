@@ -25,33 +25,128 @@ import java.util.ArrayList;
 public class EditEvents {
 
     private static String  eventPlannerMail;
+    private static String eName;
+    private static ArrayList<Eveniment> List = new ArrayList();////////////////////////////////////////
+    private static ArrayList<Inregistrare> List1 = new ArrayList();
+    private static ArrayList Lista = new ArrayList();
+    private static ArrayList Lista1 = new ArrayList();
 
     @FXML
-    private ChoiceBox eventCategory;////////////////
+    private ChoiceBox eventCategory;
     @FXML
     private ChoiceBox eventDifficulty;
-    ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
-    ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
-
     @FXML
     private Button deleteButton;
     @FXML
     private Button participantsButton;
-
     @FXML
     private TextField eventLocation;
-
     @FXML
     private Button backButton;
-
     @FXML
     private TextArea eventDescription;
 
+    public static String getEventPlannerMail() {
+        return eventPlannerMail;
+    }
+
+    public static void setEventPlannerMail(String eventPlannerMail) {
+        EditEvents.eventPlannerMail = eventPlannerMail;
+    }
+
+    public static String geteName() {
+        return eName;
+    }
+
+    public static void seteName(String eName) {
+        EditEvents.eName = eName;
+    }
+
+    public ChoiceBox getEventCategory() {
+        return eventCategory;
+    }
+
+    public void setEventCategory(ChoiceBox eventCategory) {
+        this.eventCategory = eventCategory;
+    }
+
+    public ChoiceBox getEventDifficulty() {
+        return eventDifficulty;
+    }
+
+    public void setEventDifficulty(ChoiceBox eventDifficulty) {
+        this.eventDifficulty = eventDifficulty;
+    }
+
+    public TextField getEventLocation() {
+        return eventLocation;
+    }
+
+    public void setEventLocation(TextField eventLocation) {
+        this.eventLocation = eventLocation;
+    }
+
+    public TextArea getEventDescription() {
+        return eventDescription;
+    }
+
+    public void setEventDescription(TextArea eventDescription) {
+        this.eventDescription = eventDescription;
+    }
+
+    public TextField getEventName() {
+        return eventName;
+    }
+
+    public void setEventName(TextField eventName) {
+        this.eventName = eventName;
+    }
+
+    public TextField getEventMaxNumberParticipants() {
+        return eventMaxNumberParticipants;
+    }
+
+    public void setEventMaxNumberParticipants(TextField eventMaxNumberParticipants) {
+        this.eventMaxNumberParticipants = eventMaxNumberParticipants;
+    }
+
+    public TextField getEventDate() {
+        return eventDate;
+    }
+
+    public void setEventDate(TextField eventDate) {
+        this.eventDate = eventDate;
+    }
+
+    public Eveniment getEvent() {
+        return event;
+    }
+
+    public void setEvent(Eveniment event) {
+        this.event = event;
+    }
+
     @FXML
     private TextField eventName;
-    private static String eName;
     @FXML
     private Button editButton;
+    @FXML
+    private TextField eventMaxNumberParticipants;
+    @FXML
+    private TextField eventDate;
+
+    private Eveniment event;
+    private SceneChanger scene=new SceneChanger();
+
+
+    ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
+    ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
+
+    public EditEvents() {}
+
+    public EditEvents(String eventPlannerMail) {
+        this.eventPlannerMail = eventPlannerMail;
+    }
 
     public EditEvents(String eventName, String eventPlannerMail) {
         this.eName = eventName;
@@ -62,37 +157,6 @@ public class EditEvents {
         return eName;
     }
 
-    @FXML
-    private TextField eventMaxNumberParticipants;
-
-    @FXML
-    private TextField eventDate;
-
-    private static ArrayList<Eveniment> List = new ArrayList();////////////////////////////////////////
-    private static ArrayList<Inregistrare> List1 = new ArrayList();
-    private static ArrayList Lista = new ArrayList();
-    private static ArrayList Lista1 = new ArrayList();
-
-    private Eveniment event;
-
-
-    public EditEvents() {
-
-    }
-
-
-    public EditEvents(String eventPlannerMail) {
-        this.eventPlannerMail = eventPlannerMail;
-    }
-
-    @FXML
-    void goBack(ActionEvent event) throws IOException {
-        Parent goBackView = FXMLLoader.load(getClass().getResource("/eventplannerMyEventsPage.fxml"));
-        Scene loginScene = new Scene(goBackView);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
-    }
 
     @FXML
     private void initialize(){
@@ -113,7 +177,6 @@ public class EditEvents {
         this.eventDate.setText(event.geteDate());
 
     }
-
 
 
     @FXML
@@ -173,22 +236,12 @@ public class EditEvents {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        Parent goBackPageView= FXMLLoader.load(getClass().getResource("/eventplannerMyEventsPage.fxml"));
-        Scene loginScene=new Scene(goBackPageView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+
+        scene.changeScenes(event,"/eventplannerMyEventsPage.fxml");
+
     }
 
-    @FXML
-    void seeEventParticipants(ActionEvent event) throws IOException {
-        SeeEventParticipantsPage eventPP = new SeeEventParticipantsPage(this.eventPlannerMail,eName,eventMaxNumberParticipants.getText());
-        Parent eventParticipantsPage= FXMLLoader.load(getClass().getResource("/seeEventParticipantsPage.fxml"));
-        Scene loginScene=new Scene(eventParticipantsPage);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
-    }
+
 
     @FXML
     void editEvent(ActionEvent event) {
@@ -229,5 +282,17 @@ public class EditEvents {
                 }
         }
 
+    }
+
+    @FXML
+    void seeEventParticipants(ActionEvent event) throws IOException {
+        SeeEventParticipantsPage eventPP = new SeeEventParticipantsPage(this.eventPlannerMail,eName,eventMaxNumberParticipants.getText());
+        scene.changeScenes(event,"/seeEventParticipantsPage.fxml");
+    }
+
+    @FXML
+    void goBack(ActionEvent event) throws IOException {
+        SceneChanger sc=new SceneChanger();
+        sc.changeScenes(event,"/eventplannerMyEventsPage.fxml");
     }
 }

@@ -4,35 +4,6 @@
   <void method="add">
    <object class="Eveniment">
     <void property="eventCategory">
-     <string>Basketball</string>
-    </void>
-    <void property="eventDate">
-     <string>2020-05-01</string>
-    </void>
-    <void property="eventDescription">
-     <string>Is annual competition between six European sides: A England, France
-Ireland, Italy, Scotland and Wales</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Advanced</string>
-    </void>
-    <void property="eventLocation">
-     <string>Timisoara</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>1</int>
-    </void>
-    <void property="eventName">
-     <string>Errrr</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
      <string>Jogging</string>
     </void>
     <void property="eventDate">
@@ -210,34 +181,6 @@ the men&apos;s national teams of the members of the International Basketball</st
      <string>Football</string>
     </void>
     <void property="eventDate">
-     <string>2020-06-11</string>
-    </void>
-    <void property="eventDescription">
-     <string>tergddfgsdsdfs</string>
-    </void>
-    <void property="eventDifficulty">
-     <string>Advanced</string>
-    </void>
-    <void property="eventLocation">
-     <string>w</string>
-    </void>
-    <void property="eventMaxNumberParticipants">
-     <int>19</int>
-    </void>
-    <void property="eventName">
-     <string>w</string>
-    </void>
-    <void property="eventPlannerMail">
-     <string>d</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Eveniment">
-    <void property="eventCategory">
-     <string>Football</string>
-    </void>
-    <void property="eventDate">
      <string>2020-06-24</string>
     </void>
     <void property="eventDescription">
@@ -254,6 +197,34 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
     <void property="eventName">
      <string>dgfdgf</string>
+    </void>
+    <void property="eventPlannerMail">
+     <string>d</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eveniment">
+    <void property="eventCategory">
+     <string>Rugby</string>
+    </void>
+    <void property="eventDate">
+     <string>2020-06-05</string>
+    </void>
+    <void property="eventDescription">
+     <string>asdasdadas</string>
+    </void>
+    <void property="eventDifficulty">
+     <string>Advanced</string>
+    </void>
+    <void property="eventLocation">
+     <string>aaa</string>
+    </void>
+    <void property="eventMaxNumberParticipants">
+     <int>12</int>
+    </void>
+    <void property="eventName">
+     <string>aaa</string>
     </void>
     <void property="eventPlannerMail">
      <string>d</string>

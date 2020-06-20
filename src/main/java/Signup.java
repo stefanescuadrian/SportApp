@@ -13,28 +13,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Signup{
-
+private SceneChanger sc=new SceneChanger();
 
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
-        Parent signupView= FXMLLoader.load(getClass().getResource("/login.fxml"));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
+        sc.changeScenes(event,"/login.fxml");
     }
     public void goToSportsmanForm(ActionEvent event) throws IOException {
-        Parent signupView= FXMLLoader.load(getClass().getResource("/sportsmanSignupForm.fxml"));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
+        sc.changeScenes(event,"/sportsmanSignupForm.fxml");
     }
     public void goToEventplannerForm(ActionEvent event) throws IOException {
-        Parent signupView= FXMLLoader.load(getClass().getResource("/eventplannerSignupForm.fxml"));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
+
+        sc.changeScenes(event,"/eventplannerSignupForm.fxml");
     }
 
 

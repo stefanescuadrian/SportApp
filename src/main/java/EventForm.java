@@ -52,16 +52,12 @@ public class EventForm {
     @FXML
     private DatePicker eventDate;
 
-
+private SceneChanger scene=new SceneChanger();
 
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-        Scene loginScene=new Scene(loginView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventplannerHomePage.fxml");
     }
 
 
@@ -205,12 +201,7 @@ public class EventForm {
             ex.printStackTrace();
         }
 
-
-        Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-        Scene loginScene=new Scene(loginView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventplannerHomePage.fxml");
     }
 
 }

@@ -835,5 +835,73 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>ssaa</string>
+    </void>
+    <void property="firstName">
+     <string>a</string>
+    </void>
+    <void property="lastName">
+     <string>a</string>
+    </void>
+    <void property="password">
+     <string>0d2cefd617e2689207ba94d7df5b5d475b5ee9fc340653700d03c09e115756940df9119e7806d4cb38fcf4fd86596c26027fcc77a4957cb8d2fd18016407d1dc</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>-60</byte>
+      </void>
+      <void index="1">
+       <byte>-16</byte>
+      </void>
+      <void index="2">
+       <byte>46</byte>
+      </void>
+      <void index="3">
+       <byte>-69</byte>
+      </void>
+      <void index="4">
+       <byte>-59</byte>
+      </void>
+      <void index="5">
+       <byte>15</byte>
+      </void>
+      <void index="6">
+       <byte>64</byte>
+      </void>
+      <void index="7">
+       <byte>65</byte>
+      </void>
+      <void index="8">
+       <byte>-119</byte>
+      </void>
+      <void index="9">
+       <byte>-82</byte>
+      </void>
+      <void index="10">
+       <byte>14</byte>
+      </void>
+      <void index="11">
+       <byte>24</byte>
+      </void>
+      <void index="12">
+       <byte>-41</byte>
+      </void>
+      <void index="13">
+       <byte>114</byte>
+      </void>
+      <void index="14">
+       <byte>43</byte>
+      </void>
+      <void index="15">
+       <byte>74</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

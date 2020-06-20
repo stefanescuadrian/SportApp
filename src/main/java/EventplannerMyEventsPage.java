@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 public class EventplannerMyEventsPage implements Initializable {
     private static String eventPlannerName;
     private static ArrayList<Eveniment> List = new ArrayList();
-
+    private SceneChanger scene=new SceneChanger();
     @FXML
     private TableColumn<?, ?> firstColumn;
     @FXML
@@ -46,11 +46,7 @@ public class EventplannerMyEventsPage implements Initializable {
 private static String nume;//////////////////
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        Parent goBackPageView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
-        Scene loginScene=new Scene(goBackPageView);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        scene.changeScenes(event,"/eventplannerHomePage.fxml");
     }
 
     public EventplannerMyEventsPage() {
@@ -110,7 +106,6 @@ private static String nume;//////////////////
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
 
                 Scene tableViewScene = new Scene(tableView);
                 EditEvents controller = loader.getController();
