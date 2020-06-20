@@ -26,33 +26,33 @@ public class EventForm {
     ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
     ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
     @FXML
-    private ChoiceBox eventCategory;
+    ChoiceBox eventCategory;
 
     @FXML
-    private ChoiceBox eventDifficulty;
+    ChoiceBox eventDifficulty;
 
     @FXML
-    private TextField eventLocation;
+    TextField eventLocation;
 
     @FXML
-    private TextArea eventDescription;
+    TextArea eventDescription;
 
     @FXML
-    private Button backButton;
+    Button backButton;
 
     @FXML
-    private TextField eventName;
+    TextField eventName;
 
     @FXML
-    private Button addButton;
+    Button addButton;
 
     @FXML
-    private TextField eventMaxNumberParticipants;
+    TextField eventMaxNumberParticipants;
 
     @FXML
-    private DatePicker eventDate;
+    DatePicker eventDate;
 
-private SceneChanger scene=new SceneChanger();
+    private SceneChanger scene=new SceneChanger();
 
 
     @FXML

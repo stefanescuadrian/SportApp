@@ -29,20 +29,21 @@ public class EventplannerMyEventsPage implements Initializable {
     private static ArrayList<Eveniment> List = new ArrayList();
     private SceneChanger scene=new SceneChanger();
     @FXML
-    private TableColumn<?, ?> firstColumn;
+    TableColumn<?, ?> firstColumn;
     @FXML
-    private Button add;
+    Button add;
     @FXML
-    private TableColumn<?, ?> secondColumn;
+    TableColumn<?, ?> secondColumn;
 
     @FXML
-    private Button backButton;
+    Button backButton;
 
     @FXML
-    private TableColumn<?, ?> thirdColumn;
+    TableColumn<?, ?> thirdColumn;
 
     @FXML
-    private TableView<Eveniment> table;
+    TableView<Eveniment> table;
+
 private static String nume;//////////////////
     @FXML
     void goBack(ActionEvent event) throws IOException {
@@ -52,12 +53,13 @@ private static String nume;//////////////////
     public EventplannerMyEventsPage() {
     }
     public EventplannerMyEventsPage(String eventPlannerName) {
-        this.eventPlannerName = eventPlannerName;
+        EventplannerMyEventsPage.eventPlannerName = eventPlannerName;
     }
 
     public static String getEventPlannerName() {
         return eventPlannerName;
     }
+
 
     public static void setEventPlannerName(String eventPlannerName) {
         EventplannerMyEventsPage.eventPlannerName = eventPlannerName;
