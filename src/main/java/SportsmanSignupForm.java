@@ -16,8 +16,7 @@ import java.util.ArrayList;
 
 
 public class SportsmanSignupForm {
-    //private static Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
+    //public Alert alert = new Alert(Alert.AlertType.INFORMATION);
     private ArrayList<User> List = new ArrayList();
     @FXML
     TextField firstName;
@@ -28,6 +27,9 @@ public class SportsmanSignupForm {
     @FXML
     PasswordField password;
 
+    public ArrayList<User> getList() {
+        return List;
+    }
 
     public SportsmanSignupForm() throws FileNotFoundException {
     }
@@ -41,81 +43,58 @@ public class SportsmanSignupForm {
         window.show();
     }
 
-    public void alertSet(String Title, String ContentText){
-        //alert.setTitle(Title);
-       // alert.setHeaderText(null);
-        //alert.setContentText(ContentText);
-        //alert.showAndWait();
-    }
 
     public boolean checkIfAllFieldsCompleted(){
         if (firstName.getText().isEmpty()) {
-           // alertSet("Warning","Please enter your first name!");
             return false;
         }
         if (lastName.getText().isEmpty()) {
-          //  alertSet("Warning","Please enter your last name!");
             return false;
         }
         if (emailAddress.getText().isEmpty()) {
-          //  alertSet("Warning","Please enter your email!");
             return false;
         }
 
         if (password.getText().isEmpty()) {
-          //  alertSet("Warning","Please enter a password!");
             return false;
         }
         return true;
     }
 
     public boolean addSportsmanAccount() throws NoSuchAlgorithmException {
-        //Decodificare xml file
-        try{
-            FileInputStream fis = new FileInputStream("./Signupuri.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
+        //Decodificare XML File
+        List = XMLDE.XMLDecoder("./Signupuri.xml");
 
         //ACCOUNT ALREADY EXISTS CHECK
         for(int i = 0; i< List.size(); i++){
             if(List.get(i) instanceof Sportsman){
                 if (List.get(i).getEmail().equals(this.emailAddress.getText())){
-                 //alertSet("Warning","Account already exists! Please enter another email address!");
                     emailAddress.clear();
+                    emailAddress.setPromptText("Please enter another email !");
+                    emailAddress.setStyle("-fx-prompt-text-fill:red;");
                     return false;
                 }
             }
             if(List.get(i) instanceof Eventplanner){
                 if (List.get(i).getEmail().equals(this.emailAddress.getText())){
-                 //alertSet("Warning","Account already exists! Please enter another email address!");
                     emailAddress.clear();
+                    emailAddress.setPromptText("Please enter another email !");
+                    emailAddress.setStyle("-fx-prompt-text-fill:red;");
                     return false;
                 }
             }
         }
 
-        //alertSet("Registration Successfull!","Welcome " + firstName.getText() + " " + lastName.getText() + "!");
 
         byte[] salt = CodificareParola.getSalt();
         String T = CodificareParola.getSHA512Password(password.getText(),salt);
 
-        //Codificare xml file
-        try{
-            Sportsman S = new Sportsman(firstName.getText(), lastName.getText(), emailAddress.getText(), T, salt);
-            List.add(S);
-            FileOutputStream fos = new FileOutputStream("./Signupuri.xml");
-            XMLEncoder encoder = new XMLEncoder(fos);
-            encoder.writeObject(List);
-            encoder.close();
-            fos.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        Sportsman S = new Sportsman(firstName.getText(), lastName.getText(), emailAddress.getText(), T, salt);
+        List.add(S);
+
+        //Codificare XML File
+        XMLDE.XMLEncoder("./Signupuri.xml",List);
+
         return true;
     }
 

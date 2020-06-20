@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class EventForm {
-    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
     private ArrayList List = new ArrayList();
     ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
     ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
@@ -132,79 +131,34 @@ public class EventForm {
     @FXML
     void add(ActionEvent event) throws IOException {
         if(eventCategory.getValue().equals("Category")) {
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Please select a category!");
-            alert.showAndWait();
             return;
         }
 
         if(eventDifficulty.getValue().equals("Difficulty")){
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Please select a difficulty!");
-            alert.showAndWait();
             return;
         }
 
         if (eventName.getText().isEmpty()){
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Event's name is empty!");
-            alert.showAndWait();
             return;
         }
 
         if (eventLocation.getText().isEmpty()){
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Location is empty!");
-            alert.showAndWait();
             return;
         }
 
         if (eventMaxNumberParticipants.getText().isEmpty()){
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Number of maximum participants is empty!");
-            alert.showAndWait();
             return;
         }
 
         if (eventDate.getValue()==null){
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Please select a date!");
-            alert.showAndWait();
             return;
         }
 
-        //Decodificare xml file
-        try{
-            FileInputStream fis = new FileInputStream("./Events.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
-
-        //Codificare xml file
-        try{
-            int x = Integer.parseInt(eventMaxNumberParticipants.getText());
-            Eveniment E = new Eveniment(EventplannerHomePage.getEventPlannerName(),eventCategory.getValue().toString(),eventDifficulty.getValue().toString(),eventName.getText(),eventLocation.getText(), x,eventDate.getValue().toString(),eventDescription.getText());
-            //System.out.println(E);
-            List.add(E);
-            FileOutputStream fos = new FileOutputStream("./Events.xml");
-            XMLEncoder encoder = new XMLEncoder(fos);
-            encoder.writeObject(List);
-            encoder.close();
-            fos.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
+        List = XMLDE.XMLDecoder("./Events.xml");
+        int x = Integer.parseInt(eventMaxNumberParticipants.getText());
+        Eveniment E = new Eveniment(EventplannerHomePage.getEventPlannerName(),eventCategory.getValue().toString(),eventDifficulty.getValue().toString(),eventName.getText(),eventLocation.getText(), x,eventDate.getValue().toString(),eventDescription.getText());
+        List.add(E);
+        XMLDE.XMLEncoder("./Events.xml",List);
 
         Parent loginView= FXMLLoader.load(getClass().getResource("/eventplannerHomePage.fxml"));
         Scene loginScene=new Scene(loginView);

@@ -9,6 +9,7 @@ import org.testfx.framework.junit.ApplicationTest;
 import sun.reflect.misc.FieldUtil;
 
 import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.security.NoSuchAlgorithmException;
@@ -16,29 +17,19 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 
 public class SportsmanSignupFormTest extends ApplicationTest {
-    private static final String email = "ow";
+    private static final String email = "owqq";
     private static final String password = "o";
     private static final String firstName = "o";
     private static final String lastName = "o";
+    private static ArrayList List = new ArrayList();
     private SportsmanSignupForm S;
-    private ArrayList List = new ArrayList();
+    //private Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
-
-    public void decodificareSignupuriXML(){
-        try{
-            FileInputStream fis = new FileInputStream("./Signupuri.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A;
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
-    }
 
     @BeforeClass
     public static void setupClass() throws Exception{
-
+       List =  XMLDE.XMLDecoder("./Signupuri.xml");
+       XMLDE.XMLEncoder("./SignupuriTest",List);
     }
 
     @Before
@@ -57,16 +48,13 @@ public class SportsmanSignupFormTest extends ApplicationTest {
     }
 
     @Test
-    public void testaddSportsmanAccount() throws NoSuchAlgorithmException {
-
-        decodificareSignupuriXML();
-        int nrSignupuriInitiale = List.size();
+    public void testAddSportsmanAccount() throws NoSuchAlgorithmException {
+        int i = List.size();
         S.addSportsmanAccount();
-        decodificareSignupuriXML();
-        int nrSignupuriDupaAdaugare = List.size();
-
-        assertEquals(1,nrSignupuriDupaAdaugare-nrSignupuriInitiale);
+        List.add(S);
+        assertEquals(1 , List.size()- i);
 
     }
+
 
 }

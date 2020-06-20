@@ -58,17 +58,7 @@ public class EventplannerHomePage implements Initializable {
         secondColumn.setCellValueFactory(new PropertyValueFactory<>("eNC"));
         thirdColumn.setCellValueFactory(new PropertyValueFactory<>("eD"));
 
-        //Decodificare xml
-        try{
-            FileInputStream fis = new FileInputStream("./Events.xml");
-            XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
-            List =A;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
-
+        List = XMLDE.XMLDecoder("./Events.xml");
 
         for(int i=0; i<List.size();i++){
             if (List.get(i) instanceof Eveniment) {
