@@ -3,12 +3,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import org.junit.Before;
 import org.junit.Test;
+import org.testfx.framework.junit.ApplicationTest;
 
 import java.awt.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class EventplannerMyEventsPageTest {
+public class EventplannerMyEventsPageTest extends ApplicationTest {
     private EventplannerMyEventsPage E;
 
     @Before

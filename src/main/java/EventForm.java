@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class EventForm {
-    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    //private Alert alert = new Alert(Alert.AlertType.INFORMATION);
     private ArrayList List = new ArrayList();
     ObservableList<String> categoryList= FXCollections.observableArrayList("Category","------------","Basketball","Tennis","Rugby","Jogging","Football");
     ObservableList<String> difficultyList=FXCollections.observableArrayList("Difficulty","----------","Beginner","Medium","Advanced");
@@ -54,7 +54,9 @@ public class EventForm {
 
     private SceneChanger scene=new SceneChanger();
 
+    public EventForm(){
 
+    }
     @FXML
     void goBack(ActionEvent event) throws IOException {
         scene.changeScenes(event,"/eventplannerHomePage.fxml");
@@ -62,7 +64,7 @@ public class EventForm {
 
 
     @FXML
-    private void initialize(){
+    public void initialize(){
         eventCategory.setValue("Category");
         eventCategory.setItems(categoryList);
         eventDifficulty.setValue("Difficulty");
