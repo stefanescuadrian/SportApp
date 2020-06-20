@@ -68,7 +68,6 @@ public class EventplannerSignupFormTest extends ApplicationTest {
     public void testAddTwoEventplannerAccout() throws NoSuchAlgorithmException {
         assertEquals(true,E.addEventPlannerAccount("./SignupuriTest.xml"));
         assertEquals(false,E.addEventPlannerAccount("./SignupuriTest.xml"));
-
     }
 
 

@@ -1104,5 +1104,79 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Eventplanner">
+    <void property="birthDate">
+     <string>2020-06-18</string>
+    </void>
+    <void property="email">
+     <string>g</string>
+    </void>
+    <void property="firstName">
+     <string>g</string>
+    </void>
+    <void property="lastName">
+     <string>g</string>
+    </void>
+    <void property="password">
+     <string>b3abcc4f2e169c77980acab46dfd892c57a555d61608bb874ce2f427eb002bff394834836d4128ce60431f98499293980b922067c84eaffc8704cfc42cdeb91a</string>
+    </void>
+    <void property="phoneNumber">
+     <string>07</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>15</byte>
+      </void>
+      <void index="1">
+       <byte>-38</byte>
+      </void>
+      <void index="2">
+       <byte>70</byte>
+      </void>
+      <void index="3">
+       <byte>-72</byte>
+      </void>
+      <void index="4">
+       <byte>-55</byte>
+      </void>
+      <void index="5">
+       <byte>37</byte>
+      </void>
+      <void index="6">
+       <byte>-103</byte>
+      </void>
+      <void index="7">
+       <byte>33</byte>
+      </void>
+      <void index="8">
+       <byte>-5</byte>
+      </void>
+      <void index="9">
+       <byte>92</byte>
+      </void>
+      <void index="10">
+       <byte>-9</byte>
+      </void>
+      <void index="11">
+       <byte>-119</byte>
+      </void>
+      <void index="12">
+       <byte>-125</byte>
+      </void>
+      <void index="13">
+       <byte>120</byte>
+      </void>
+      <void index="14">
+       <byte>83</byte>
+      </void>
+      <void index="15">
+       <byte>107</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

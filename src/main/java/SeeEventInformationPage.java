@@ -19,15 +19,14 @@ public class SeeEventInformationPage {
     private static String  eventPlannerMail;
     private static String eName;
     private Eveniment event;
-    @FXML
-    private Button backButton;
-    @FXML
-    private Label eventLocationLabel;
-    @FXML
-    private ImageView imageViewLocation;
 
     @FXML
-    private ImageView imageView;
+    Label eventLocationLabel;
+    @FXML
+    ImageView imageViewLocation;
+
+    @FXML
+    ImageView imageView;
 
     @FXML
     private Label eventDifficultyLabel;

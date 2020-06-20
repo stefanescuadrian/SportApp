@@ -59,6 +59,8 @@ public class SportsmanSignupFormTest extends ApplicationTest {
         assertTrue(S.checkIfAllFieldsCompleted());
     }
 
+
+
     @Test
     public void testAddTwoTimesSportsmanAccount()throws NoSuchAlgorithmException{
           assertEquals(true, S.addSportsmanAccount("./SignupuriTest.xml"));
