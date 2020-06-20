@@ -29,28 +29,36 @@ public class SeeEventInformationPage {
     ImageView imageView;
 
     @FXML
-    private Label eventDifficultyLabel;
+    Label eventDifficultyLabel;
 
     @FXML
-    private Label eventMaxParticipantsLabel;
+    Label eventMaxParticipantsLabel;
 
     @FXML
-    private Label eventDateLabel;
+    Label eventDateLabel;
 
 private SceneChanger scene=new SceneChanger();
 
     @FXML
-    private ImageView imageViewCat;
+    ImageView imageViewCat;
 
     @FXML
-    private Label eventCategoryLabel;
+    Label eventCategoryLabel;
 
 
     @FXML
-    private Label eventDescriptionLabel;
+    Label eventDescriptionLabel;
 
     @FXML
-    private Label eventNameLabel;
+    Label eventNameLabel;
+
+    public Eveniment getEvent() {
+        return event;
+    }
+
+    public void setEvent(Eveniment event) {
+        this.event = event;
+    }
 
     public static String getEventPlannerMail() {////////////////////////////////
         return eventPlannerMail;

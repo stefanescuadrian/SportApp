@@ -31,7 +31,7 @@
          </image>
       </ImageView>
       <Button fx:id="backButton" layoutX="41.0" layoutY="32.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
-      <Button layoutX="519.0" layoutY="99.0" mnemonicParsing="false" onAction="#acceptParticipant" prefHeight="43.0" prefWidth="172.0" styleClass="btn" text="Accept" />
+      <Button fx:id="acceptButton" layoutX="519.0" layoutY="99.0" mnemonicParsing="false" onAction="#acceptParticipant" prefHeight="43.0" prefWidth="172.0" styleClass="btn" text="Accept" />
       <Button layoutX="714.0" layoutY="99.0" mnemonicParsing="false" onAction="#declineParticipant" prefHeight="43.0" prefWidth="172.0" styleClass="add-btn" text="Decline" />
       <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="936.0" layoutY="198.0">
          <image>
