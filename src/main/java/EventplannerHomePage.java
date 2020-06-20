@@ -82,7 +82,6 @@ public class EventplannerHomePage implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 SeePlannerEventInformationPage edit = new SeePlannerEventInformationPage(table.getSelectionModel().getSelectedItem().getN(),eventPlannerName); //e, de fapt, email-ul eventPlanner-ului
-
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/seePlannerEventInformationPage.fxml"));
                 Parent tableView = null;
@@ -103,7 +102,7 @@ public class EventplannerHomePage implements Initializable {
         });
     }
     public EventplannerHomePage(String eventPlannerName) {
-       this.eventPlannerName = eventPlannerName;
+       EventplannerHomePage.eventPlannerName = eventPlannerName;
     }
 
     public static String getEventPlannerName() {

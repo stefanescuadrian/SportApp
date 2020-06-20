@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import javax.jws.soap.SOAPBinding;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
@@ -15,32 +16,23 @@ import java.util.ArrayList;
 
 
 public class SportsmanSignupForm {
+    //private static Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
-    private ArrayList List = new ArrayList();
+    private ArrayList<User> List = new ArrayList();
     @FXML
-    private TextField firstName;
+    TextField firstName;
     @FXML
-    private TextField lastName;
+    TextField lastName;
     @FXML
-    private TextField emailAddress;
+    TextField emailAddress;
     @FXML
-    private PasswordField password;
+    PasswordField password;
 
-
-    @FXML
-    private Label signupLabel;
-
-    @FXML
-    private Button signupButtonForm;
-    @FXML
-    private Button goBackButton;
-    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
     public SportsmanSignupForm() throws FileNotFoundException {
     }
 
     @FXML
-
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
         Parent signupView= FXMLLoader.load(getClass().getResource("/signup.fxml"));
         Scene signupScene=new Scene(signupView);
@@ -49,41 +41,35 @@ public class SportsmanSignupForm {
         window.show();
     }
 
-    public void saveSportsmanData(ActionEvent e) throws IOException, NoSuchAlgorithmException {
+    public void alertSet(String Title, String ContentText){
+        //alert.setTitle(Title);
+       // alert.setHeaderText(null);
+        //alert.setContentText(ContentText);
+        //alert.showAndWait();
+    }
 
+    public boolean checkIfAllFieldsCompleted(){
         if (firstName.getText().isEmpty()) {
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter your first name!");
-            alert.showAndWait();
-            return;
+           // alertSet("Warning","Please enter your first name!");
+            return false;
         }
         if (lastName.getText().isEmpty()) {
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter your last name!");
-
-            alert.showAndWait();
-            return;
+          //  alertSet("Warning","Please enter your last name!");
+            return false;
         }
         if (emailAddress.getText().isEmpty()) {
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter your email!");
-
-            alert.showAndWait();
-            return;
+          //  alertSet("Warning","Please enter your email!");
+            return false;
         }
 
         if (password.getText().isEmpty()) {
-            alert.setTitle("ERROR");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter a password!");
-            alert.showAndWait();
-            return;
+          //  alertSet("Warning","Please enter a password!");
+            return false;
         }
+        return true;
+    }
 
-
+    public boolean addSportsmanAccount() throws NoSuchAlgorithmException {
         //Decodificare xml file
         try{
             FileInputStream fis = new FileInputStream("./Signupuri.xml");
@@ -98,36 +84,29 @@ public class SportsmanSignupForm {
         //ACCOUNT ALREADY EXISTS CHECK
         for(int i = 0; i< List.size(); i++){
             if(List.get(i) instanceof Sportsman){
-                if ( ((Sportsman) List.get(i)).getEmail().equals(this.emailAddress.getText())){
-                    alert.setTitle("ERROR");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Account already exists! Please enter another email address!");
-                    alert.showAndWait();
+                if (List.get(i).getEmail().equals(this.emailAddress.getText())){
+                 //alertSet("Warning","Account already exists! Please enter another email address!");
                     emailAddress.clear();
-                    return;
+                    return false;
                 }
             }
             if(List.get(i) instanceof Eventplanner){
-                if ( ((Eventplanner) List.get(i)).getEmail().equals(this.emailAddress.getText())){
-                    alert.setTitle("ERROR");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Account already exists! Please enter another email address!");
-                    alert.showAndWait();
+                if (List.get(i).getEmail().equals(this.emailAddress.getText())){
+                 //alertSet("Warning","Account already exists! Please enter another email address!");
                     emailAddress.clear();
-                    return;
+                    return false;
                 }
             }
         }
 
-        alert.setTitle("Registration Successfull!");
-        alert.setHeaderText(null);
-        alert.setContentText("Welcome " + firstName.getText() + " " + lastName.getText() + "!");
-        alert.showAndWait();
+        //alertSet("Registration Successfull!","Welcome " + firstName.getText() + " " + lastName.getText() + "!");
+
         byte[] salt = CodificareParola.getSalt();
         String T = CodificareParola.getSHA512Password(password.getText(),salt);
+
         //Codificare xml file
         try{
-            Sportsman S = new Sportsman(firstName.getText(), lastName.getText(), emailAddress.getText(), T,salt);
+            Sportsman S = new Sportsman(firstName.getText(), lastName.getText(), emailAddress.getText(), T, salt);
             List.add(S);
             FileOutputStream fos = new FileOutputStream("./Signupuri.xml");
             XMLEncoder encoder = new XMLEncoder(fos);
@@ -137,50 +116,25 @@ public class SportsmanSignupForm {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+        return true;
+    }
 
+    private void loadNewPage(String NewPage, ActionEvent e) throws IOException {
+        Parent signupView= FXMLLoader.load(getClass().getResource(NewPage));
+        Scene signupScene=new Scene(signupView);
+        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
+        window.setScene(signupScene);
+        window.show();
+    }
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("Sportsman_signupuriInfo.txt", true))) {
-            bw.write("Role: Sportsman ");
-            bw.newLine();
-            bw.write("First Name: " + firstName.getText() + " ");
-            bw.newLine();
-            bw.write("Last Name: " + lastName.getText() + " ");
-            bw.newLine();
-            bw.write("Email: " + emailAddress.getText() + " ");
-            bw.newLine();
-            bw.write("Password: " + password.getText());
-            bw.newLine();
-            bw.newLine();
-        } catch (IOException e1) {
-            e1.printStackTrace();
+    public void saveSportsmanData(ActionEvent e) throws IOException, NoSuchAlgorithmException {
+
+        if (!checkIfAllFieldsCompleted()){
+            return;
         }
 
-        try (BufferedWriter bw2 = new BufferedWriter(new FileWriter("Sportsman_firstName.txt", true))) {
-            bw2.write(firstName.getText());
-            bw2.newLine();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        try (BufferedWriter bw2 = new BufferedWriter(new FileWriter("Sportsman_lastName.txt", true))) {
-            bw2.write(lastName.getText());
-            bw2.newLine();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        try (BufferedWriter bw2 = new BufferedWriter(new FileWriter("Sportsman_email.txt", true))) {
-            bw2.write(emailAddress.getText());
-            bw2.newLine();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        try (BufferedWriter bw2 = new BufferedWriter(new FileWriter("Sportsman_passwords.txt", true))) {
-            bw2.write(password.getText());
-            bw2.newLine();
-        } catch (IOException e1) {
-            e1.printStackTrace();
+        if (!addSportsmanAccount()){
+            return;
         }
 
         firstName.clear();
@@ -188,11 +142,7 @@ public class SportsmanSignupForm {
         emailAddress.clear();
         password.clear();
 
-        Parent signupView= FXMLLoader.load(getClass().getResource("/login.fxml"));
-        Scene signupScene=new Scene(signupView);
-        Stage window=(Stage)((Node)e.getSource()).getScene().getWindow();
-        window.setScene(signupScene);
-        window.show();
+        loadNewPage("/login.fxml", e);
     }
 }
 

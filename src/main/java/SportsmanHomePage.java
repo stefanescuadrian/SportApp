@@ -15,8 +15,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.omg.CORBA.ExceptionList;
 
 import javax.swing.*;
+import java.beans.ExceptionListener;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.FileInputStream;
@@ -29,7 +31,6 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class SportsmanHomePage implements Initializable {
-    Inregistrare I;
     private static String eventPlannerName;////////////////////////////////////////////
 
     public static String sportsmanEmail;
@@ -37,7 +38,7 @@ public class SportsmanHomePage implements Initializable {
     public static String sportsmanLastName;
     private static int[] checkList = new int[5];
     private static ArrayList<Eveniment> List = new ArrayList();
-    private static ArrayList List1 = new ArrayList();
+    private static ArrayList<Inregistrare> List1 = new ArrayList();
     @FXML
     private TableColumn<?, ?> firstColumn;
 
@@ -79,10 +80,7 @@ public class SportsmanHomePage implements Initializable {
 
     @FXML
     private CheckBox footballFilter;
-    @FXML
-    private Button myEventsButton;
-    @FXML
-    private Button cancelButton;
+
 
     public Pane getCheckPane() {
         return checkPane;
@@ -155,12 +153,12 @@ public class SportsmanHomePage implements Initializable {
         }
 
 
-        for (int i=0;i<Lista.size();i++){
-            if(Lista.get(i) instanceof Inregistrare){
-                if (Lista.get(i).getSportsmanEmail().equals(sportsmanMail) && Lista.get(i).getE().getEventPlannerMail().equals(eventplannerMail) && Lista.get(i).getE().getEventName().equals(eventName)){
-                    for(int j=0;j<Lista1.size();j++){
-                        if (Lista1.get(j) instanceof Eveniment){
-                            if (Lista1.get(j).getEventName().equals(eventName) && Lista1.get(j).getEventPlannerMail().equals(eventplannerMail)){
+        for (Inregistrare inregistrare : Lista) {
+            if (inregistrare != null) {
+                if (inregistrare.getSportsmanEmail().equals(sportsmanMail) && inregistrare.getE().getEventPlannerMail().equals(eventplannerMail) && inregistrare.getE().getEventName().equals(eventName)) {
+                    for (int j = 0; j < Lista1.size(); j++) {
+                        if (Lista1.get(j) != null) {
+                            if (Lista1.get(j).getEventName().equals(eventName) && Lista1.get(j).getEventPlannerMail().equals(eventplannerMail)) {
                                 buttons_disable_status[j] = true;
                                 textButtons[j] = "Joined";
                             }
@@ -213,8 +211,8 @@ public class SportsmanHomePage implements Initializable {
         try{
             FileInputStream fis = new FileInputStream("./Events.xml");
             XMLDecoder decoder = new XMLDecoder(fis);
-            ArrayList A = new ArrayList();
-            A = (ArrayList) decoder.readObject();
+            ArrayList<Eveniment> A = new ArrayList();
+            A = (ArrayList<Eveniment>) decoder.readObject();
             List =A;
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
@@ -222,7 +220,7 @@ public class SportsmanHomePage implements Initializable {
 
 
         for(int i=0; i<List.size();i++){
-            if (List.get(i) instanceof Eveniment) {
+            if (List.get(i) != null) {
                 verificareInregistrareaExista(List.get(i).getEventName(), List.get(i).getEventPlannerMail(), sportsmanEmail);
                 initializare_butoane();
                 data.add(new Eveniment(List.get(i).getEventCategory(), List.get(i).getEventDescription(), List.get(i).getEventName(), List.get(i).getEventDifficulty(), List.get(i).getEventLocation(), List.get(i).getEventMaxNumberParticipants(), List.get(i).getEventDate(),buttons[i]));
@@ -285,7 +283,7 @@ public class SportsmanHomePage implements Initializable {
 
 
         for(int i=0; i<List.size();i++){
-            if (List.get(i) instanceof Eveniment ) {
+            if (List.get(i) != null) {
                 verificareInregistrareaExista(List.get(i).getEventName(), List.get(i).getEventPlannerMail(), sportsmanEmail);
                 initializare_butoane();
                 if(List.get(i).getEventCategory().equals("Basketball") && checkList[0] == 1)///////////////////////////////////////////
@@ -306,24 +304,28 @@ public class SportsmanHomePage implements Initializable {
     }
 
     private void handleButtonAction(ActionEvent actionEvent) {
-        for (int i=0; i<buttons.length; i++)
-            if (actionEvent.getSource() == buttons[i] && List.get(i) instanceof Eveniment) {
-                I = new Inregistrare(List.get(i), SportsmanHomePage.getSportsmanFirstName(), SportsmanHomePage.getSportsmanLastName(), SportsmanHomePage.getSportsmanEmail(), "Pending");
-            }
         //Decodificare xml
-        try{
+        try {
             FileInputStream fis = new FileInputStream("./Registrations.xml");
             XMLDecoder decoder = new XMLDecoder(fis);
             ArrayList A = new ArrayList();
             A = (ArrayList) decoder.readObject();
-            List1 =A;
+            List1 = A;
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
 
+        Inregistrare I;
+        for (int i=0; i<buttons.length; i++){
+            System.out.println(i);
+            if (actionEvent.getSource() == buttons[i] && List.get(i) != null) {
+                I = new Inregistrare(List.get(i), SportsmanHomePage.getSportsmanFirstName(), SportsmanHomePage.getSportsmanLastName(), SportsmanHomePage.getSportsmanEmail(), "Pending");
+                List1.add(I);
+            }
+        }
+        
         //Codificare xml file
-        try{
-            List1.add(I);
+        try {
             FileOutputStream fos = new FileOutputStream("./Registrations.xml");
             XMLEncoder encoder = new XMLEncoder(fos);
             encoder.writeObject(List1);

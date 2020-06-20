@@ -13,16 +13,17 @@ import java.io.File;
 
 public class Eveniment {
     private ImageView photo;
-    private ImageView photo1;////////////////////////////////////
+    private ImageView photo1;
     private String eventPlannerMail;
     private String eventCategory;
     private String eventDifficulty;
     private String eventName;
     private String eventLocation;
-    private int eventMaxNumberParticipants;
-    private String eventDate;  //.getValue().toString()
+    private String eventDate;
     private String eventDescription;
     private Button button;
+
+    private int eventMaxNumberParticipants;
 
     private Label status;
     private Label L;
@@ -146,10 +147,8 @@ L.setText(eventCategory);
         eDif=new SimpleStringProperty(eventDifficulty);
         eDate=new SimpleStringProperty(eventDate);
         eP=new SimpleStringProperty(Integer.toString(eventMaxNumberParticipants));
-
-
     }
-//////////////////////////////////////////////////////////////////////////////////////////////modificat constructor
+
     public Eveniment( String eventCategory, String eventDescription, String eventName,String eventDifficulty,String eventLocation,int eventMaxNumberParticipants,String eventDate, Button button){
         if (eventCategory.equals("Basketball")){
             photo = new ImageView(new Image(this.getClass().getResourceAsStream("x1.png")));
@@ -185,7 +184,7 @@ L.setText(eventCategory);
         eDate=new SimpleStringProperty(eventDate);
         eP=new SimpleStringProperty(Integer.toString(eventMaxNumberParticipants));
         this.button = button;
-        //this.button.setText("Join");
+
     }
 
     public Eveniment(String eventCategory, String eventDescription, String eventName, String status){
@@ -414,4 +413,5 @@ L.setText(eventCategory);
     public String toString(){
         return this.eventPlannerMail;
     }
+
 }

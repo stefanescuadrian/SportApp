@@ -16,8 +16,7 @@ public class Inregistrare {
     private SimpleStringProperty eD;
     private SimpleStringProperty eC;
     private SimpleStringProperty sportsmanFNLN;
-    private SimpleStringProperty sT;////////////////////////////////////
-private Text t;
+
 
 
 
@@ -26,6 +25,7 @@ private Text t;
     }
 
     public Inregistrare(Eveniment e, String sportsmanFirstName, String sportsmanLastName, String sportsmanEmail, String status) {
+
         E = e;
         this.sportsmanFirstName = sportsmanFirstName;
         this.sportsmanLastName = sportsmanLastName;
@@ -59,7 +59,6 @@ private Text t;
         eNC = new SimpleStringProperty(E.getEventName() + '\n' + L.getText());
         eD = new SimpleStringProperty(E.getEventDescription());
         eC = new SimpleStringProperty(E.getEventCategory());
-
         sportsmanFNLN = new SimpleStringProperty(sportsmanFirstName + " " +sportsmanLastName);
     }
 

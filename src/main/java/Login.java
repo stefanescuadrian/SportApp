@@ -80,7 +80,6 @@ public class Login implements Initializable {
             ArrayList A = new ArrayList();
             A = (ArrayList) decoder.readObject();
             List = A;
-
         } catch (
                 FileNotFoundException ex) {
             ex.printStackTrace();

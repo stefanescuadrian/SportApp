@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Afisare_Continut_XML_Signupuri {
     private static ArrayList List = new ArrayList();
+
     public static ArrayList decodificareXML(){
     try{
         FileInputStream fis = new FileInputStream("./Signupuri.xml");

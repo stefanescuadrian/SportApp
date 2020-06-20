@@ -14,17 +14,6 @@ import java.util.ResourceBundle;
 
 public class Signup{
 
-    @FXML
-    private Label signupLabel;
-
-    @FXML
-    private Label roleLabel;
-
-    @FXML
-    private Button goBackButton;
-
-    @FXML
-    private Button sportsmanForm;
 
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
         Parent signupView= FXMLLoader.load(getClass().getResource("/login.fxml"));
@@ -48,8 +37,6 @@ public class Signup{
         window.show();
     }
 
-    public void initialize(URL location, ResourceBundle resources) {
 
-    }
 
 }
