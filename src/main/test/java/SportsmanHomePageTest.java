@@ -37,7 +37,6 @@ public class SportsmanHomePageTest extends ApplicationTest {
         S.basketFilter.setSelected(false);
         assertFalse(S.basketFilter.isSelected());
         S.actionBasket();
-
     }
 
     @Test

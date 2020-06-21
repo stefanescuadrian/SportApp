@@ -3,6 +3,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import sun.java2d.pipe.SpanShapeRenderer;
 
 public class Inregistrare {
     private Eveniment E;
@@ -12,10 +13,10 @@ public class Inregistrare {
     private String status = "Pending";
     private ImageView photo;
     private Label L;
-    private SimpleStringProperty eNC;
-    private SimpleStringProperty eD;
-    private SimpleStringProperty eC;
-    private SimpleStringProperty sportsmanFNLN;
+    private SimpleStringProperty eNC = new SimpleStringProperty();
+    private SimpleStringProperty eD = new SimpleStringProperty();
+    private SimpleStringProperty eC = new SimpleStringProperty();
+    private SimpleStringProperty sportsmanFNLN = new SimpleStringProperty();
 
 
 
@@ -65,6 +66,7 @@ public class Inregistrare {
     public Inregistrare(String sportsmanFirstName, String sportsmanLastName) {
         sportsmanFNLN = new SimpleStringProperty(sportsmanFirstName + sportsmanLastName);
     }
+
 
     public Eveniment getE() {
         return E;
