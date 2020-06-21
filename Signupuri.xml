@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_241" class="java.beans.XMLDecoder">
+<java version="1.8.0_251" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="Sportsman">
@@ -1241,6 +1241,74 @@
       </void>
       <void index="15">
        <byte>17</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>l</string>
+    </void>
+    <void property="firstName">
+     <string>a</string>
+    </void>
+    <void property="lastName">
+     <string>a</string>
+    </void>
+    <void property="password">
+     <string>4f335bd2adc47c644000a48228b04751ba86e91de8a1430f37b9d7b8d712aac7a8dd44f35a0953dee40444f109e4d0632348122836cea07b0657f2a4f1bad068</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>34</byte>
+      </void>
+      <void index="1">
+       <byte>107</byte>
+      </void>
+      <void index="2">
+       <byte>102</byte>
+      </void>
+      <void index="3">
+       <byte>28</byte>
+      </void>
+      <void index="4">
+       <byte>-99</byte>
+      </void>
+      <void index="5">
+       <byte>114</byte>
+      </void>
+      <void index="6">
+       <byte>52</byte>
+      </void>
+      <void index="7">
+       <byte>-82</byte>
+      </void>
+      <void index="8">
+       <byte>121</byte>
+      </void>
+      <void index="9">
+       <byte>-37</byte>
+      </void>
+      <void index="10">
+       <byte>-8</byte>
+      </void>
+      <void index="11">
+       <byte>-120</byte>
+      </void>
+      <void index="12">
+       <byte>81</byte>
+      </void>
+      <void index="13">
+       <byte>81</byte>
+      </void>
+      <void index="14">
+       <byte>117</byte>
+      </void>
+      <void index="15">
+       <byte>46</byte>
       </void>
      </array>
     </void>

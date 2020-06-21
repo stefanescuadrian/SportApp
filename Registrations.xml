@@ -624,64 +624,6 @@ the men&apos;s national teams of the members of the International Basketball</st
        <string>Rugby</string>
       </void>
       <void property="eventDate">
-       <string>2020-06-12</string>
-      </void>
-      <void property="eventDescription">
-       <string></string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Beginner</string>
-      </void>
-      <void property="eventLocation">
-       <string>w</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>54</int>
-      </void>
-      <void property="eventName">
-       <string>w</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>w</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Rugby</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>q</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
-       <string>Rugby</string>
-      </void>
-      <void property="eventDate">
        <string>2020-06-05</string>
       </void>
       <void property="eventDescription">
@@ -856,64 +798,6 @@ the men&apos;s national teams of the members of the International Basketball</st
     <void property="e">
      <object class="Eveniment">
       <void property="eventCategory">
-       <string>Football</string>
-      </void>
-      <void property="eventDate">
-       <string>2020-06-24</string>
-      </void>
-      <void property="eventDescription">
-       <string>jghjgh</string>
-      </void>
-      <void property="eventDifficulty">
-       <string>Medium</string>
-      </void>
-      <void property="eventLocation">
-       <string>y</string>
-      </void>
-      <void property="eventMaxNumberParticipants">
-       <int>17</int>
-      </void>
-      <void property="eventName">
-       <string>y</string>
-      </void>
-      <void property="eventPlannerMail">
-       <string>d</string>
-      </void>
-     </object>
-    </void>
-    <void property="l">
-     <object class="javafx.scene.control.Label">
-      <void property="text">
-       <string>Football</string>
-      </void>
-     </object>
-    </void>
-    <void property="photo">
-     <object class="javafx.scene.image.ImageView">
-      <void property="fitHeight">
-       <double>50.0</double>
-      </void>
-      <void property="fitWidth">
-       <double>50.0</double>
-      </void>
-     </object>
-    </void>
-    <void property="sportsmanEmail">
-     <string>q</string>
-    </void>
-    <void property="sportsmanFirstName">
-     <string>e</string>
-    </void>
-    <void property="sportsmanLastName">
-     <string>e</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Inregistrare">
-    <void property="e">
-     <object class="Eveniment">
-      <void property="eventCategory">
        <string>Tennis</string>
       </void>
       <void property="eventDate">
@@ -964,6 +848,9 @@ the men&apos;s national teams of the members of the International Basketball</st
     </void>
     <void property="sportsmanLastName">
      <string>e</string>
+    </void>
+    <void property="status">
+     <string>Accepted</string>
     </void>
    </object>
   </void>

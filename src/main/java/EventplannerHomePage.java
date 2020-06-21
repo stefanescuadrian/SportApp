@@ -28,21 +28,21 @@ import java.util.ResourceBundle;
 
 public class EventplannerHomePage implements Initializable {
     @FXML
-    private Button myEventsButton;
+    Button myEventsButton;
 
     @FXML
-    private Button addEventsButton;
+    Button addEventsButton;
     @FXML
-    private TableView<Eveniment> table;
+    TableView<Eveniment> table;
 
     @FXML
-    private TableColumn<?, ?> firstColumn;
+    TableColumn<?, ?> firstColumn;
 
     @FXML
-    private TableColumn<?, ?> secondColumn;
+     TableColumn<?, ?> secondColumn;
 
     @FXML
-    private TableColumn<?, ?> thirdColumn;
+    TableColumn<?, ?> thirdColumn;
 
 private SceneChanger scene=new SceneChanger();
     private static ArrayList<Eveniment> List = new ArrayList();

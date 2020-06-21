@@ -40,53 +40,51 @@ public class SportsmanHomePage implements Initializable {
     private static ArrayList<Eveniment> List = new ArrayList();
     private static ArrayList<Inregistrare> List1 = new ArrayList();
     @FXML
-    private TableColumn<?, ?> firstColumn;
+    TableColumn<?, ?> firstColumn;
 
     @FXML
-    private TableColumn<?, ?> secondColumn;
+    TableColumn<?, ?> secondColumn;
 
     @FXML
-    private TableColumn<?, ?> thirdColumn;
+    TableColumn<?, ?> thirdColumn;
 
     @FXML
-    private TableColumn<?, ?> fourthColumn;
+    TableColumn<?, ?> fourthColumn;
     @FXML
-    private TableView<Eveniment> table;
+    TableView<Eveniment> table;
 
     @FXML
-    private Button goBackButton;
+    Button goBackButton;
 
     private Button[] buttons = new Button[100];
     private boolean[] buttons_disable_status = new boolean[100];
     private String[] textButtons = new String[100];
 
     @FXML
-    private TitledPane filters;
+    TitledPane filters;
 
     @FXML
-    private Pane checkPane;
+    Pane checkPane;
 
     @FXML
-    private CheckBox basketFilter;
+    CheckBox basketFilter;
 
     @FXML
-    private CheckBox joggingFilter;
+    CheckBox joggingFilter;
 
     @FXML
-    private CheckBox tennisFilter;
+    CheckBox tennisFilter;
 
     @FXML
-    private CheckBox rugbyFilter;
+    CheckBox rugbyFilter;
 
     @FXML
-    private CheckBox footballFilter;
+    CheckBox footballFilter;
 
 private SceneChanger scene=new SceneChanger();
     public Pane getCheckPane() {
         return checkPane;
     }
-
-
 
     @FXML
     void changeScreenButtonPushed(ActionEvent event) {
@@ -304,7 +302,7 @@ private SceneChanger scene=new SceneChanger();
     }
 
     @FXML
-    void actionBasket(ActionEvent event) {
+    void actionBasket() {
 
         if (!basketFilter.isSelected())
             checkList[0] = 0;
@@ -314,7 +312,7 @@ private SceneChanger scene=new SceneChanger();
     }
 
     @FXML
-    void actionTennis(ActionEvent event) {
+    void actionTennis() {
         if(!tennisFilter.isSelected())
             checkList[1] = 0;
         else
@@ -323,7 +321,7 @@ private SceneChanger scene=new SceneChanger();
     }
 
     @FXML
-    void actionJogging(ActionEvent event) {
+    void actionJogging() {
         if(!joggingFilter.isSelected()){
             checkList[2] = 0;
         }
@@ -333,7 +331,7 @@ private SceneChanger scene=new SceneChanger();
     }
 
     @FXML
-    void actionRugby(ActionEvent event) {
+    void actionRugby() {
         if(!rugbyFilter.isSelected()){
             checkList[3] = 0;
         }
@@ -343,7 +341,7 @@ private SceneChanger scene=new SceneChanger();
     }
 
     @FXML
-    void actionFootball(ActionEvent event) {
+    void actionFootball() {
         if(!footballFilter.isSelected()){
             checkList[4] = 0;
         }

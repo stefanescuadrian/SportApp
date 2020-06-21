@@ -50,7 +50,7 @@ public class SeePlannerEventInformationPage {
 
     @FXML
     Label eventDescriptionLabel;
-    public SceneChanger scene = new SceneChanger();
+    private SceneChanger scene = new SceneChanger();
 
     @FXML
     Label eventNameLabel;
@@ -66,8 +66,7 @@ public class SeePlannerEventInformationPage {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        scene.changeScenes(event, "/eventPlannerHomePage.fxml");
-
+        scene.changeScenes(event, "/eventplannerHomePage.fxml");
     }
 
     void check_category(Eveniment event) {
