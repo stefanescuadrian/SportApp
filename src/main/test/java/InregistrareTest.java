@@ -26,7 +26,7 @@ public class InregistrareTest extends ApplicationTest {
     E.setEventLocation("location");
     E.seteDif("difficulty");
     E.setEventDate("data");
-    E.setEventDescription("descriprion");
+    E.setEventDescription("description");
     E.setEventDifficulty("difficulty");
     E.setEventMaxNumberParticipants(15);
     E.setEventName("name");
