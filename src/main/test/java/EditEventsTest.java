@@ -15,6 +15,13 @@ public class EditEventsTest extends ApplicationTest {
     private Eveniment event;
     private static String mail="fain";
     private static String nume="Cool";
+
+    private static String name="flower";
+    private static String category="Rugby";
+    private static String dif="Advanced";
+    private static String loc="Timisoara";
+    private static String eventPlanner="You";
+    private static String eName="Cool";
     @BeforeClass
     public static void setupClass() throws Exception{ }
 
@@ -91,5 +98,27 @@ public class EditEventsTest extends ApplicationTest {
         E.setEventName(t);
         assertEquals(t.toString(),E.getEventName().toString());
     }
+    @Test
+    public void testGetAndSetNameAndMail(){
+    EditEvents.seteName(nume);
+    EditEvents.setEventPlannerMail(mail);
+    assertEquals("fain",EditEvents.getEventPlannerMail());
+    assertEquals("Cool",EditEvents.geteName());
+    }
+    @Test
+    public void testGetAndSetEvent(){
+        E.setEvent(event);
+        assertEquals(event,E.getEvent());
+    }
+
+    @Test
+    public void testShowDetails(){
+      event.seteN(name);
+        event.seteC(category);
+        event.seteL(loc);
+        E.showDetails(event);
+    }
+
 
 }
+
