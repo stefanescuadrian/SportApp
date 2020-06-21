@@ -12,10 +12,10 @@ public class Inregistrare {
     private String status = "Pending";
     private ImageView photo;
     private Label L;
-    private SimpleStringProperty eNC;
-    private SimpleStringProperty eD;
-    private SimpleStringProperty eC;
-    private SimpleStringProperty sportsmanFNLN;
+    private SimpleStringProperty eNC=new SimpleStringProperty();
+    private SimpleStringProperty eD=new SimpleStringProperty();
+    private SimpleStringProperty eC=new SimpleStringProperty();
+    private SimpleStringProperty sportsmanFNLN=new SimpleStringProperty();
 
 
 

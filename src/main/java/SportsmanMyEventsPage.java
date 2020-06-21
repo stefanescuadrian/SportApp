@@ -40,46 +40,46 @@ public class SportsmanMyEventsPage implements Initializable {
 private Text t;
 
     @FXML
-    private TableColumn<?, ?> secondColumn;
+    TableColumn<?, ?> secondColumn;
 
     @FXML
-    private CheckBox basketFilter;
+     CheckBox basketFilter;
 
     @FXML
-    private TitledPane filters;
+     TitledPane filters;
 
     @FXML
-    private CheckBox footballFilter;
+     CheckBox footballFilter;
 
     @FXML
-    private Pane checkPane;
+     Pane checkPane;
 
     @FXML
-    private CheckBox joggingFilter;
+     CheckBox joggingFilter;
 
     @FXML
-    private CheckBox rugbyFilter;
+    CheckBox rugbyFilter;
 
     @FXML
-    private TableColumn<?, ?> firstColumn;
+     TableColumn<?, ?> firstColumn;
 
     @FXML
-    private CheckBox tennisFilter;
+     CheckBox tennisFilter;
 
     @FXML
-    private Button backButton;
+     Button backButton;
 
     @FXML
-    private Button cancelButton;
+    Button cancelButton;
 
     @FXML
-    private TableColumn<?, ?> thirdColumn;
+     TableColumn<?, ?> thirdColumn;
 
     @FXML
-    private TableView<Inregistrare> table;
+     TableView<Inregistrare> table;
 
     @FXML
-    private TableColumn<?, ?> fourthColumn;
+     TableColumn<?, ?> fourthColumn;
     private SceneChanger scene=new SceneChanger();
     private ArrayList Lista = new ArrayList();
 
@@ -88,6 +88,30 @@ private Text t;
     }
     public SportsmanMyEventsPage(String sportsmanEmail) {
         this.sportsmanEmail = sportsmanEmail;
+    }
+
+    public static String getSportsmanEmail() {
+        return sportsmanEmail;
+    }
+
+    public static String getSportsmanFirstName() {
+        return sportsmanFirstName;
+    }
+
+    public static void setSportsmanFirstName(String sportsmanFirstName) {
+        SportsmanMyEventsPage.sportsmanFirstName = sportsmanFirstName;
+    }
+
+    public static String getSportsmanLastName() {
+        return sportsmanLastName;
+    }
+
+    public static void setSportsmanLastName(String sportsmanLastName) {
+        SportsmanMyEventsPage.sportsmanLastName = sportsmanLastName;
+    }
+
+    public static void setSportsmanEmail(String sportsmanEmail) {
+        SportsmanMyEventsPage.sportsmanEmail = sportsmanEmail;
     }
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -146,7 +170,7 @@ private Text t;
     }
 
     @FXML
-    void actionBasket(ActionEvent event) {
+    void actionBasket() {
 
         if (!basketFilter.isSelected())
             checkList[0] = 0;
@@ -156,7 +180,7 @@ private Text t;
     }
 
     @FXML
-    void actionTennis(ActionEvent event) {
+    void actionTennis() {
         if(!tennisFilter.isSelected())
             checkList[1] = 0;
         else
@@ -165,7 +189,7 @@ private Text t;
     }
 
     @FXML
-    void actionJogging(ActionEvent event) {
+    void actionJogging() {
         if(!joggingFilter.isSelected()){
             checkList[2] = 0;
         }
@@ -175,7 +199,7 @@ private Text t;
     }
 
     @FXML
-    void actionRugby(ActionEvent event) {
+    void actionRugby() {
         if(!rugbyFilter.isSelected()){
             checkList[3] = 0;
         }
@@ -185,7 +209,7 @@ private Text t;
     }
 
     @FXML
-    void actionFootball(ActionEvent event) {
+    void actionFootball() {
         if(!footballFilter.isSelected()){
             checkList[4] = 0;
         }

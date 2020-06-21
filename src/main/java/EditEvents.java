@@ -139,9 +139,9 @@ public class EditEvents {
         this.eventPlannerMail = eventPlannerMail;
     }
 
-    public String getEName() {
-        return eName;
-    }
+   // public String getEName() {
+      //  return eName;
+   // }
     @FXML
      TextField eventMaxNumberParticipants;
     @FXML
