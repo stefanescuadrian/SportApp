@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" styleClass="root" stylesheets="@signup.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signup">
+    <children>
+        <Pane layoutX="128.0" layoutY="145.0" prefHeight="536.0" prefWidth="1128.0">
+            <children>
+                <Label fx:id="roleLabel" layoutX="167.0" layoutY="43.0" styleClass="role" text="Choose your role">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="signupLabel" layoutX="171.0" layoutY="-3.0" styleClass="sgn-f" text="Sign Up">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Button onAction="#goToEventplannerForm" layoutX="151.0" layoutY="179.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="374.0" styleClass="ev-btn" text="EVENT PLANNER">
+                    <font>
+                        <Font name="System Bold" size="40.0" />
+                    </font>
+                </Button>
+                <Button fx:id="sportsmanForm" layoutX="646.0" layoutY="179.0" mnemonicParsing="false" onAction="#goToSportsmanForm" prefHeight="86.0" prefWidth="319.0" styleClass="sp-btn" text="SPORTSMAN">
+                    <font>
+                        <Font name="System Bold" size="40.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Button fx:id="goBackButton" layoutX="64.0" layoutY="44.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" styleClass="btn" text="Back">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

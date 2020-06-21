@@ -1,0 +1,41 @@
+.login{
+    -fx-background-image: url(loginbkg.jpg);
+}
+.btn{
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+}
+
+.lgn-btn{
+    -fx-background-color: #A33AFF;
+    -fx-text-fill: white;
+    -fx-border-width: 2px;
+}
+.lgn-btn:hover{
+    -fx-background-color:#A55AFF;
+
+}
+.label{
+    -fx-text-fill: white;
+}
+.hyperlink{
+    -fx-text-fill: white;
+
+    -fx-border-width: 0px 2px 0px 0px;
+}
+.sign {
+    -fx-text-fill: white;
+
+    -fx-border-width: 0px 0px 5px 0px;
+    -fx-border-color:#A33AFF;
+}
+.sign:hover{
+    -fx-border-width: 0px 0px 0px 0px;
+    -fx-text-fill: #A55AFF;
+}
+.as{
+    -fx-background-color: red;
+}

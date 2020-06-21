@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@seeEventParticipantsPage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeeEventParticipantsPage">
+   <children>
+      <TableView fx:id="pendingTable" layoutX="243.0" layoutY="190.0" prefHeight="495.0" prefWidth="296.0" styleClass="pcol">
+        <columns>
+          <TableColumn fx:id="pendingColumn" prefWidth="295.0" text="C1AAA" />
+        </columns>
+      </TableView>
+      <TableView fx:id="declinedTable" layoutX="849.0" layoutY="190.0" prefHeight="495.0" prefWidth="284.0" styleClass="dcol">
+         <columns>
+            <TableColumn fx:id="declinedColumn" prefWidth="283.0" text="C1" />
+         </columns>
+      </TableView>
+      <TableView fx:id="acceptedTable" layoutX="537.0" layoutY="190.0" prefHeight="495.0" prefWidth="317.0" styleClass="acol">
+         <columns>
+            <TableColumn fx:id="acceptedColumn" prefWidth="316.0" text="C1" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="219.0" fitWidth="945.0" layoutX="216.0" layoutY="58.0">
+         <image>
+            <Image url="@line.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="41.0" layoutY="32.0" mnemonicParsing="false" onAction="#goBack" prefHeight="53.0" prefWidth="45.0" styleClass="btn_back" />
+      <Button fx:id="acceptButton" layoutX="519.0" layoutY="99.0" mnemonicParsing="false" onAction="#acceptParticipant" prefHeight="43.0" prefWidth="172.0" styleClass="btn" text="Accept" />
+      <Button layoutX="714.0" layoutY="99.0" mnemonicParsing="false" onAction="#declineParticipant" prefHeight="43.0" prefWidth="172.0" styleClass="add-btn" text="Decline" />
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="936.0" layoutY="198.0">
+         <image>
+            <Image url="@red.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="336.0" layoutY="198.0">
+         <image>
+            <Image url="@orange.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="637.0" layoutY="198.0">
+         <image>
+            <Image url="@purple.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

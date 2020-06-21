@@ -1,0 +1,77 @@
+
+
+.btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: gray;
+}
+.btn:hover{
+
+    -fx-text-fill: #A33AFF;
+}
+
+/*.role-planner{
+    -fx-text-fill: blue;
+
+}
+.role-sportsman
+{
+    -fx-text-fill: gray;
+
+}
+.role-planner:hover{
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 8px 0px;
+    -fx-border-color:#A33AFF ;
+
+}
+.role-sportsman:hover{
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 8px 0px;
+    -fx-border-color:#A33AFF ;
+
+}*/
+.role{
+    -fx-text-fill: black;
+}
+
+.textfield{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+.role-sportsman-form{
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 8px 0px;
+    -fx-border-color:#A33AFF ;
+
+}
+.sgn-btn{
+    -fx-background-color: #A33AFF;
+    -fx-text-fill: white;
+    -fx-border-width: 2px;
+
+}
+.sgn-btn:hover{
+    -fx-background-color: #A55AFF
+}
+.ev-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: gray;
+}
+.ev-btn:hover{
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 8px 0px;
+    -fx-border-color:#A33AFF ;
+}
+.sp-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: gray;
+}
+.sp-btn:hover{
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 8px 0px;
+    -fx-border-color:#A33AFF ;
+}
+.sgn-f{
+    -fx-text-fill: #A33AFF;
+}

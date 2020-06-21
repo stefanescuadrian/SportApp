@@ -1,0 +1,125 @@
+.table-view{
+    -fx-background-color: transparent;
+}
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header,.table-view .filler{
+    -fx-background-color: transparent;
+
+}
+
+.table-row-cell{
+    -fx-background-color: transparent;
+    -fx-cell-size: 75;
+    -fx-padding: 25 10 10 10;
+    -fx-border-color: #dedede transparent #dedede transparent;
+    -fx-border-width: 0.5px;
+    -fx-font-size: 16px;
+}
+
+.btn{
+    -fx-background-color:#A33AFF;
+    -fx-text-fill:white;
+}
+.add-btn{
+    -fx-background-color:black;
+    -fx-text-fill:white;
+}
+.add-btn:hover{
+    -fx-background-color: #403f3f;
+}
+.btn:hover{
+    -fx-background-color:#A55AFF;
+}
+
+.btn_back{
+    -fx-graphic: url(arrow123.png);
+    -fx-background-color: transparent;
+}
+.btn_back:hover{
+    -fx-cursor: hand;
+}
+.table-row-cell:hover{
+    -fx-background-color: #ededed;
+    -fx-cursor: hand;
+}
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: #ededed ;
+    -fx-table-cell-border-color: transparent;
+
+}
+.table-view:focused .table-row-cell {
+    -fx-table-cell-border-color: transparent;
+
+}
+.table-view:focused .table-row-cell:selected .table-cell{
+    -fx-text-fill: black;
+
+}
+
+.table-view .scroll-bar:vertical > .increment-button,
+.table-view .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+
+}
+
+.table-view .scroll-bar{
+    -fx-background-color: transparent;
+}
+.table-view .scroll-bar:vertical .thumb{
+      -fx-background-color: transparent;
+  }
+.table-view .scroll-bar:horizontal .thumb{
+    -fx-background-color: transparent;
+}
+.table-view  .scroll-bar .increment-arrow,
+.table-view  .scroll-bar .decrement-arrow
+{
+    -fx-shape: " ";
+    -fx-padding:0;
+}
+.titleLabel{
+   -fx-font-size:22;
+    -fx-font-weight: bold;
+
+}
+.titleSecondary{
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+     -fx-text-fill: #8f8f8f;
+}
+.descriptionLabel{
+    -fx-text-fill: #7a7a7a;
+}
+.categoryLabel{
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 36;
+}
+.participantsLabel{
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 36;
+    -fx-background-color: e6e6e6;
+}
+
+.difficultyLabel{
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 36;
+    -fx-background-color: e6e6e6;
+}
+.loc-date{
+    -fx-font-weight: bold;
+}
+
+.btn_b{
+     -fx-background-color: transparent;
+ }
+
+.btn_b:hover{
+    -fx-cursor: hand;
+}

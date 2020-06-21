@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@eventplannerHomePage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventplannerHomePage">
+   <children>
+      <ImageView fitHeight="88.0" fitWidth="989.0" layoutX="194.0" layoutY="111.0">
+         <image>
+            <Image url="@line.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="226.0" layoutY="102.0" text="Events">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="92.0" layoutX="43.0" layoutY="28.0" preserveRatio="true">
+         <image>
+            <Image url="@logo_black.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="myEventsButton" layoutX="1007.0" layoutY="99.0" mnemonicParsing="false" onAction="#goToMyEventsPage" prefHeight="39.0" prefWidth="141.0" styleClass="btn" text="My Events">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="addEventsButton" layoutX="851.0" layoutY="99.0" mnemonicParsing="false" onAction="#addEvents" prefHeight="36.0" prefWidth="141.0" styleClass="add-btn" text="Add">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="1244.0" layoutY="26.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="logout-btn" text="Log out">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutX="217.0" layoutY="118.0" prefHeight="539.0" prefWidth="947.0">
+         <columns>
+            <TableColumn fx:id="firstColumn" prefWidth="75.0" styleClass="col-i" />
+            <TableColumn fx:id="secondColumn" prefWidth="75.0" styleClass="col-t" />
+           <!-- <TableColumn fx:id="newColumn" prefWidth="75.0" />-->
+            <TableColumn fx:id="thirdColumn" prefWidth="75.0" styleClass="col-d" />
+            <TableColumn fx:id="firstColumn1" prefWidth="75.0" styleClass="col-i" />
+         </columns></TableView>
+      <ImageView fitHeight="8.0" fitWidth="15.0" layoutX="670.0" layoutY="712.0" preserveRatio="true">
+         <image>
+            <Image url="@x9.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@signup.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventplannerSignupForm">
+    <children>
+        <Pane layoutX="141.0" layoutY="143.0" prefHeight="536.0" prefWidth="1128.0">
+            <children>
+                <Label layoutX="115.0" layoutY="179.0" prefHeight="66.0" prefWidth="349.0" styleClass="role-sportsman-form" text=" EVENT PLANNER">
+                    <font>
+                        <Font name="System Bold" size="40.0" />
+                    </font>
+                </Label>
+                <Label fx:id="signupLabel" layoutX="115.0" layoutY="28.0" styleClass="sgn" text="Sign Up">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="firstNameEP" layoutX="586.0" layoutY="28.0" prefHeight="42.0" prefWidth="341.0" promptText="First Name" styleClass="textfield" />
+                <TextField fx:id="lastNameEP" layoutX="586.0" layoutY="90.0" prefHeight="42.0" prefWidth="341.0" promptText="Last Name" styleClass="textfield" />
+                <TextField fx:id="emailAddressEP" layoutX="585.0" layoutY="150.0" prefHeight="42.0" prefWidth="341.0" promptText="Email Address" styleClass="textfield" />
+                <PasswordField fx:id="passwordEP" layoutX="585.0" layoutY="207.0" prefHeight="42.0" prefWidth="341.0" promptText="Password" styleClass="textfield" />
+                <Button fx:id="signupButtonForm" layoutX="585.0" layoutY="392.0" mnemonicParsing="false" onAction="#saveEventPlannerData" prefHeight="42.0" prefWidth="341.0" styleClass="sgn-btn" text="Sign up">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <DatePicker fx:id="dateOfBirthEP" layoutX="585.0" layoutY="327.0" prefHeight="42.0" prefWidth="341.0" promptText="Date of Birth" styleClass="textfield" />
+                <TextField fx:id="phoneNumberEP" layoutX="585.0" layoutY="267.0" prefHeight="42.0" prefWidth="341.0" promptText="Phone Number" styleClass="textfield" />
+            </children>
+        </Pane>
+        <Button fx:id="goBackButton" layoutX="84.0" layoutY="64.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" styleClass="btn" text="Back">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

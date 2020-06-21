@@ -1,0 +1,226 @@
+.titled > .title
+{
+    -fx-background-color:transparent;
+
+}
+
+.titled-nd> *.content{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+.txt{
+    -fx-background-color: transparent;
+    -fx-text-fill: gray;
+}
+.txt:hover{
+    -fx-background-color:#d9d9d9;
+}
+.lbl{
+    -fx-border-color: gray;
+    -fx-border-width: 2px;
+}
+.pane{
+    -fx-background-color: white;
+    /* -fx-border-color: #d9d9d9;*/
+
+}
+
+.titled> .title > .arrow-button
+{
+    -fx-background-color: null;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.0em 0.25em 0.0em 0.0em;
+}
+.titled> .title > .arrow-button>.arrow
+{
+    -fx-background-color: #A33AFF;
+    -fx-translate-x: 100;
+
+}
+.titled > *.content{
+    -fx-background-color: white;
+    -fx-border-color: white;
+
+}
+
+.btn{
+    -fx-background-color:#A33AFF;
+    -fx-text-fill:white;
+}
+.btn-c{
+    -fx-background-color: transparent;
+    -fx-border-color:#A33AFF ;
+    -fx-border-width: 4;
+}
+.btn-c:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: #787878;
+    -fx-border-color:#be73ff ;
+}
+.btn-ex{
+    -fx-background-color: transparent;
+}
+.add-btn{
+    -fx-background-color:black;
+    -fx-text-fill:white;
+}
+.add-btn:hover{
+    -fx-background-color: #403f3f;
+}
+.btn:hover{
+    -fx-background-color:#A55AFF;
+}
+
+
+.logout-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill:#949392;
+}
+.logout-btn:hover{
+    -fx-cursor: hand;
+    -fx-text-fill:#403f3f ;
+}
+.table{
+    -fx-background-color: transparent;
+}
+.check-box{
+    -fx-text-fill:gray;
+}
+.check-box:selected{
+    -fx-text-fill:black;
+}
+
+.check-box:hover{
+    -fx-text-fill:black;
+
+}
+
+.check-box .box {
+
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-border-radius:3px;
+    -fx-cell-size: 6px;
+    -fx-scale-x: 0.6;
+    -fx-scale-y:0.6;
+    -fx-translate-x: 15;
+
+
+}
+
+.check-box:selected .mark {
+
+    -fx-background-color: black;
+
+}
+
+/*ce e nou*/
+.table-view{
+    -fx-background-color: transparent;
+}
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+.table-view .column-header,.table-view .filler{
+    -fx-background-color: transparent;
+}
+.table-row-cell{
+    -fx-background-color: transparent;
+    -fx-cell-size: 130;
+    -fx-padding: 25 10 10 10;
+    -fx-border-color: #dedede transparent #dedede transparent;
+    -fx-border-width: 0.5px;
+    -fx-font-size: 16px;
+}
+/*.table-column{
+    -fx-pref-width: 200;
+    -fx-border-color: transparent;
+}*/
+.col-t{
+    -fx-text-fill: black;
+    -fx-font-size:19px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 180;
+    -fx-border-color: transparent;
+    -fx-padding: 0 0 0 25;
+}
+.col-i{
+    -fx-pref-width: 180;
+    -fx-padding: 0 0 0 80;
+}
+.col-is{
+    -fx-pref-width: 130;
+    -fx-padding: 0 0 0 43;
+}
+.col-d{
+    -fx-pref-width: 580;
+    -fx-text-fill: #7a7a7a;
+}
+.col-b {
+    -fx-pref-width: 180;
+    -fx-padding: 15 0 0 0 ;
+    -fx-font-weight: bold;
+}
+.col-s{
+    -fx-pref-width: 180;
+    -fx-padding: 15 0 0 30 ;
+    -fx-font-weight: bold;
+}
+.col-b .button{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-padding: 5 54 5 54;
+}
+.col-b .button:hover{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+.table-row-cell:hover{
+    -fx-background-color: #ededed;
+    -fx-cursor: hand;
+}
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: transparent ;
+    -fx-table-cell-border-color: transparent;
+
+}
+.table-view:focused .table-row-cell {
+    -fx-table-cell-border-color: transparent;
+
+}
+.table-view:focused .table-row-cell:selected .table-cell{
+    -fx-text-fill: black;
+}
+
+.table-view .scroll-bar:vertical > .increment-button,
+.table-view .scroll-bar:vertical > .decrement-button {
+    -fx-background-color: transparent;
+
+}
+
+.table-view .scroll-bar{
+    -fx-background-color: transparent;
+}
+.table-view .scroll-bar:vertical .thumb{
+    -fx-background-color: transparent;
+}
+.table-view  .scroll-bar .increment-arrow,
+.table-view  .scroll-bar .decrement-arrow
+{
+    -fx-shape: " ";
+    -fx-padding:0;
+}
+
+
+.btn_back{
+    -fx-graphic: url(arrow123.png);
+    -fx-background-color: transparent;
+}
+.btn_back:hover{
+    -fx-cursor: hand;
+}

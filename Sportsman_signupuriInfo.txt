@@ -1,0 +1,156 @@
+Role: Sportsman 
+First Name: Adrian 
+Last Name: Stefanescu 
+Email: stefanescuadrian04@gmail.com 
+Password: parola
+
+Role: Sportsman 
+First Name: as 
+Last Name: as 
+Email: as 
+Password: as
+
+Role: Sportsman 
+First Name: test 
+Last Name: test 
+Email: test 
+Password: test
+
+Role: Sportsman 
+First Name: sad 
+Last Name: ads 
+Email: asd 
+Password: asd
+
+Role: Sportsman 
+First Name: sda 
+Last Name: d 
+Email: ads 
+Password: ads
+
+Role: Sportsman 
+First Name: Serban 
+Last Name: Stefanescu 
+Email: Serban123 
+Password: asdfg
+
+Role: Sportsman 
+First Name: asd 
+Last Name: asd 
+Email:  
+Password: qwe
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+
+Role: Sportsman 
+First Name: q 
+Last Name: q 
+Email: q 
+Password: q
+
+Role: Sportsman 
+First Name: w 
+Last Name: w 
+Email: w 
+Password: w
+
+Role: Sportsman 
+First Name: aaaa 
+Last Name: aaaa 
+Email: aaaaa 
+Password: aaaaa
+
+Role: Sportsman 
+First Name: Prenume 
+Last Name: Nume 
+Email: ContNou 
+Password: parola1
+
+Role: Sportsman 
+First Name: Nume1 
+Last Name: Prenume1 
+Email: mail 
+Password: parola1
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+
+Role: Sportsman 
+First Name: w 
+Last Name: w 
+Email: w 
+Password: e
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: q 
+Password: e
+
+Role: Sportsman 
+First Name: e 
+Last Name: e 
+Email: e 
+Password: e
+
+Role: Sportsman 
+First Name: a 
+Last Name: a 
+Email: a 
+Password: a
+
+Role: Sportsman 
+First Name: s 
+Last Name: s 
+Email: s 
+Password: s
+
+Role: Sportsman 
+First Name:  
+Last Name:  
+Email:  
+Password: 
+
+Role: Sportsman 
+First Name: w 
+Last Name: e 
+Email: r 
+Password: r
+
+Role: Sportsman 
+First Name: r 
+Last Name: r 
+Email:  
+Password: r
+
+Role: Sportsman 
+First Name: r 
+Last Name: r 
+Email:  
+Password: r
+
+Role: Sportsman 
+First Name: r 
+Last Name: r 
+Email: u 
+Password: r
+
+Role: Sportsman 
+First Name: q 
+Last Name: q 
+Email: y 
+Password: q
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_241" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Eventplanner">
+    <void property="birthDate">
+     <string>2020-06-20</string>
+    </void>
+    <void property="email">
+     <string>owqq</string>
+    </void>
+    <void property="firstName">
+     <string>o</string>
+    </void>
+    <void property="lastName">
+     <string>o</string>
+    </void>
+    <void property="password">
+     <string>e9bb590747aaaca5126903e9d787e7bac4b700099233d7dd903d54ec26eabfd391ba12f4e679dd47154edf866ae00a15f86fb90527bbfe43da97dd9c8a3a3c4b</string>
+    </void>
+    <void property="phoneNumber">
+     <string>123</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>2</byte>
+      </void>
+      <void index="1">
+       <byte>-22</byte>
+      </void>
+      <void index="2">
+       <byte>-100</byte>
+      </void>
+      <void index="3">
+       <byte>39</byte>
+      </void>
+      <void index="4">
+       <byte>-1</byte>
+      </void>
+      <void index="5">
+       <byte>-126</byte>
+      </void>
+      <void index="6">
+       <byte>91</byte>
+      </void>
+      <void index="7">
+       <byte>-3</byte>
+      </void>
+      <void index="8">
+       <byte>50</byte>
+      </void>
+      <void index="9">
+       <byte>-4</byte>
+      </void>
+      <void index="10">
+       <byte>110</byte>
+      </void>
+      <void index="11">
+       <byte>-80</byte>
+      </void>
+      <void index="12">
+       <byte>118</byte>
+      </void>
+      <void index="13">
+       <byte>-109</byte>
+      </void>
+      <void index="14">
+       <byte>3</byte>
+      </void>
+      <void index="15">
+       <byte>-112</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
