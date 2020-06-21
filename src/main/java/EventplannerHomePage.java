@@ -44,7 +44,7 @@ public class EventplannerHomePage implements Initializable {
     @FXML
     TableColumn<?, ?> thirdColumn;
 
-private SceneChanger scene=new SceneChanger();
+    private SceneChanger scene=new SceneChanger();
     private static ArrayList<Eveniment> List = new ArrayList();
     private static String eventPlannerName;
     public EventplannerHomePage(){
