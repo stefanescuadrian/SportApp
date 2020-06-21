@@ -977,5 +977,201 @@ of your long Sunday run, we’re here to support your goals.</string>
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Rugby</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-12</string>
+      </void>
+      <void property="eventDescription">
+       <string></string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Beginner</string>
+      </void>
+      <void property="eventLocation">
+       <string>w</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>54</int>
+      </void>
+      <void property="eventName">
+       <string>w</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>w</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Rugby</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>q</string>
+    </void>
+    <void property="sportsmanFNLN">
+     <string>e e</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>e</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>e</string>
+    </void>
+    <void property="status">
+     <string>Accepted</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Rugby</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-05</string>
+      </void>
+      <void property="eventDescription">
+       <string>asdasdadas</string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Advanced</string>
+      </void>
+      <void property="eventLocation">
+       <string>aaa</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>2</int>
+      </void>
+      <void property="eventName">
+       <string>aaa</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>d</string>
+      </void>
+     </object>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Rugby</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>x</string>
+    </void>
+    <void property="sportsmanFNLN">
+     <string>x x</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>x</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>x</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Inregistrare">
+    <void property="e">
+     <object class="Eveniment">
+      <void property="eventCategory">
+       <string>Rugby</string>
+      </void>
+      <void property="eventDate">
+       <string>2020-06-12</string>
+      </void>
+      <void property="eventDescription">
+       <string></string>
+      </void>
+      <void property="eventDifficulty">
+       <string>Beginner</string>
+      </void>
+      <void property="eventLocation">
+       <string>w</string>
+      </void>
+      <void property="eventMaxNumberParticipants">
+       <int>1</int>
+      </void>
+      <void property="eventName">
+       <string>w</string>
+      </void>
+      <void property="eventPlannerMail">
+       <string>w</string>
+      </void>
+     </object>
+    </void>
+    <void property="eC">
+     <string>Rugby</string>
+    </void>
+    <void property="eD">
+     <string></string>
+    </void>
+    <void property="eNC">
+     <string>w
+Rugby</string>
+    </void>
+    <void property="l">
+     <object class="javafx.scene.control.Label">
+      <void property="text">
+       <string>Rugby</string>
+      </void>
+     </object>
+    </void>
+    <void property="photo">
+     <object class="javafx.scene.image.ImageView">
+      <void property="fitHeight">
+       <double>50.0</double>
+      </void>
+      <void property="fitWidth">
+       <double>50.0</double>
+      </void>
+     </object>
+    </void>
+    <void property="sportsmanEmail">
+     <string>x</string>
+    </void>
+    <void property="sportsmanFNLN">
+     <string>x x</string>
+    </void>
+    <void property="sportsmanFirstName">
+     <string>x</string>
+    </void>
+    <void property="sportsmanLastName">
+     <string>x</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

@@ -1314,5 +1314,147 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Sportsman">
+    <void property="email">
+     <string>x</string>
+    </void>
+    <void property="firstName">
+     <string>x</string>
+    </void>
+    <void property="lastName">
+     <string>x</string>
+    </void>
+    <void property="password">
+     <string>57cb54701c3f3afb653ffcfcc0a61e0ed957e1658b8077376cb6274f64a1f89e0dfc2f066bd24580d75339e37b33d4ea62f3f160a861deea0ba883a34b47216c</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>83</byte>
+      </void>
+      <void index="1">
+       <byte>81</byte>
+      </void>
+      <void index="2">
+       <byte>58</byte>
+      </void>
+      <void index="3">
+       <byte>-68</byte>
+      </void>
+      <void index="4">
+       <byte>-41</byte>
+      </void>
+      <void index="5">
+       <byte>100</byte>
+      </void>
+      <void index="6">
+       <byte>105</byte>
+      </void>
+      <void index="7">
+       <byte>34</byte>
+      </void>
+      <void index="8">
+       <byte>-51</byte>
+      </void>
+      <void index="9">
+       <byte>-102</byte>
+      </void>
+      <void index="10">
+       <byte>72</byte>
+      </void>
+      <void index="11">
+       <byte>94</byte>
+      </void>
+      <void index="12">
+       <byte>-98</byte>
+      </void>
+      <void index="13">
+       <byte>-26</byte>
+      </void>
+      <void index="14">
+       <byte>120</byte>
+      </void>
+      <void index="15">
+       <byte>127</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Eventplanner">
+    <void property="birthDate">
+     <string>2020-06-10</string>
+    </void>
+    <void property="email">
+     <string>v</string>
+    </void>
+    <void property="firstName">
+     <string>v</string>
+    </void>
+    <void property="lastName">
+     <string>v</string>
+    </void>
+    <void property="password">
+     <string>a568da7f94e1cc33b9c1203c737f2832fc4057f5191a9df783b9929c0d614a759240485d96d05a7926f50d1d6fe3a5fcf47a19d0fb7179ee26f96e44224a69ae</string>
+    </void>
+    <void property="phoneNumber">
+     <string>0789</string>
+    </void>
+    <void property="salt">
+     <array class="byte" length="16">
+      <void index="0">
+       <byte>-47</byte>
+      </void>
+      <void index="1">
+       <byte>-10</byte>
+      </void>
+      <void index="2">
+       <byte>-73</byte>
+      </void>
+      <void index="3">
+       <byte>14</byte>
+      </void>
+      <void index="4">
+       <byte>21</byte>
+      </void>
+      <void index="5">
+       <byte>121</byte>
+      </void>
+      <void index="6">
+       <byte>119</byte>
+      </void>
+      <void index="7">
+       <byte>67</byte>
+      </void>
+      <void index="8">
+       <byte>-69</byte>
+      </void>
+      <void index="9">
+       <byte>68</byte>
+      </void>
+      <void index="10">
+       <byte>64</byte>
+      </void>
+      <void index="11">
+       <byte>81</byte>
+      </void>
+      <void index="12">
+       <byte>-66</byte>
+      </void>
+      <void index="13">
+       <byte>49</byte>
+      </void>
+      <void index="14">
+       <byte>36</byte>
+      </void>
+      <void index="15">
+       <byte>-47</byte>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
  </object>
 </java>
